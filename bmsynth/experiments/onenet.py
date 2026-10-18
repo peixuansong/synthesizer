@@ -18,7 +18,7 @@ Usage: onenet.py [n_targets (0 = all)] [seconds]   (the run time is the only lim
 import sys, json, time
 import _setup, _build, _wordrun as WR
 import behaviours as I1, word_register as I2, oeis
-from net import Net
+from boxnet import BoxNet as Net
 import _observe as O
 
 

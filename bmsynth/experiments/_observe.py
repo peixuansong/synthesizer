@@ -5,7 +5,8 @@ here, by the experiment; anything that needs a box's own knowledge (which circui
 word wiring outputs) is asked of the box the only allowed way: by placing it in a small observation net and running it.
 """
 import _setup, _build
-from net import Net, ONE, ZERO
+from net import ONE, ZERO
+from boxnet import BoxNet as Net
 
 OPS = ['ADD', 'SUB', 'MUL', 'DIV', 'MOD', 'MIN', 'MAX']      # word op numbers in the library word layout
 CELL, WORD, NOP = 1, 2, 7
