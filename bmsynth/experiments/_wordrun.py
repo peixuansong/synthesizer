@@ -6,7 +6,7 @@ Observation afterwards: each lane's answer and the global library are read from 
 known terms by the wordeval.RUN box and traced by the wordeval.TRACE box, each in an observation net.
 """
 import _setup, _build
-from boxnet import BoxNet as Net
+from lanes import LaneBoxNet as Net
 import _observe as O
 
 R, W, LAGS, B = 16, 48, 3, 1 << 16

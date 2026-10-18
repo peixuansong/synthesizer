@@ -17,7 +17,7 @@ Both boxes are RULE VIOLATIONS (stopgaps / primers).
 import time
 import _setup
 from net import ZERO, ONE
-from boxnet import BoxNet as Net
+from lanes import LaneBoxNet as Net
 from gates import GATES
 
 HOLD = 4

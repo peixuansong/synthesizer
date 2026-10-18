@@ -6,7 +6,7 @@ word wiring outputs) is asked of the box the only allowed way: by placing it in 
 """
 import _setup, _build
 from net import ONE, ZERO
-from boxnet import BoxNet as Net
+from lanes import LaneBoxNet as Net
 
 OPS = ['ADD', 'SUB', 'MUL', 'DIV', 'MOD', 'MIN', 'MAX']      # word op numbers in the library word layout
 CELL, WORD, NOP = 1, 2, 7

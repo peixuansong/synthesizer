@@ -1,14 +1,14 @@
-"""Ports and black boxes, on top of the lane net in lanes.py.
+"""Ports and black boxes, on top of the cell net in net.py. Concept only: one bit per node (lanes are in accel/).
 
     port   a wire nothing in the net drives; it holds its value unless a black box writes it
            (or it is loaded once from outside before the run, e.g. a target)
 
 A black-box node has input wires (words of nodes), output wires (words of ports) and a call
-wire. On a tick where the call wire is 1 in a lane, the box reads its inputs from that tick
+wire. On a tick where the call wire is 1, the box reads its inputs from that tick
 and its outputs appear one tick later, like a cell. What happens inside the box (combinational
 or with its own state) is invisible to the net.
 
-API (added to lanes.py's):
+API (added to net.py's):
     wires nothing drives   add_port(), remove_port(), load()
     black boxes            place_box(), remove_box(), close()
 
@@ -17,7 +17,7 @@ path) and asks its factory NAME(**params) for the box. Box functions are only ev
 """
 import importlib
 import numpy as np
-from lanes import LaneNet, ALL, _read
+from net import Net
 
 
 class _Box:
@@ -25,9 +25,9 @@ class _Box:
         self.box, self.call, self.ins, self.outs = box, call, [list(w) for w in ins], [list(w) for w in outs]
 
 
-class BoxNet(LaneNet):
-    def __init__(self, lanes=1):
-        super().__init__(lanes)
+class BoxNet(Net):
+    def __init__(self, *args, **kw):
+        super().__init__(*args, **kw)
         self.boxes = {}
         self._nbox = 0
 
@@ -36,7 +36,7 @@ class BoxNet(LaneNet):
 
     def remove_port(self, i):
         assert self.kind.get(i) == 'port'
-        del self.kind[i]; self.names.pop(i, None); self._compiled = None
+        del self.kind[i]; self.names.pop(i, None); self._changed()
 
     def place_box(self, box, call, ins, outs, **params):
         """box: 'module.NAME', a factory in a box file; NAME(**params) gives the box,
@@ -58,73 +58,33 @@ class BoxNet(LaneNet):
         for bx in self.boxes.values():
             if hasattr(bx.box, 'close'): bx.box.close()
 
-    def load(self, s, word, values):
-        """Write one integer per lane into a word of ports (from outside, before the run: the spec)."""
+    def load(self, s, word, value):
+        """Write an integer into a word of ports (from outside, before the run: the spec)."""
         assert all(self.kind.get(n) == 'port' for n in word)
-        v = _as_ints(np.array(values, dtype=object).reshape(-1)); _write(s, word, np.broadcast_to(v, (self.lanes,)).copy(), np.ones(self.lanes, bool), self.lanes)
+        self._write_lanes(s, word, np.array([0]), np.array([int(np.asarray(value).reshape(-1)[0])], dtype=object))
 
-    def _read_cached(self, s, word):
-        """_read, remembered per word while its bits do not change (wide words are slow to turn into ints)."""
-        if len(word) <= 62: return _read(s, word, self.lanes)
-        cache = self.__dict__.setdefault('_rc', {})
-        key, raw = tuple(word), s[list(word)].tobytes()
-        hit = cache.get(key)
-        if hit is None or hit[0] != raw:
-            hit = cache[key] = (raw, _read(s, word, self.lanes))
-        return hit[1]
+    # ---------------------------------------------------------------- how a box sees the state
+    # A box is called as box(lanes, *in_values) with one entry per calling lane; here there is one lane, lane 0.
+    def _calling(self, s, node):
+        """The lanes in which `node` is 1."""
+        return np.array([0]) if s[node] else np.array([], np.int64)
+
+    def _read_lanes(self, s, word):
+        return np.array([self.read(s, word)])
+
+    def _write_lanes(self, s, word, lanes, values):
+        """Write values[j] (two's complement for negatives) into a word of nodes, in lane lanes[j]."""
+        v = int(np.asarray(values).reshape(-1)[0])
+        for k, n in enumerate(word): s[n] = (v >> k) & 1
 
     def _tick(self, s):
-        """One tick of every cell, then every box whose call wire is 1."""
+        """One tick of every cell, then every box whose call wire is 1 (box outputs appear in the new state)."""
         new = super()._tick(s)
         for bx in self.boxes.values():
-            go = _bits(s[bx.call], self.lanes)
-            if not go.any(): continue
-            lanes = np.flatnonzero(go)
-            args = [self._read_cached(s, w)[lanes] for w in bx.ins]
+            lanes = self._calling(s, bx.call)
+            if not len(lanes): continue
+            args = [self._read_lanes(s, w)[lanes] for w in bx.ins]
             res = bx.box(lanes, *args)
             if not isinstance(res, tuple): res = (res,)
-            for w, val in zip(bx.outs, res):
-                val = _as_ints(val)
-                full = np.zeros(self.lanes, val.dtype)
-                full[lanes] = val
-                _write(new, w, full, go, self.lanes)
-        if self._compiled is None:                  # a box edited the net this tick: tick the new wiring from now on
-            if new.shape[0] < self._next:
-                grow = np.zeros((self._next - new.shape[0], self.words), np.uint64)
-                for i in range(new.shape[0], self._next):
-                    if i in self.cells and self.cells[i][2]: grow[i - new.shape[0]] = ALL
-                new = np.concatenate([new, grow])
-        return new
-
-
-# ------------------------------------------------------------------- bit helpers
-def _bits(row, lanes):
-    return np.unpackbits(row.view(np.uint8), bitorder='little')[:lanes].astype(bool)
-
-
-def _as_ints(val):
-    val = np.asarray(val)
-    if val.dtype == object:
-        try: return val.astype(np.int64)
-        except OverflowError: return val
-    return val.astype(np.int64)
-
-
-def _write(s, word, values, mask, lanes):
-    """Write values (two's complement for negatives) into a word of nodes, in the lanes where mask is set."""
-    values = np.asarray(values)
-    n = len(word)
-    if values.dtype == object:
-        first = values[0] if len(values) else 0
-        if all(v == first for v in values):                    # the same value everywhere (e.g. a library word)
-            bits = np.repeat(np.array([(int(first) >> i) & 1 for i in range(n)], bool)[:, None], len(values), 1)
-        else:
-            nb = (n + 7) // 8; m = (1 << (8 * nb)) - 1
-            by = np.frombuffer(b''.join((int(v) & m).to_bytes(nb, 'little') for v in values), np.uint8).reshape(len(values), nb)
-            bits = np.unpackbits(by, axis=1, bitorder='little')[:, :n].T.astype(bool)
-    else:
-        v = values.view(np.int64) if values.dtype == np.uint64 else values.astype(np.int64)
-        bits = ((v[None, :] >> np.minimum(np.arange(n), 63)[:, None]) & 1).astype(bool)
-    old = np.unpackbits(s[list(word)].view(np.uint8), axis=1, bitorder='little').astype(bool)
-    old[:, :lanes] = np.where(mask[None, :], bits, old[:, :lanes])
-    s[list(word)] = np.packbits(old, axis=1, bitorder='little').view(np.uint64)
+            for w, val in zip(bx.outs, res): self._write_lanes(new, w, lanes, val)
+        return self._grow(new)                     # a box may have added nodes this tick
