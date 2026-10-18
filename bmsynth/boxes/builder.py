@@ -17,6 +17,7 @@ appended to it, in order. The ports cell, a, b are positions in this table.
 An edit changes the net itself, so it is the same for every lane: all calling lanes must ask for the same edit.
 """
 import numpy as np
+from part import copy, paste
 
 
 def BUILD(net, source, nodes):
@@ -30,8 +31,8 @@ def BUILD(net, source, nodes):
         assert len(req) == 1, 'BUILD: lanes asked for different edits'
         o, c, x, y = req.pop()
         if o == 1:
-            circ = net.copy(source)
-            table.extend(net.paste(circ, circ.ends))
+            p = copy(net, source)
+            table.extend(paste(net, p, p.outside))
             made[0] += 1
         elif o in (2, 3) and max(c, x, y) < len(table):
             cell_, pair = table[c], (table[x], table[y])

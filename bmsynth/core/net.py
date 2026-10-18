@@ -8,18 +8,10 @@ API (nothing else is offered):
     run                    state(), run(), read()
     cells                  add_cell(), remove_cell(), set_init(), pairs()
     connections            connect(), disconnect(), set_z()
-    copy / paste           copy() -> Circuit, paste()
 
-Ports and black boxes are in boxnet.py.
+Copy / paste (parts) are in part.py; ports and black boxes in boxnet.py.
 """
 ZERO, ONE = 0, 1
-
-
-class Circuit:
-    """A copied group of cells. References are ('c', i) internal cell, ('k', 0/1) constant, ('e', j) open end."""
-
-    def __init__(self, cells, n_ends, names=None):
-        self.cells, self.n_ends, self.names = cells, n_ends, names or {}
 
 
 class Net:
@@ -70,38 +62,6 @@ class Net:
         if name: self.names[i] = name
         self._changed()
         return i
-
-    # ---------------------------------------------------------------- copy / paste
-    def copy(self, ids, ends=()):
-        """The cells `ids` as a Circuit. Nodes they read that are not in `ids` become open ends: `ends` first,
-        in the order given, then any others in order of first use."""
-        ids = list(ids)
-        pos = {g: k for k, g in enumerate(ids)}
-        ends = list(ends)
-        def ref(n):
-            if n in (ZERO, ONE): return ('k', n)
-            if n in pos: return ('c', pos[n])
-            if n not in ends: ends.append(n)
-            return ('e', ends.index(n))
-        cells = []
-        for g in ids:
-            pairs, z, init = self.cells[g]
-            cells.append(dict(pairs=[(ref(a), ref(b)) for a, b in pairs], z=ref(z), init=init))
-        circ = Circuit(cells, len(ends), {k: self.names[g] for k, g in enumerate(ids) if g in self.names})
-        circ.ends = ends
-        return circ
-
-    def paste(self, circ, ends, prefix=''):
-        """New cells for the circuit, open end j wired to node ends[j]. Returns their ids, in circuit order."""
-        assert len(ends) == circ.n_ends
-        new = [self.add_cell(init=c['init'], name=prefix + circ.names[k] if k in circ.names else None) for k, c in enumerate(circ.cells)]
-        def node(r):
-            t, v = r
-            return v if t == 'k' else new[v] if t == 'c' else ends[v]
-        for k, c in enumerate(circ.cells):
-            for a, b in c['pairs']: self.connect(new[k], node(a), node(b))
-            self.set_z(new[k], node(c['z']))
-        return new
 
     def _changed(self):
         """Called on every change to the nodes or the wiring."""

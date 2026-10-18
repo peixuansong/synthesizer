@@ -7,6 +7,7 @@ Gates are single cells of the BMN rule  y' = s[z] XNOR OR_k(s[a_k] AND s[b_k]):
 import numpy as np
 import _setup
 from net import ONE, ZERO
+from part import paste
 import math
 
 LIB_K, LIB_EW = 64, 256                 # the flat library: 64 entries, one 256-bit word of ports each
@@ -33,14 +34,14 @@ def ports(net, n, name):
 
 
 def ring(net, P, delay=None):
-    """P cells passing one 1 around, cell P-1 starts at 1. With `delay` (a found 1-cell delay Circuit),
+    """P cells passing one 1 around, cell P-1 starts at 1. With `delay` (a found 1-cell delay Part),
     the ring is P pasted copies of it closed into a loop; otherwise P hand cells r_i' = r_{i-1}."""
     if delay is None:
         r = [net.add_cell(init=int(i == P - 1), name=f'r{i}') for i in range(P)]
         for i in range(P): net.connect(r[i], r[i - 1])
         return r
     tmp = net.add_port()
-    r = [net.paste(delay, [tmp], prefix=f'r{i}.')[0] for i in range(P)]
+    r = [paste(net, delay, [tmp], prefix=f'r{i}.')[0] for i in range(P)]
     for i in range(P):                                          # close the loop: the open end of copy i reads copy i-1
         prs, z = net.pairs(r[i])
         for a, b in prs:
