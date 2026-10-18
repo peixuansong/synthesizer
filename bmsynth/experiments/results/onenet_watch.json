@@ -1,0 +1,876 @@
+[
+ {
+  "tick": 80,
+  "sec": 9.4,
+  "solved": 0,
+  "q": 0,
+  "walks": {
+   "global": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   },
+   "units": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 160,
+  "sec": 16.7,
+  "solved": 0,
+  "q": 0,
+  "walks": {
+   "global": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   },
+   "units": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 240,
+  "sec": 24.5,
+  "solved": 0,
+  "q": 0,
+  "walks": {
+   "global": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   },
+   "units": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 320,
+  "sec": 30.5,
+  "solved": 0,
+  "q": 0,
+  "walks": {
+   "global": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   },
+   "units": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 400,
+  "sec": 35.5,
+  "solved": 0,
+  "q": 0,
+  "walks": {
+   "global": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   },
+   "units": {
+    "nodes": 0,
+    "units": 0,
+    "new": 0,
+    "shell_done": 0,
+    "shell_blocks": 0,
+    "blocks": 0
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 680,
+  "sec": 38.3,
+  "solved": 12,
+  "q": 34,
+  "walks": {
+   "global": {
+    "nodes": 2,
+    "units": 5,
+    "new": 1,
+    "shell_done": 1,
+    "shell_blocks": 1,
+    "blocks": 18
+   },
+   "units": {
+    "nodes": 1,
+    "units": 12,
+    "new": 1,
+    "shell_done": 1,
+    "shell_blocks": 1,
+    "blocks": 17
+   }
+  },
+  "new": [
+   {
+    "A": "A000045",
+    "wiring": "x' = ADD(x, y) [start 1]; y' = ADD(0, x) [start 0]; out = y"
+   },
+   {
+    "A": "A000217",
+    "wiring": "x' = ADD(1, x) [start 0]; y' = ADD(x, y) [start 0]; out = y"
+   },
+   {
+    "A": "A000079",
+    "wiring": "x' = ADD(x, x) [start 1]; out = x"
+   },
+   {
+    "A": "A000292",
+    "wiring": "x' = A000217; y' = ADD(x, y) [start 0]; out = y"
+   },
+   {
+    "A": "A000225",
+    "wiring": "x' = ADD(x, x) [start 1]; y' = ADD(x, y) [start 0]; out = y"
+   },
+   {
+    "A": "A000290",
+    "wiring": "x' = ADD(1, x) [start 0]; y' = MUL(x, x) [start 0]; out = y"
+   },
+   {
+    "A": "A002620",
+    "wiring": "x' = A000217; y' = SUB(x, y) [start 0]; out = y"
+   },
+   {
+    "A": "A002378",
+    "wiring": "x' = A000217; y' = ADD(x, x) [start 0]; out = y"
+   },
+   {
+    "A": "A001045",
+    "wiring": "x' = ADD(y, y) [start 1]; y' = ADD(x, y) [start 0]; out = y"
+   },
+   {
+    "A": "A000330",
+    "wiring": "x' = A000290; y' = ADD(x, y) [start 0]; out = y"
+   },
+   {
+    "A": "A000124",
+    "wiring": "x' = ADD(1, x) [start 0]; y' = ADD(x, y) [start 1]; out = y"
+   },
+   {
+    "A": "A005408",
+    "wiring": "x' = ADD(1, 1) [start 1]; y' = ADD(x, y) [start 0]; out = y"
+   }
+  ]
+ },
+ {
+  "tick": 760,
+  "sec": 39.7,
+  "solved": 12,
+  "q": 44,
+  "walks": {
+   "global": {
+    "nodes": 2,
+    "units": 8,
+    "new": 1,
+    "shell_done": 1,
+    "shell_blocks": 1,
+    "blocks": 23
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 1,
+    "shell_blocks": 13083,
+    "blocks": 22
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 840,
+  "sec": 40.7,
+  "solved": 12,
+  "q": 54,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 4,
+    "shell_blocks": 13083,
+    "blocks": 28
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 6,
+    "shell_blocks": 13083,
+    "blocks": 27
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 920,
+  "sec": 41.6,
+  "solved": 12,
+  "q": 64,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 9,
+    "shell_blocks": 13083,
+    "blocks": 33
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 11,
+    "shell_blocks": 13083,
+    "blocks": 32
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1000,
+  "sec": 42.2,
+  "solved": 12,
+  "q": 74,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 14,
+    "shell_blocks": 13083,
+    "blocks": 38
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 16,
+    "shell_blocks": 13083,
+    "blocks": 37
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1080,
+  "sec": 43.2,
+  "solved": 12,
+  "q": 84,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 19,
+    "shell_blocks": 13083,
+    "blocks": 43
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 21,
+    "shell_blocks": 13083,
+    "blocks": 42
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1160,
+  "sec": 43.9,
+  "solved": 12,
+  "q": 94,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 24,
+    "shell_blocks": 13083,
+    "blocks": 48
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 26,
+    "shell_blocks": 13083,
+    "blocks": 47
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1240,
+  "sec": 44.8,
+  "solved": 12,
+  "q": 104,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 29,
+    "shell_blocks": 13083,
+    "blocks": 53
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 31,
+    "shell_blocks": 13083,
+    "blocks": 52
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1320,
+  "sec": 45.5,
+  "solved": 12,
+  "q": 114,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 34,
+    "shell_blocks": 13083,
+    "blocks": 58
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 36,
+    "shell_blocks": 13083,
+    "blocks": 57
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1400,
+  "sec": 46.1,
+  "solved": 12,
+  "q": 124,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 39,
+    "shell_blocks": 13083,
+    "blocks": 63
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 41,
+    "shell_blocks": 13083,
+    "blocks": 62
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1480,
+  "sec": 47.0,
+  "solved": 12,
+  "q": 134,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 44,
+    "shell_blocks": 13083,
+    "blocks": 68
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 46,
+    "shell_blocks": 13083,
+    "blocks": 67
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1560,
+  "sec": 47.7,
+  "solved": 12,
+  "q": 144,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 49,
+    "shell_blocks": 13083,
+    "blocks": 73
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 51,
+    "shell_blocks": 13083,
+    "blocks": 72
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1640,
+  "sec": 48.2,
+  "solved": 12,
+  "q": 154,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 54,
+    "shell_blocks": 13083,
+    "blocks": 78
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 56,
+    "shell_blocks": 13083,
+    "blocks": 77
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1720,
+  "sec": 49.2,
+  "solved": 12,
+  "q": 164,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 59,
+    "shell_blocks": 13083,
+    "blocks": 83
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 61,
+    "shell_blocks": 13083,
+    "blocks": 82
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1800,
+  "sec": 49.8,
+  "solved": 12,
+  "q": 174,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 64,
+    "shell_blocks": 13083,
+    "blocks": 88
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 66,
+    "shell_blocks": 13083,
+    "blocks": 87
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1880,
+  "sec": 50.6,
+  "solved": 12,
+  "q": 184,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 69,
+    "shell_blocks": 13083,
+    "blocks": 93
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 71,
+    "shell_blocks": 13083,
+    "blocks": 92
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 1960,
+  "sec": 51.5,
+  "solved": 12,
+  "q": 194,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 74,
+    "shell_blocks": 13083,
+    "blocks": 98
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 76,
+    "shell_blocks": 13083,
+    "blocks": 97
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2040,
+  "sec": 52.0,
+  "solved": 12,
+  "q": 204,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 79,
+    "shell_blocks": 13083,
+    "blocks": 103
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 81,
+    "shell_blocks": 13083,
+    "blocks": 102
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2120,
+  "sec": 53.0,
+  "solved": 12,
+  "q": 214,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 84,
+    "shell_blocks": 13083,
+    "blocks": 108
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 86,
+    "shell_blocks": 13083,
+    "blocks": 107
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2200,
+  "sec": 53.8,
+  "solved": 12,
+  "q": 224,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 89,
+    "shell_blocks": 13083,
+    "blocks": 113
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 91,
+    "shell_blocks": 13083,
+    "blocks": 112
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2280,
+  "sec": 54.4,
+  "solved": 12,
+  "q": 234,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 94,
+    "shell_blocks": 13083,
+    "blocks": 118
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 96,
+    "shell_blocks": 13083,
+    "blocks": 117
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2360,
+  "sec": 55.7,
+  "solved": 12,
+  "q": 244,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 99,
+    "shell_blocks": 13083,
+    "blocks": 123
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 101,
+    "shell_blocks": 13083,
+    "blocks": 122
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2440,
+  "sec": 56.3,
+  "solved": 12,
+  "q": 254,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 104,
+    "shell_blocks": 13083,
+    "blocks": 128
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 106,
+    "shell_blocks": 13083,
+    "blocks": 127
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2520,
+  "sec": 57.2,
+  "solved": 12,
+  "q": 264,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 109,
+    "shell_blocks": 13083,
+    "blocks": 133
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 111,
+    "shell_blocks": 13083,
+    "blocks": 132
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2600,
+  "sec": 58.2,
+  "solved": 12,
+  "q": 274,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 114,
+    "shell_blocks": 13083,
+    "blocks": 138
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 116,
+    "shell_blocks": 13083,
+    "blocks": 137
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2680,
+  "sec": 58.6,
+  "solved": 12,
+  "q": 284,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 119,
+    "shell_blocks": 13083,
+    "blocks": 143
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 121,
+    "shell_blocks": 13083,
+    "blocks": 142
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2760,
+  "sec": 59.6,
+  "solved": 12,
+  "q": 294,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 124,
+    "shell_blocks": 13083,
+    "blocks": 148
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 126,
+    "shell_blocks": 13083,
+    "blocks": 147
+   }
+  },
+  "new": []
+ },
+ {
+  "tick": 2840,
+  "sec": 60.5,
+  "solved": 12,
+  "q": 304,
+  "walks": {
+   "global": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 129,
+    "shell_blocks": 13083,
+    "blocks": 153
+   },
+   "units": {
+    "nodes": 3,
+    "units": 12,
+    "new": 0,
+    "shell_done": 131,
+    "shell_blocks": 13083,
+    "blocks": 152
+   }
+  },
+  "new": []
+ }
+]

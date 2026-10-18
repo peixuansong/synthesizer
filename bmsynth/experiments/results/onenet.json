@@ -1,0 +1,1125 @@
+{
+ "lanes": {
+  "behaviour": 29,
+  "oeis": 40
+ },
+ "cells": 468,
+ "boxes": 11,
+ "seconds": 60.5,
+ "ticks": 2840,
+ "phase1_end": [
+  480,
+  36.7
+ ],
+ "halted": false,
+ "library": {
+  "L0": "cell: square wave, period 2: u0' = \u00ac(u0)",
+  "L1": "cell: square wave, period 4: u0' = u1; u1' = \u00ac(u0)",
+  "L2": "cell: pulse every 3 ticks: u0' = u1; u1' = \u00ac(u1 \u2228 u0)",
+  "L3": "cell: delay: u0' = a",
+  "L4": "cell: inverted delay: u0' = \u00ac(a)",
+  "L5": "cell: memory bit (d, load, \u00acload): u0' = u0\u2227c \u2228 b\u2227a",
+  "L6": "cell: pulse every 4 ticks: u0' = u1; u1' = \u00ac(u0); u2' = u1\u2227u0",
+  "G7": "A000217 (used 3x): x' = ADD(1, x) [start 0]; y' = ADD(x, y) [start 0]; out = y",
+  "G8": "A000290 (used 1x): x' = ADD(1, x) [start 0]; y' = MUL(x, x) [start 0]; out = y",
+  "G9": "A000045 (used 0x): x' = ADD(x, y) [start 1]; y' = ADD(0, x) [start 0]; out = y",
+  "G10": "A000079 (used 0x): x' = ADD(x, x) [start 1]; out = x",
+  "G11": "A000292 (used 0x): x' = A000217; y' = ADD(x, y) [start 0]; out = y",
+  "G12": "A000225 (used 0x): x' = ADD(x, x) [start 1]; y' = ADD(x, y) [start 0]; out = y",
+  "G13": "A002620 (used 0x): x' = A000217; y' = SUB(x, y) [start 0]; out = y",
+  "G14": "A002378 (used 0x): x' = A000217; y' = ADD(x, x) [start 0]; out = y",
+  "G15": "A001045 (used 0x): x' = ADD(y, y) [start 1]; y' = ADD(x, y) [start 0]; out = y",
+  "G16": "A000330 (used 0x): x' = A000290; y' = ADD(x, y) [start 0]; out = y",
+  "G17": "A000124 (used 0x): x' = ADD(1, x) [start 0]; y' = ADD(x, y) [start 1]; out = y",
+  "G18": "A005408 (used 0x): x' = ADD(1, 1) [start 1]; y' = ADD(x, y) [start 0]; out = y"
+ },
+ "register": {
+  "values": [
+   24,
+   27,
+   30,
+   33,
+   36,
+   39,
+   42,
+   45,
+   48,
+   51,
+   54,
+   57,
+   60,
+   63,
+   66,
+   69,
+   72,
+   75,
+   78,
+   81
+  ],
+  "counts_by_3": true
+ },
+ "oeis": {
+  "found": 12,
+  "exact": 12,
+  "using_units": [
+   {
+    "A": 292,
+    "name": "Tetrahedral (or triangular pyramidal) numbers: a(n) = C(n+2,3) = n*(n+1)*(n+2)/6",
+    "wiring": "x' = A000217; y' = ADD(x, y) [start 0]; out = y",
+    "exact": true
+   },
+   {
+    "A": 2620,
+    "name": "Quarter-squares: a(n) = floor(n/2)*ceiling(n/2). Equivalently, a(n) = floor(n^2/",
+    "wiring": "x' = A000217; y' = SUB(x, y) [start 0]; out = y",
+    "exact": true
+   },
+   {
+    "A": 2378,
+    "name": "Oblong (or promic, pronic, or heteromecic) numbers: a(n) = n*(n+1).",
+    "wiring": "x' = A000217; y' = ADD(x, x) [start 0]; out = y",
+    "exact": true
+   },
+   {
+    "A": 330,
+    "name": "Square pyramidal numbers: a(n) = 0^2 + 1^2 + 2^2 + ... + n^2 = n*(n+1)*(2*n+1)/6",
+    "wiring": "x' = A000290; y' = ADD(x, y) [start 0]; out = y",
+    "exact": true
+   }
+  ]
+ },
+ "rows": [
+  {
+   "A": 43,
+   "rank": 1,
+   "name": "Mersenne exponents: primes p such that 2^p - 1 is prime. Then 2^p - 1 is called a Mersenne prime.",
+   "found": false
+  },
+  {
+   "A": 1,
+   "rank": 2,
+   "name": "Number of groups of order n.",
+   "found": false
+  },
+  {
+   "A": 105,
+   "rank": 4,
+   "name": "Number of free polyominoes (or square animals) with n cells.",
+   "found": false
+  },
+  {
+   "A": 45,
+   "rank": 5,
+   "name": "Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1.",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     0,
+     2,
+     3,
+     1
+    ],
+    [
+     0,
+     0,
+     2,
+     0
+    ]
+   ],
+   "wiring": "x' = ADD(x, y) [start 1]; y' = ADD(0, x) [start 0]; out = y",
+   "lag": 0,
+   "uses_units": false,
+   "all_terms_ok": true,
+   "known_terms": 41,
+   "first_wrong": null,
+   "flat": "v0' = ADD(v0, v1) [start 1]; v1' = ADD(0, v0) [start 0]; out = v1",
+   "trace": [
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     8,
+     5
+    ],
+    [
+     13,
+     8
+    ],
+    [
+     21,
+     13
+    ],
+    [
+     34,
+     21
+    ],
+    [
+     55,
+     34
+    ]
+   ]
+  },
+  {
+   "A": 108,
+   "rank": 6,
+   "name": "Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!).",
+   "found": false
+  },
+  {
+   "A": 217,
+   "rank": 7,
+   "name": "Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n.",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     0,
+     1,
+     2,
+     0
+    ],
+    [
+     0,
+     2,
+     3,
+     0
+    ]
+   ],
+   "wiring": "x' = ADD(1, x) [start 0]; y' = ADD(x, y) [start 0]; out = y",
+   "lag": 1,
+   "uses_units": false,
+   "all_terms_ok": true,
+   "known_terms": 54,
+   "first_wrong": null,
+   "flat": "v0' = ADD(1, v0) [start 0]; v1' = ADD(v0, v1) [start 0]; out = v1",
+   "trace": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     10
+    ],
+    [
+     6,
+     15
+    ],
+    [
+     7,
+     21
+    ],
+    [
+     8,
+     28
+    ],
+    [
+     9,
+     36
+    ]
+   ]
+  },
+  {
+   "A": 110,
+   "rank": 8,
+   "name": "Bell or exponential numbers: number of ways to partition a set of n labeled elements.",
+   "found": false
+  },
+  {
+   "A": 41,
+   "rank": 9,
+   "name": "a(n) is the number of partitions of n (the partition numbers).",
+   "found": false
+  },
+  {
+   "A": 984,
+   "rank": 10,
+   "name": "Central binomial coefficients: binomial(2*n,n) = (2*n)!/(n!)^2.",
+   "found": false
+  },
+  {
+   "A": 7318,
+   "rank": 11,
+   "name": "Pascal's triangle read by rows: C(n,k) = binomial(n,k) = n!/(k!*(n-k)!), 0 <= k <= n.",
+   "found": false
+  },
+  {
+   "A": 40,
+   "rank": 12,
+   "name": "The prime numbers.",
+   "found": false
+  },
+  {
+   "A": 142,
+   "rank": 13,
+   "name": "Factorial numbers: n! = 1*2*3*4*...*n (order of symmetric group S_n, number of permutations of n let",
+   "found": false
+  },
+  {
+   "A": 79,
+   "rank": 14,
+   "name": "Powers of 2: a(n) = 2^n.",
+   "found": true,
+   "nodes": 1,
+   "decoded": [
+    [
+     0,
+     2,
+     2,
+     1
+    ]
+   ],
+   "wiring": "x' = ADD(x, x) [start 1]; out = x",
+   "lag": 0,
+   "uses_units": false,
+   "all_terms_ok": true,
+   "known_terms": 35,
+   "first_wrong": null,
+   "flat": "v0' = ADD(v0, v0) [start 1]; out = v0",
+   "trace": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     8
+    ],
+    [
+     16
+    ],
+    [
+     32
+    ],
+    [
+     64
+    ],
+    [
+     128
+    ],
+    [
+     256
+    ],
+    [
+     512
+    ]
+   ]
+  },
+  {
+   "A": 292,
+   "rank": 15,
+   "name": "Tetrahedral (or triangular pyramidal) numbers: a(n) = C(n+2,3) = n*(n+1)*(n+2)/6.",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     41,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     2,
+     3,
+     0
+    ]
+   ],
+   "wiring": "x' = A000217; y' = ADD(x, y) [start 0]; out = y",
+   "lag": 2,
+   "uses_units": true,
+   "all_terms_ok": true,
+   "known_terms": 45,
+   "first_wrong": null,
+   "flat": "v0' = ADD(1, v0) [start 0]; v1' = ADD(v0, v1) [start 0]; v2' = ADD(v1, v2) [start 0]; out = v2",
+   "trace": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     1,
+     0
+    ],
+    [
+     3,
+     3,
+     1
+    ],
+    [
+     4,
+     6,
+     4
+    ],
+    [
+     5,
+     10,
+     10
+    ],
+    [
+     6,
+     15,
+     20
+    ],
+    [
+     7,
+     21,
+     35
+    ],
+    [
+     8,
+     28,
+     56
+    ],
+    [
+     9,
+     36,
+     84
+    ]
+   ]
+  },
+  {
+   "A": 225,
+   "rank": 16,
+   "name": "a(n) = 2^n - 1. (Sometimes called Mersenne numbers, although that name is usually reserved for A0013",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     0,
+     2,
+     2,
+     1
+    ],
+    [
+     0,
+     2,
+     3,
+     0
+    ]
+   ],
+   "wiring": "x' = ADD(x, x) [start 1]; y' = ADD(x, y) [start 0]; out = y",
+   "lag": 0,
+   "uses_units": false,
+   "all_terms_ok": true,
+   "known_terms": 34,
+   "first_wrong": null,
+   "flat": "v0' = ADD(v0, v0) [start 1]; v1' = ADD(v0, v1) [start 0]; out = v1",
+   "trace": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     4,
+     3
+    ],
+    [
+     8,
+     7
+    ],
+    [
+     16,
+     15
+    ],
+    [
+     32,
+     31
+    ],
+    [
+     64,
+     63
+    ],
+    [
+     128,
+     127
+    ],
+    [
+     256,
+     255
+    ],
+    [
+     512,
+     511
+    ]
+   ]
+  },
+  {
+   "A": 32,
+   "rank": 17,
+   "name": "Lucas numbers beginning at 2: L(n) = L(n-1) + L(n-2), L(0) = 2, L(1) = 1.",
+   "found": false
+  },
+  {
+   "A": 129,
+   "rank": 18,
+   "name": "Pell numbers: a(0) = 0, a(1) = 1; for n > 1, a(n) = 2*a(n-1) + a(n-2).",
+   "found": false
+  },
+  {
+   "A": 290,
+   "rank": 19,
+   "name": "The squares: a(n) = n^2.",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     0,
+     1,
+     2,
+     0
+    ],
+    [
+     2,
+     2,
+     2,
+     0
+    ]
+   ],
+   "wiring": "x' = ADD(1, x) [start 0]; y' = MUL(x, x) [start 0]; out = y",
+   "lag": 1,
+   "uses_units": false,
+   "all_terms_ok": true,
+   "known_terms": 51,
+   "first_wrong": null,
+   "flat": "v0' = ADD(1, v0) [start 0]; v1' = MUL(v0, v0) [start 0]; out = v1",
+   "trace": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     16
+    ],
+    [
+     6,
+     25
+    ],
+    [
+     7,
+     36
+    ],
+    [
+     8,
+     49
+    ],
+    [
+     9,
+     64
+    ]
+   ]
+  },
+  {
+   "A": 2620,
+   "rank": 20,
+   "name": "Quarter-squares: a(n) = floor(n/2)*ceiling(n/2). Equivalently, a(n) = floor(n^2/4).",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     41,
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     2,
+     3,
+     0
+    ]
+   ],
+   "wiring": "x' = A000217; y' = SUB(x, y) [start 0]; out = y",
+   "lag": 1,
+   "uses_units": true,
+   "all_terms_ok": true,
+   "known_terms": 58,
+   "first_wrong": null,
+   "flat": "v0' = ADD(1, v0) [start 0]; v1' = ADD(v0, v1) [start 0]; v2' = SUB(v1, v2) [start 0]; out = v2",
+   "trace": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     1,
+     0
+    ],
+    [
+     3,
+     3,
+     1
+    ],
+    [
+     4,
+     6,
+     2
+    ],
+    [
+     5,
+     10,
+     4
+    ],
+    [
+     6,
+     15,
+     6
+    ],
+    [
+     7,
+     21,
+     9
+    ],
+    [
+     8,
+     28,
+     12
+    ],
+    [
+     9,
+     36,
+     16
+    ]
+   ]
+  },
+  {
+   "A": 166,
+   "rank": 21,
+   "name": "Subfactorial or rencontres numbers, or derangements: number of permutations of n elements with no fi",
+   "found": false
+  },
+  {
+   "A": 2378,
+   "rank": 22,
+   "name": "Oblong (or promic, pronic, or heteromecic) numbers: a(n) = n*(n+1).",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     41,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     2,
+     2,
+     0
+    ]
+   ],
+   "wiring": "x' = A000217; y' = ADD(x, x) [start 0]; out = y",
+   "lag": 2,
+   "uses_units": true,
+   "all_terms_ok": true,
+   "known_terms": 51,
+   "first_wrong": null,
+   "flat": "v0' = ADD(1, v0) [start 0]; v1' = ADD(v0, v1) [start 0]; v2' = ADD(v1, v1) [start 0]; out = v2",
+   "trace": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     1,
+     0
+    ],
+    [
+     3,
+     3,
+     2
+    ],
+    [
+     4,
+     6,
+     6
+    ],
+    [
+     5,
+     10,
+     12
+    ],
+    [
+     6,
+     15,
+     20
+    ],
+    [
+     7,
+     21,
+     30
+    ],
+    [
+     8,
+     28,
+     42
+    ],
+    [
+     9,
+     36,
+     56
+    ]
+   ]
+  },
+  {
+   "A": 1045,
+   "rank": 23,
+   "name": "Jacobsthal sequence (or Jacobsthal numbers): a(n) = a(n-1) + 2*a(n-2), with a(0) = 0, a(1) = 1; also",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     0,
+     3,
+     3,
+     1
+    ],
+    [
+     0,
+     2,
+     3,
+     0
+    ]
+   ],
+   "wiring": "x' = ADD(y, y) [start 1]; y' = ADD(x, y) [start 0]; out = y",
+   "lag": 0,
+   "uses_units": false,
+   "all_terms_ok": true,
+   "known_terms": 36,
+   "first_wrong": null,
+   "flat": "v0' = ADD(v1, v1) [start 1]; v1' = ADD(v0, v1) [start 0]; out = v1",
+   "trace": [
+    [
+     1,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     6,
+     5
+    ],
+    [
+     10,
+     11
+    ],
+    [
+     22,
+     21
+    ],
+    [
+     42,
+     43
+    ],
+    [
+     86,
+     85
+    ],
+    [
+     170,
+     171
+    ]
+   ]
+  },
+  {
+   "A": 1006,
+   "rank": 24,
+   "name": "Motzkin numbers: number of ways of drawing any number of nonintersecting chords joining n (labeled) ",
+   "found": false
+  },
+  {
+   "A": 111,
+   "rank": 26,
+   "name": "Euler or up/down numbers: e.g.f. sec(x) + tan(x). Also for n >= 2, half the number of alternating pe",
+   "found": false
+  },
+  {
+   "A": 10,
+   "rank": 27,
+   "name": "Euler totient function phi(n): count numbers <= n and prime to n.",
+   "found": false
+  },
+  {
+   "A": 1622,
+   "rank": 28,
+   "name": "Decimal expansion of golden ratio phi (or tau) = (1 + sqrt(5))/2.",
+   "found": false
+  },
+  {
+   "A": 8277,
+   "rank": 29,
+   "name": "Triangle of Stirling numbers of the second kind, S2(n,k), n >= 1, 1 <= k <= n.",
+   "found": false
+  },
+  {
+   "A": 203,
+   "rank": 31,
+   "name": "a(n) = sigma(n), the sum of the divisors of n. Also called sigma_1(n).",
+   "found": false
+  },
+  {
+   "A": 330,
+   "rank": 32,
+   "name": "Square pyramidal numbers: a(n) = 0^2 + 1^2 + 2^2 + ... + n^2 = n*(n+1)*(2*n+1)/6.",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     53,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     2,
+     3,
+     0
+    ]
+   ],
+   "wiring": "x' = A000290; y' = ADD(x, y) [start 0]; out = y",
+   "lag": 2,
+   "uses_units": true,
+   "all_terms_ok": true,
+   "known_terms": 45,
+   "first_wrong": null,
+   "flat": "v0' = ADD(1, v0) [start 0]; v1' = MUL(v0, v0) [start 0]; v2' = ADD(v1, v2) [start 0]; out = v2",
+   "trace": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     1,
+     0
+    ],
+    [
+     3,
+     4,
+     1
+    ],
+    [
+     4,
+     9,
+     5
+    ],
+    [
+     5,
+     16,
+     14
+    ],
+    [
+     6,
+     25,
+     30
+    ],
+    [
+     7,
+     36,
+     55
+    ],
+    [
+     8,
+     49,
+     91
+    ],
+    [
+     9,
+     64,
+     140
+    ]
+   ]
+  },
+  {
+   "A": 124,
+   "rank": 33,
+   "name": "Central polygonal numbers (the Lazy Caterer's sequence): n(n+1)/2 + 1; or, maximal number of pieces ",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     0,
+     1,
+     2,
+     0
+    ],
+    [
+     0,
+     2,
+     3,
+     1
+    ]
+   ],
+   "wiring": "x' = ADD(1, x) [start 0]; y' = ADD(x, y) [start 1]; out = y",
+   "lag": 1,
+   "uses_units": false,
+   "all_terms_ok": true,
+   "known_terms": 53,
+   "first_wrong": null,
+   "flat": "v0' = ADD(1, v0) [start 0]; v1' = ADD(v0, v1) [start 1]; out = v1",
+   "trace": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     11
+    ],
+    [
+     6,
+     16
+    ],
+    [
+     7,
+     22
+    ],
+    [
+     8,
+     29
+    ],
+    [
+     9,
+     37
+    ]
+   ]
+  },
+  {
+   "A": 5,
+   "rank": 34,
+   "name": "d(n) (also called tau(n) or sigma_0(n)), the number of divisors of n.",
+   "found": false
+  },
+  {
+   "A": 8292,
+   "rank": 35,
+   "name": "Triangle of Eulerian numbers T(n,k) (n >= 1, 1 <= k <= n) read by rows.",
+   "found": false
+  },
+  {
+   "A": 5408,
+   "rank": 36,
+   "name": "The odd numbers: a(n) = 2*n + 1.",
+   "found": true,
+   "nodes": 2,
+   "decoded": [
+    [
+     0,
+     1,
+     1,
+     1
+    ],
+    [
+     0,
+     2,
+     3,
+     0
+    ]
+   ],
+   "wiring": "x' = ADD(1, 1) [start 1]; y' = ADD(x, y) [start 0]; out = y",
+   "lag": 1,
+   "uses_units": false,
+   "all_terms_ok": true,
+   "known_terms": 66,
+   "first_wrong": null,
+   "flat": "v0' = ADD(1, 1) [start 1]; v1' = ADD(v0, v1) [start 0]; out = v1",
+   "trace": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     2,
+     11
+    ],
+    [
+     2,
+     13
+    ],
+    [
+     2,
+     15
+    ],
+    [
+     2,
+     17
+    ]
+   ]
+  },
+  {
+   "A": 244,
+   "rank": 37,
+   "name": "Powers of 3: a(n) = 3^n.",
+   "found": false
+  },
+  {
+   "A": 578,
+   "rank": 38,
+   "name": "The cubes: a(n) = n^3.",
+   "found": false
+  },
+  {
+   "A": 120,
+   "rank": 39,
+   "name": "Ones-counting sequence: number of 1's in binary expansion of n (or the binary weight of n).",
+   "found": false
+  },
+  {
+   "A": 1906,
+   "rank": 40,
+   "name": "F(2n) = bisection of Fibonacci sequence: a(n) = 3*a(n-1) - a(n-2).",
+   "found": false
+  },
+  {
+   "A": 1700,
+   "rank": 41,
+   "name": "a(n) = binomial(2*n+1, n+1): number of ways to put n+1 indistinguishable balls into n+1 distinguisha",
+   "found": false
+  },
+  {
+   "A": 1519,
+   "rank": 42,
+   "name": "a(n) = 3*a(n-1) - a(n-2) for n >= 2, with a(0) = a(1) = 1.",
+   "found": false
+  },
+  {
+   "A": 85,
+   "rank": 43,
+   "name": "Number of self-inverse permutations on n letters, also known as involutions; number of standard Youn",
+   "found": false
+  }
+ ]
+}
