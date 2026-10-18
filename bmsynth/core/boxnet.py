@@ -1,4 +1,4 @@
-"""Ports and black boxes, on top of the cell net in net.py.
+"""Ports and black boxes, on top of the lane net in lanes.py.
 
     port   a wire nothing in the net drives; it holds its value unless a black box writes it
            (or it is loaded once from outside before the run, e.g. a target)
@@ -8,7 +8,7 @@ wire. On a tick where the call wire is 1 in a lane, the box reads its inputs fro
 and its outputs appear one tick later, like a cell. What happens inside the box (combinational
 or with its own state) is invisible to the net.
 
-API (added to net.py's):
+API (added to lanes.py's):
     wires nothing drives   add_port(), remove_port(), load()
     black boxes            place_box(), remove_box(), close()
 
@@ -17,7 +17,7 @@ path) and asks its factory NAME(**params) for the box. Box functions are only ev
 """
 import importlib
 import numpy as np
-from net import Net, ALL, _read
+from lanes import LaneNet, ALL, _read
 
 
 class _Box:
@@ -25,7 +25,7 @@ class _Box:
         self.box, self.call, self.ins, self.outs = box, call, [list(w) for w in ins], [list(w) for w in outs]
 
 
-class BoxNet(Net):
+class BoxNet(LaneNet):
     def __init__(self, lanes=1):
         super().__init__(lanes)
         self.boxes = {}

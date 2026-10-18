@@ -2,7 +2,7 @@
 
 A net is a set of nodes. Node 0 is constant 0, node 1 is constant 1. Every other node is a
     cell   y(t+1) = s(t)[z] XNOR OR_k ( s(t)[a_k] AND s(t)[b_k] )
-Each node holds one bit per lane; lanes are independent copies of the same net.
+Each node holds one bit.
 
 API (nothing else is offered):
     run                    state(), run(), read()
@@ -10,13 +10,12 @@ API (nothing else is offered):
     connections            connect(), disconnect(), set_z()
     copy / paste           copy() -> Circuit, paste()
 
-Ports and black boxes are in boxnet.py.
+Lanes are in lanes.py; ports and black boxes in boxnet.py.
 """
 import numpy as np
 from tick import step_cells
 
 ZERO, ONE = 0, 1
-ALL = np.uint64(0xFFFFFFFFFFFFFFFF)
 
 
 class Circuit:
@@ -27,9 +26,7 @@ class Circuit:
 
 
 class Net:
-    def __init__(self, lanes=1):
-        self.lanes = lanes
-        self.words = max(1, (lanes + 63) // 64)
+    def __init__(self):
         self.kind = {ZERO: 'const', ONE: 'const'}
         self.cells = {}                      # id -> [pairs list, z, init]
         self.names = {}
@@ -122,15 +119,16 @@ class Net:
         return self._compiled
 
     def state(self):
-        s = np.zeros((self._next, self.words), np.uint64)
-        s[ONE] = ALL
+        """One bit per node, at tick 0."""
+        s = np.zeros(self._next, np.uint8)
+        s[ONE] = 1
         for i, (_, _, init) in self.cells.items():
-            if init: s[i] = ALL
+            if init: s[i] = 1
         return s
 
     def read(self, s, word):
-        """One integer per lane from a word of nodes (observation)."""
-        return _read(s, word, self.lanes)
+        """An integer from a word of nodes, bit 0 first (observation)."""
+        return sum(int(s[n]) << k for k, n in enumerate(word))
 
     def _tick(self, s):
         """One tick of every cell."""
@@ -138,34 +136,16 @@ class Net:
         step_cells(s, new, *self._compile())
         return new
 
+    def _is_one(self, s, node):
+        return s[node] == 1
+
     def run(self, s, ticks, stop=None, every=1):
-        """Tick up to `ticks` times. If `stop` (a node) is given, end early once it is 1 in every lane."""
-        if s.shape[0] < self._next:
-            s = np.concatenate([s, np.zeros((self._next - s.shape[0], self.words), np.uint64)])
-        lanes_mask = _lane_mask(self.lanes, self.words)
+        """Tick up to `ticks` times. If `stop` (a node) is given, end early once it is 1."""
+        if s.shape[0] < self._next:                 # nodes added since state(): they start at 0
+            s = np.concatenate([s, np.zeros((self._next - s.shape[0],) + s.shape[1:], s.dtype)])
         for t in range(ticks):
             s = self._tick(s)
-            if stop is not None and (t + 1) % every == 0 and ((s[stop] & lanes_mask) == lanes_mask).all():
+            if stop is not None and (t + 1) % every == 0 and self._is_one(s, stop):
                 return s, t + 1
         return s, ticks
 
-
-# ------------------------------------------------------------------- bit helpers
-def _lane_mask(lanes, words):
-    m = np.zeros(words, np.uint64)
-    for w in range(words):
-        n = min(64, lanes - 64 * w)
-        m[w] = ALL if n == 64 else np.uint64((1 << n) - 1)
-    return m
-
-
-def _read(s, word, lanes):
-    """One integer per lane (int64 up to 62 bits, Python ints above that)."""
-    if not len(word): return np.zeros(lanes, np.int64)
-    bits = np.unpackbits(s[list(word)].view(np.uint8), axis=1, bitorder='little')[:, :lanes]
-    if len(word) <= 62:
-        return (np.int64(1) << np.arange(len(word), dtype=np.int64)) @ bits.astype(np.int64)
-    by = np.ascontiguousarray(np.packbits(bits, axis=0, bitorder='little').T)      # (lanes, bytes)
-    out = np.empty(lanes, dtype=object)
-    for i in range(lanes): out[i] = int.from_bytes(by[i].tobytes(), 'little')
-    return out
