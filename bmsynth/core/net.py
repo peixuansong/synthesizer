@@ -26,6 +26,9 @@ class Net:
             self._tick()
 
     def _tick(self):
-        """One tick: every cell's next bit from the current bits, then all written together."""
+        """One tick: every cell's next bit from the current bits, then all written together;
+        then every cell whose bit just turned from 0 to 1 makes its edit (triangle connect, cell.py)."""
         new = [c.next() for c in self.cells]
+        rose = [c for c, y in zip(self.cells, new) if y and not c.y]
         for c, y in zip(self.cells, new): c.y = y
+        for c in rose: c.edit()
