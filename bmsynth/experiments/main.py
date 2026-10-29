@@ -1,78 +1,64 @@
-"""The main net: a target net from core/test_demo.py and a grid searcher (gridsearcher.py), in ONE net.
+"""The main net: the small seed, then net(). Nothing else runs.
 
-The searcher tries candidate wirings one after another until one gives the same outputs as the target on every
-input pattern. Run:  python3 experiments/main.py [TARGET] [SECONDS]     (TARGET: AND OR NOR NAND XOR; default XOR)
-net() runs forever and has no way to stop or report, so this file steps the net with net._tick() and watches
-the `found` cell itself (see the note in the thread: this is an architectural gap in core/net.py).
+The seed (notes/targets-1-seed-and-ops.md):
+    fixed cells    0 = always 0, 1 = T, 2 = TEST, rows A and B, GO: copies of what the target box drives
+    candidate      one cell y with 21 switch bits (core/maker.py NAMES); every input reaches it 3 ticks late
+    counter        fewest.py: sets of 0..3 switch bits, fewest first; `go` steps it, `clr` restarts it
+    checker        a latch that is set when y differs from the wanted bit at a strobe; passed = the try ended
+                   (dec) with no mismatch
+    maker          on passed, makes the found cell or row from the switch bits, wired to the real sources the box
+                   names; on the box's act pulse, wires the box's probe inputs to a cell or row, or copies a block
+    target box     targets/target_box.py: plays every target in turn (a black box, inside the net)
+The net only grows by what it finds. Run:  python3 experiments/main.py   (it may never end; watch.py looks)
 """
-import sys, time
 import _setup
-from net import Net
+from cell import Cell
+from fastnet import FastNet
+from maker import Maker, NAMES
+from fewest import fewest
+from target_box import target_box, AW
+from machine_targets import TARGETS, W, samples
+from mul_div_targets import TARGETS_C
+from cpu_targets import TARGETS_D
+from cpu_control import TARGETS_E
+from cpu_runs import TARGETS_K
 import gridsearcher as G
 
-H = 10                                                       # ticks per hold
+
+def wire(net, y, bits, g):
+    """Cell y reads g (4 sources and its own value, each already one tick late) through the switch bits."""
+    srcs = [G.delay(net, a) for a in g] + [G.cell(net, terms=[(a, b)]) for i, a in enumerate(g) for b in g[i + 1:]]
+    zb = bits[16:21]
+    nz = G.cell(net, z=0, terms=[bits[0]] + zb)                               # no z source and not nor
+    y.z = G.cell(net, terms=[nz] + list(zip(zb, g)))
+    for b, s in zip(bits[1:16], srcs): (b, s) >> y
+    net += y
 
 
-def target(net, name, a, b):
-    """The gate nets of test_demo.gates(), built on inputs a, b. Returns the output cell."""
+def seed():
+    net, box = FastNet(), target_box(TARGETS + TARGETS_C + TARGETS_D + TARGETS_E + TARGETS_K, W, samples)
+    o, i = box.o, box.i
     c = lambda **k: G.cell(net, **k)
-    if name == 'AND': return c(terms=[(a, b)])
-    if name == 'OR': return c(terms=[a, b])
-    if name == 'NOR': return c(z=0, terms=[a, b])
-    if name == 'NAND': return c(z=0, terms=[(a, b)])
-    na, nb = G.NOT(net, a), G.NOT(net, b)                    # XOR: (a AND NOT b) OR (NOT a AND b)
-    return c(terms=[(a, nb), (na, b)])
-
-
-TRUTH = dict(AND=lambda a, b: a & b, OR=lambda a, b: a | b, NOR=lambda a, b: 1 - (a | b),
-             NAND=lambda a, b: 1 - (a & b), XOR=lambda a, b: a ^ b)
-
-
-def describe(bits):
-    """The candidate a config spells out (observation only)."""
-    v = [b.y for b in bits]
-    def one(cfg, names):
-        used = [n for n, on in zip(names, cfg[1:]) if on]
-        return f"{'OR' if cfg[0] else 'NOR'}({', '.join(used) or '-'})"
-    h0, h1, out = v[0:4], v[4:8], v[8:12]
-    return f"h0 = {one(h0, ['a', 'b', 'a.b'])};  h1 = {one(h1, ['a', 'b', 'a.b'])};  y = {one(out, ['h0', 'h1', 'h0.h1'])}"
-
-
-def check(bits, name):
-    """Independent check: a fresh small net with the found config held fixed, probed on all 4 inputs."""
-    for a_bit in (0, 1):
-        for b_bit in (0, 1):
-            net = Net()
-            a, b = G.cell(net, y=a_bit), G.cell(net, y=b_bit)
-            a >> a; b >> b
-            cfg = [G.cell(net, y=k.y) for k in bits]
-            for k in cfg: k >> k
-            y = G.candidate(net, [a, b], cfg)
-            for _ in range(6): net._tick()
-            if y.y != TRUTH[name](a_bit, b_bit): return False
-    return True
-
-
-def main(name='XOR', seconds=150):
-    net = Net()
-    stim = G.stimulus(net, 2, H)
-    a, b = stim[0]
-    net.inputs += [a, b]
-    t_out = target(net, name, a, b)
-    found, bits, out = G.searcher(net, stim, t_out)
-    net.outputs += [found]
-    cycle = 5 * H
-    print(f'main net: {len(net.cells)} cells; target {name}; {1 << len(bits)} candidates, {cycle} ticks each')
-    t0, ticks = time.time(), 0
-    while not found.y and time.time() - t0 < seconds:
-        net._tick(); ticks += 1
-    sec = time.time() - t0
-    count = sum(b.y << k for k, b in enumerate(bits))
-    if not found.y:
-        print(f'not found after {ticks:,} ticks, {sec:.0f} s (at candidate {count})'); return
-    print(f'found at tick {ticks:,} ({sec:.1f} s), candidate {count}:  {describe(bits)}')
-    print('independent check on all 4 inputs:', 'correct' if check(bits, name) else 'WRONG')
+    net += Cell()                                                             # place 0: always 0
+    for name in ('T', 'TEST', 'A', 'B', 'GO'):
+        for x in o[name]: G.delay(net, x)                                     # places 1, 2, 3.., 3+W.., 3+2W
+    net.nets.append(box)
+    mism = Cell(); net += mism                                                # a mismatch seen in this try
+    dec, ndec = o['dec'][0], o['ndec'][0]
+    passed = c(z=0, terms=[ndec, mism])                                       # dec AND no mismatch
+    bits, done = fewest(net, c(terms=[(dec, mism)]), o['clr'][0], len(NAMES))
+    y = Cell()
+    wire(net, y, bits, [G.delay(net, x) for x in o['x']] + [c(terms=[(y, o['nrst'][0])])])
+    neq = G.NOT(net, c(z=y, terms=[o['want'][0]]))                            # y differs from the wanted bit
+    (o['strobe'][0], neq) >> mism; (mism, ndec) >> mism
+    addr = [c() for _ in range(AW)]
+    for a, b in zip(addr, i['addr']): a >> a; a >> b                          # holds the maker's last address
+    srcs = [(s[:AW], s[AW:AW + 2], s[AW + 2:AW + 8]) for s in (o['src'][k * 28:(k + 1) * 28] for k in range(4))]
+    mk = Maker(net, o['op'], bits, srcs, addr, i['probe'], W)
+    passed >> mk; o['act'][0] >> mk; net += mk
+    passed >> i['passed'][0]; done >> i['fdone'][0]
+    return net
 
 
 if __name__ == '__main__':
-    main(*(sys.argv[1:2] or ['XOR']), *[float(s) for s in sys.argv[2:3]])
+    seed()()

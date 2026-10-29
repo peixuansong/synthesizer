@@ -26,18 +26,18 @@ def copy(net, ids, ends=()):
             if n not in (ZERO, ONE) and n not in ids and n not in outside: outside.append(n)
     part = Net()
     e = [part.add_cell() for _ in outside]
-    new = [part.add_cell(init=net.cells[g][2], name=net.names.get(g)) for g in ids]
+    new = [part.add_cell(init=net.cells[g][2]) for g in ids]
     _wire(net, ids, part, new, {**dict(zip(outside, e)), **dict(zip(ids, new))})
     return Part(part, e, outside)
 
 
-def paste(net, part, ends, prefix=''):
+def paste(net, part, ends):
     """New cells in `net` for every cell of the part that is not an end; a read of end j becomes a read of node
     ends[j]. Returns the new cells' ids, in the part's order."""
     assert len(ends) == len(part.ends)
     src = part.net
     body = [i for i in sorted(src.cells) if i not in part.ends]
-    new = [net.add_cell(init=src.cells[i][2], name=prefix + src.names[i] if i in src.names else None) for i in body]
+    new = [net.add_cell(init=src.cells[i][2]) for i in body]
     _wire(src, body, net, new, {**dict(zip(part.ends, ends)), **dict(zip(body, new))})
     return new
 

@@ -40,18 +40,21 @@ class CompiledNet(Net):
     def _empty(self, rows):
         return np.zeros(rows, np.uint8)
 
-    def state(self):
-        return self._grow(self._empty(0))
+    def __init__(self):
+        super().__init__()
+        self.s = self._empty(0)
 
-    def _grow(self, s):
-        if s.shape[0] >= self._next: return s
-        add = self._empty(self._next - s.shape[0])
-        for k, i in enumerate(range(s.shape[0], self._next)):
-            if self._start(i): add[k] = self._one
-        return np.concatenate([s, add])
+    def _new(self, bit=0):
+        row = self._empty(1)
+        if bit: row[0] = self._one
+        self.s = np.concatenate([self.s, row])
+        return len(self.s) - 1
 
-    def read(self, s, word):
-        return sum(int(s[n]) << k for k, n in enumerate(word))
+    def _join(self, s, extra):
+        return np.concatenate([s, extra])
+
+    def read(self, word):
+        return sum(int(self.s[n]) << k for k, n in enumerate(word))
 
     def _tick(self, s):
         new = s.copy()
