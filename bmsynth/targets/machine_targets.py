@@ -1,4 +1,4 @@
-"""Targets for the program machine, part 2 (clock, constants) and part 3 (word ops); see notes/oeis-dep-machine.md.
+"""Targets for the program machine, parts A, B (clock, constants, word ops); see notes/machine-built.md.
 Only descriptions: what each new cell reads (its sources) and what it must output. No nets here.
 
 Words:
