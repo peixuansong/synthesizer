@@ -1,0 +1,2001 @@
+anumber,rank,has_program,length,loop,calls,ops_outside_basic,name
+A000043,1,no,,,,,Mersenne exponents: primes p such that 2^p - 1 is prime. Then 2^p - 1 
+A000001,2,no,,,,,Number of groups of order n.
+A000798,3,no,,,,,Number of different quasi-orders (or topologies  or transitive digraph
+A000105,4,no,,,,,Number of free polyominoes (or square animals) with n cells.
+A000045,5,yes,30,1,0,ban log neq pow,Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1.
+A000108,6,yes,5,0,0,bin,Catalan numbers: C(n) = binomial(2n n)/(n+1) = (2n)!/(n!(n+1)!).
+A000217,7,yes,2,0,0,bin,Triangular numbers: a(n) = binomial(n+1 2) = n*(n+1)/2 = 0 + 1 + 2 + .
+A000110,8,yes,34,1,0,bin fac pow,Bell or exponential numbers: number of ways to partition a set of n la
+A000041,9,yes,28,1,1,trn,a(n) is the number of partitions of n (the partition numbers).
+A000984,10,yes,3,0,0,bin,Central binomial coefficients: binomial(2*n n) = (2*n)!/(n!)^2.
+A007318,11,yes,12,0,0,bin nrt,Pascal's triangle read by rows: C(n k) = binomial(n k) = n!/(k!*(n-k)!
+A000040,12,yes,34,1,0,equ neq nrt pow,The prime numbers.
+A000142,13,yes,2,0,0,fac,Factorial numbers: n! = 1*2*3*4*...*n (order of symmetric group S_n  n
+A000079,14,yes,3,0,0,pow,Powers of 2: a(n) = 2^n.
+A000292,15,yes,2,0,0,bin,Tetrahedral (or triangular pyramidal) numbers: a(n) = C(n+2 3) = n*(n+
+A000225,16,yes,4,0,0,pow,a(n) = 2^n - 1. (Sometimes called Mersenne numbers  although that name
+A000032,17,yes,32,1,0,ban log neq pow,Lucas numbers beginning at 2: L(n) = L(n-1) + L(n-2)  L(0) = 2  L(1) =
+A000129,18,yes,9,1,0,rol,Pell numbers: a(0) = 0  a(1) = 1; for n > 1  a(n) = 2*a(n-1) + a(n-2).
+A000290,19,yes,1,0,0,pow,The squares: a(n) = n^2.
+A002620,20,yes,2,0,0,pow,Quarter-squares: a(n) = floor(n/2)*ceiling(n/2). Equivalently  a(n) = 
+A000166,21,yes,9,1,0,,Subfactorial or rencontres numbers  or derangements: number of permuta
+A002378,22,yes,1,0,0,fac,Oblong (or promic  pronic  or heteromecic) numbers: a(n) = n*(n+1).
+A001045,23,yes,5,0,0,pow,Jacobsthal sequence (or Jacobsthal numbers): a(n) = a(n-1) + 2*a(n-2) 
+A001006,24,yes,14,1,0,,Motzkin numbers: number of ways of drawing any number of nonintersecti
+A001147,25,yes,8,1,0,,Double factorial of odd numbers: a(n) = (2*n-1)!! = 1*3*5*...*(2*n-1).
+A000111,26,yes,9,1,3,gcd pow,Euler or up/down numbers: e.g.f. sec(x) + tan(x). Also for n >= 2  hal
+A000010,27,yes,26,1,0,dif dir pow,Euler totient function phi(n): count numbers <= n and prime to n.
+A001622,28,yes,10,0,0,nrt pow,Decimal expansion of golden ratio phi (or tau) = (1 + sqrt(5))/2.
+A008277,29,yes,27,1,0,bin fac nrt pow,Triangle of Stirling numbers of the second kind  S2(n k)  n >= 1  1 <=
+A000670,30,yes,16,1,0,bin pow,Fubini numbers: number of preferential arrangements of n labeled eleme
+A000203,31,yes,30,1,0,bxo dir equ nrt pow,a(n) = sigma(n)  the sum of the divisors of n. Also called sigma_1(n).
+A000330,32,yes,3,0,0,bin,Square pyramidal numbers: a(n) = 0^2 + 1^2 + 2^2 + ... + n^2 = n*(n+1)
+A000124,33,yes,3,0,0,bin,Central polygonal numbers (the Lazy Caterer's sequence): n(n+1)/2 + 1;
+A000005,34,yes,22,1,0,dif,d(n) (also called tau(n) or sigma_0(n))  the number of divisors of n.
+A008292,35,yes,29,1,0,bin nrt pow,Triangle of Eulerian numbers T(n k) (n >= 1  1 <= k <= n) read by rows
+A005408,36,yes,2,0,0,,The odd numbers: a(n) = 2*n + 1.
+A000244,37,yes,3,0,0,pow,Powers of 3: a(n) = 3^n.
+A000578,38,yes,1,0,0,pow,The cubes: a(n) = n^3.
+A000120,39,yes,1,0,0,dgs,Ones-counting sequence: number of 1's in binary expansion of n (or the
+A001906,40,yes,8,1,0,,F(2n) = bisection of Fibonacci sequence: a(n) = 3*a(n-1) - a(n-2).
+A001700,41,yes,4,0,0,bin,a(n) = binomial(2*n+1  n+1): number of ways to put n+1 indistinguishab
+A001519,42,yes,8,1,0,,a(n) = 3*a(n-1) - a(n-2) for n >= 2  with a(0) = a(1) = 1.
+A000085,43,yes,10,1,0,trn,Number of self-inverse permutations on n letters  also known as involu
+A001764,44,yes,6,0,0,bin,a(n) = binomial(3*n n)/(2*n+1) (enumerates ternary trees and also nonc
+A001405,45,yes,3,0,0,bin,a(n) = binomial(n  floor(n/2)).
+A000112,46,no,,,,,Number of partially ordered sets ('posets') with n unlabeled elements.
+A000182,47,yes,20,1,0,bin gcd pow,Tangent (or 'Zag') numbers: e.g.f. tan(x)  also (up to signs) e.g.f. t
+A000364,48,yes,2,0,1,,Euler (or secant or 'Zig') numbers: e.g.f. (even powers only) sec(x) =
+A000796,49,yes,20,1,0,pow,Decimal expansion of Pi (or digits of Pi).
+A001333,50,yes,13,1,0,,Pell-Lucas numbers: numerators of continued fraction convergents to sq
+A001511,51,yes,2,0,0,lex,The ruler function: exponent of the highest power of 2 dividing 2n. Eq
+A000720,52,yes,9,1,1,,pi(n)  the number of primes <= n. Sometimes called PrimePi(n) to disti
+A005117,53,yes,18,1,1,pow,Squarefree numbers: numbers that are not divisible by a square greater
+A000009,54,yes,27,1,1,trn,Expansion of Product_{m >= 1} (1 + x^m); number of partitions of n int
+A000326,55,yes,3,0,0,bin,Pentagonal numbers: a(n) = n*(3*n-1)/2.
+A008683,56,yes,41,1,0,dif,Möbius (or Moebius) function mu(n). mu(1) = 1; mu(n) = (-1)^k if n is 
+A000302,57,yes,3,0,0,pow,Powers of 4: a(n) = 4^n.
+A000396,58,no,,,,,Perfect numbers k: k is equal to the sum of the proper divisors of k.
+A004526,59,yes,1,0,0,,Nonnegative integers repeated  floor(n/2).
+A000081,60,yes,36,1,0,equ,Number of unlabeled rooted trees with n nodes (or connected functions 
+A001003,61,yes,18,1,0,,Schroeder's second problem (generalized parentheses); also called supe
+A001113,62,yes,21,1,0,pow,Decimal expansion of e.
+A002487,63,yes,10,1,0,dif,Stern's diatomic series (or Stern-Brocot sequence): a(0) = 0  a(1) = 1
+A008275,64,yes,24,1,2,,Triangle read by rows of Stirling numbers of first kind  s(n k)  n >= 
+A000055,65,yes,58,1,0,bin equ geq,Number of trees with n unlabeled nodes.
+A000088,66,no,,,,,Number of simple graphs on n unlabeled nodes.
+A006318,67,yes,21,1,0,bin trn,Large Schröder numbers (or large Schroeder numbers  or big Schroeder n
+A002110,68,yes,17,1,0,gcd neq,Primorial numbers (first definition): product of first n primes. Somet
+A002426,69,yes,13,1,0,,Central trinomial coefficients: largest coefficient of (1 + x + x^2)^n
+A000594,70,yes,32,1,1,bin trn,Ramanujan's tau function (or Ramanujan numbers  or tau numbers).
+A000169,71,yes,3,0,0,pow,Number of labeled rooted trees with n nodes: n^(n-1).
+A000272,72,yes,3,0,0,pow trn,Number of trees on n labeled nodes: n^(n-2) with a(0)=1.
+A000058,73,yes,7,1,0,fac,Sylvester's sequence: a(n+1) = a(n)^2 - a(n) + 1  with a(0) = 2.
+A000312,74,yes,1,0,0,pow,a(n) = n^n; number of labeled mappings from n points to themselves (en
+A005843,75,yes,1,0,0,,The nonnegative even numbers: a(n) = 2n.
+A000204,76,yes,32,1,0,ban log neq pow,Lucas numbers (beginning with 1): L(n) = L(n-1) + L(n-2) with L(1) = 1
+A000219,77,yes,28,1,1,trn,Number of plane partitions (or planar partitions) of n.
+A002275,78,yes,4,0,0,pow,Repunits: (10^n - 1)/9. Often denoted by R_n.
+A003418,79,yes,9,1,0,gcd,Least common multiple (or LCM) of {1  2  ...  n} for n >= 1  a(0) = 1.
+A000311,80,no,,,,,Schroeder's fourth problem; also series-reduced rooted trees with n la
+A001221,81,yes,18,1,0,dif,Number of distinct primes dividing n (also called omega(n)).
+A001227,82,yes,2,0,1,dir,Number of odd divisors of n.
+A000262,83,yes,10,1,0,,Number of 'sets of lists': number of partitions of {1 ... n} into any 
+A000593,84,yes,32,1,0,bxo dir equ nrt pow,Sum of odd divisors of n.
+A001615,85,yes,10,0,1,bin pow,Dedekind psi function: n * Product_{p|n  p prime} (1 + 1/p).
+A001037,86,yes,11,1,1,equ,Number of degree-n irreducible polynomials over GF(2); number of n-bea
+A000109,87,no,,,,,Number of simplicial polyhedra with n vertices; simple planar graphs w
+A000961,88,yes,8,1,1,,Powers of primes. Alternatively  1 and the prime powers (p^k  p prime 
+A001190,89,no,,,,,Wedderburn-Etherington numbers: unlabeled binary rooted trees (every n
+A001481,90,yes,18,1,1,equ pow,Numbers that are the sum of 2 squares.
+A000123,91,yes,12,1,0,rol,Number of binary partitions: number of partitions of 2n into powers of
+A002808,92,yes,14,1,1,,The composite numbers: numbers n of the form x*y for x > 1 and y > 1.
+A000583,93,yes,1,0,0,pow,Fourth powers: a(n) = n^4.
+A000035,94,yes,1,0,0,,Period 2: repeat [0  1]; a(n) = n mod 2; parity of n.
+A001969,95,yes,6,0,0,dgs,Evil numbers: nonnegative integers with an even number of 1's in their
+A004018,96,yes,24,1,0,dir equ nrt pow,Theta series of square lattice (or number of ways of writing n as a su
+A000069,97,yes,7,0,0,dgs gcd,Odious numbers: numbers with an odd number of 1's in their binary expa
+A001222,98,yes,22,1,0,dif,Number of prime divisors of n counted with multiplicity (also called b
+A000031,99,yes,17,1,0,gcd pow,Number of n-bead necklaces with 2 colors when turning over is not allo
+A000602,100,no,,,,,Number of n-node unrooted quartic trees; number of n-carbon alkanes C(
+A001065,101,yes,41,1,0,bxo dir equ nrt pow,Sum of proper divisors (or aliquot parts) of n: sum of divisors of n t
+A001349,102,no,,,,,Number of simple connected graphs on n unlabeled nodes.
+A001358,103,yes,22,1,2,equ pow,Semiprimes (or biprimes): products of two primes.
+A002113,104,yes,32,1,0,equ geq log pow,Palindromes in base 10.
+A002654,105,yes,21,1,0,dir equ nrt pow,Number of ways of writing n as a sum of at most two nonzero squares  w
+A003415,106,yes,19,1,0,neq,a(n) = n' = arithmetic derivative of n: a(0) = a(1) = 0  a(prime) = 1 
+A000521,107,yes,30,1,2,,Coefficients of modular function j as power series in q = e^(2 Pi i t)
+A001157,108,yes,25,1,0,dif equ pow,a(n) = sigma_2(n): sum of squares of divisors of n.
+A000048,109,yes,5,0,2,,Number of n-bead necklaces with beads of 2 colors and primitive period
+A006530,110,yes,13,1,0,dif,Gpf(n): greatest prime dividing n  for n >= 2; a(1)=1.
+A005101,111,yes,35,1,1,equ pow,Abundant numbers (sum of divisors of m exceeds 2m).
+A000002,112,yes,10,1,0,gcd,Kolakoski sequence: a(n) is length of n-th run; a(1) = 1; sequence con
+A002530,113,yes,10,1,0,,a(n) = 4*a(n-2) - a(n-4) for n > 1  a(n) = n for n = 0  1.
+A006882,114,yes,6,1,0,,Double factorials n!!: a(n) = n*a(n-2) for n > 1  a(0) = a(1) = 1.
+A000793,115,no,,,,,Landau's function g(n): largest order of permutation of n elements. Eq
+A005130,116,yes,22,1,0,bin,Robbins numbers: a(n) = Product_{k=0..n-1} (3k+1)!/(n+k)!; also the nu
+A001462,117,yes,28,1,0,geq,Golomb's sequence: a(n) is the number of times n occurs in the sequenc
+A003136,118,yes,11,1,1,pow,Loeschian numbers: numbers of the form x^2 + xy + y^2; norms of vector
+A000609,119,no,,,,,Number of threshold functions of n or fewer variables.
+A008279,120,yes,11,0,0,bin fac nrt,Triangle T(n k) = n!/(n-k)! (0 <= k <= n) read by rows  giving number 
+A001055,121,no,,,,,The multiplicative partition function: number of ways of factoring n w
+A002033,122,yes,2,0,1,,Number of perfect partitions of n.
+A002322,123,yes,14,1,1,gcd pow,Reduced totient function psi(n): least k such that x^k == 1 (mod n) fo
+A001057,124,yes,4,0,0,bin,Canonical enumeration of integers: interleaved positive and negative i
+A001285,125,yes,3,0,0,dgs,Thue-Morse sequence: let A_k denote the first 2^k terms; then A_0 = 1 
+A000959,126,no,,,,,Lucky numbers.
+A001699,127,yes,9,1,0,bin pow,Number of binary trees of height n; or products (ways to insert parent
+A000688,128,yes,23,1,1,dif neq,Number of Abelian groups of order n; number of factorizations of n int
+A002106,129,no,,,,,Number of transitive permutation groups of degree n.
+A002083,130,yes,23,1,0,fil pow ror trn,Narayana-Zidek-Capell numbers: a(n) = 1 for n <= 2. Otherwise a(2n) = 
+A004011,131,yes,19,1,1,,Theta series of D_4 lattice; Fourier coefficients of Eisenstein series
+A000029,132,yes,27,1,0,gcd pow,Number of necklaces with n beads of 2 colors  allowing turning over (t
+A005100,133,yes,15,1,1,equ pow,Deficient numbers: numbers k such that sigma(k) < 2k.
+A002572,134,no,,,,,Number of partitions of 1 into n powers of 1/2; or (according to one d
+A002658,135,yes,9,1,0,bin,a(0) = a(1) = 1; for n > 0  a(n+1) = a(n)*(a(0) + ... + a(n-1)) + a(n)
+A002531,136,yes,10,1,0,,a(2*n) = a(2*n-1) + a(2*n-2)  a(2*n+1) = 2*a(2*n) + a(2*n-1); a(0) = a
+A001097,137,yes,19,1,1,gcd,Twin primes.
+A000161,138,yes,20,1,0,dir equ nrt pow,Number of partitions of n into 2 squares.
+A005470,139,no,,,,,Number of unlabeled planar simple graphs with n nodes.
+A000273,140,no,,,,,Number of unlabeled simple digraphs with n nodes.
+A000014,141,no,,,,,Number of series-reduced trees with n nodes.
+A000140,142,no,,,,,Kendall-Mann numbers: the most common number of inversions in a permut
+A005811,143,yes,4,0,0,bxo dgs,Number of runs in binary expansion of n (n>0); number of 1's in Gray c
+A001034,144,no,,,,,Orders of noncyclic simple groups (without repetition).
+A000019,145,no,,,,,Number of primitive permutation groups of degree n.
+A006894,146,yes,8,1,0,bin,Number of planted 3-trees of height < n.
+A000027,147,yes,0,0,0,,The positive integers. Also called the natural numbers  the whole numb
+A000012,148,yes,1,0,0,,The simplest sequence of positive numbers: the all 1's sequence.
+A005036,149,no,,,,,Number of nonequivalent dissections of a polygon into n quadrilaterals
+A006966,150,no,,,,,Number of lattices on n unlabeled nodes.
+A000612,151,no,,,,,Number of P-equivalence classes of switching functions of n or fewer v
+A003484,152,yes,8,0,0,lex,Radon function  also called Hurwitz-Radon numbers.
+A001477,153,yes,1,0,0,,The nonnegative integers.
+A003094,154,no,,,,,Number of unlabeled connected planar simple graphs with n nodes.
+A000007,155,yes,1,0,0,equ,The characteristic function of {0}: a(n) = 0^n.
+A000668,156,no,,,,,Mersenne primes (primes of the form 2^n - 1).
+A000372,157,no,,,,,Dedekind numbers or Dedekind's problem: number of monotone Boolean fun
+A001220,158,no,,,,,Wieferich primes: primes p such that p^2 divides 2^(p-1) - 1.
+A002061,159,yes,2,0,0,bor fac,Central polygonal numbers: a(n) = n^2 - n + 1.
+A000332,160,yes,1,0,0,bin,Binomial coefficient binomial(n 4) = n*(n-1)*(n-2)*(n-3)/24.
+A001263,161,yes,16,0,0,bin nrt,Triangle of Narayana numbers T(n k) = C(n-1 k-1)*C(n k-1)/k with 1 <= 
+A001109,162,yes,14,1,0,,a(n)^2 is a triangular number: a(n) = 6*a(n-1) - a(n-2) with a(0)=0  a
+A007814,163,yes,1,0,0,lex,Exponent of highest power of 2 dividing n  a.k.a. the binary carry seq
+A000384,164,yes,2,0,0,bin,Hexagonal numbers: a(n) = n*(2*n-1).
+A001620,165,no,,,,,Decimal expansion of Euler's constant (or the Euler-Mascheroni constan
+A004023,166,no,,,,,Indices of prime repunits: numbers k such that 11...111 (with k 1's) =
+A001844,167,yes,3,0,0,fac,Centered square numbers: a(n) = 2*n*(n+1)+1. Sums of two consecutive s
+A001353,168,yes,8,1,0,,a(n) = 4*a(n-1) - a(n-2) with a(0) = 0  a(1) = 1.
+A000522,169,yes,9,1,0,,Total number of ordered k-tuples (k=0..n) of distinct elements from an
+A006880,170,no,,,,,Number of primes < 10^n.
+A001399,171,yes,4,0,0,pow,a(n) is the number of partitions of n into at most 3 parts; also parti
+A001653,172,yes,17,1,0,,Numbers k such that 2*k^2 - 1 is a square.
+A001787,173,yes,4,0,0,pow,a(n) = n*2^(n-1).
+A003215,174,yes,3,0,0,fac,Hex (or centered hexagonal) numbers: 3*n*(n+1)+1 (crystal ball sequenc
+A001318,175,yes,5,0,0,bin,Generalized pentagonal numbers: m*(3*m - 1)/2  m = 0  +-1  +-2  +-3  .
+A009766,176,yes,19,0,0,bin nrt,Catalan's triangle T(n k) (read by rows): each term is the sum of the 
+A000073,177,yes,10,1,0,rol,Tribonacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) for n >= 3 with a(
+A002315,178,yes,15,1,0,,NSW numbers: a(n) = 6*a(n-1) - a(n-2); also a(n)^2 - 2*b(n)^2 = -1 wit
+A000700,179,yes,31,1,1,gcd trn,Expansion of Product_{k>=0} (1 + x^(2k+1)); number of partitions of n 
+A000071,180,yes,10,1,0,,a(n) = Fibonacci(n) - 1.
+A002144,181,yes,13,1,1,pow,Pythagorean primes: primes of the form 4*k + 1.
+A000295,182,yes,5,0,0,pow,Eulerian numbers (Euler's triangle: column k=2 of A008292  column k=1 
+A005043,183,yes,16,1,0,bin trn,Riordan numbers: a(n) = (n-1)*(2*a(n-1) + 3*a(n-2))/(n+1).
+A002450,184,yes,4,0,0,pow,a(n) = (4^n - 1)/3.
+A008288,185,yes,28,1,0,bin nrt,Square array of Delannoy numbers D(i j) (i >= 0  j >= 0) read by antid
+A000930,186,yes,9,1,0,ror,Narayana's cows sequence: a(0) = a(1) = a(2) = 1; thereafter a(n) = a(
+A002293,187,yes,6,0,0,bin,Number of dissections of a polygon: binomial(4*n  n)/(3*n + 1).
+A003462,188,yes,4,0,0,pow,a(n) = (3^n - 1)/2.
+A005588,189,no,,,,,Number of free binary trees admitting height n.
+A000070,190,yes,34,1,1,clr rol trn,a(n) = Sum_{k=0..n} p(k) where p(k) = number of partitions of k (A0000
+A002117,191,yes,30,1,0,pow,Apéry's number or Apéry's constant zeta(3). Decimal expansion of zeta(
+A001541,192,yes,15,1,0,,a(0) = 1  a(1) = 3; for n > 1  a(n) = 6*a(n-1) - a(n-2).
+A000537,193,yes,3,0,0,bin pow,Sum of first n cubes; or n-th triangular number squared.
+A000201,194,yes,6,0,0,nrt pow,Lower Wythoff sequence (a Beatty sequence): a(n) = floor(n*phi)  where
+A000265,195,yes,1,0,0,dir,Remove all factors of 2 from n; or largest odd divisor of n; or odd pa
+A000096,196,yes,3,0,0,bin,a(n) = n*(n+3)/2.
+A000165,197,yes,6,0,0,fac pow,Double factorial of even numbers: (2n)!! = 2^n*n!.
+A001850,198,yes,17,1,0,bin,Central Delannoy numbers: a(n) = Sum_{k=0..n} C(n k)*C(n+k k).
+A000931,199,yes,7,1,0,rol,Padovan sequence (or Padovan numbers): a(n) = a(n-2) + a(n-3) with a(0
+A001792,200,yes,5,0,0,pow,a(n) = (n+2)*2^(n-1).
+A000254,201,yes,9,1,0,,Unsigned Stirling numbers of first kind  s(n+1 2): a(n+1) = (n+1)*a(n)
+A001075,202,yes,8,1,0,,a(0) = 1  a(1) = 2  a(n) = 4*a(n-1) - a(n-2).
+A001652,203,yes,16,1,0,,a(n) = 6*a(n-1) - a(n-2) + 2 with a(0) = 0  a(1) = 3.
+A006003,204,yes,4,0,0,pow,a(n) = n*(n^2 + 1)/2.
+A000567,205,yes,4,0,0,bin,Octagonal numbers: n*(3*n-2). Also called star numbers.
+A000255,206,yes,14,1,0,gcd,a(n) = n*a(n-1) + (n-1)*a(n-2)  a(0) = 1  a(1) = 1.
+A002623,207,yes,6,0,0,bin,Expansion of 1/((1-x)^4*(1+x)).
+A008302,208,yes,23,1,0,,Triangle of Mahonian numbers T(n k): coefficients in expansion of Prod
+A001791,209,yes,4,0,0,bin,a(n) = binomial coefficient C(2n  n-1).
+A001950,210,yes,7,0,0,nrt,Upper Wythoff sequence (a Beatty sequence): a(n) = floor(n*phi^2)  whe
+A002415,211,yes,3,0,0,bin pow,4-dimensional pyramidal numbers: a(n) = n^2*(n^2-1)/12.
+A000215,212,yes,5,0,0,pow,Fermat numbers: a(n) = 2^(2^n) + 1.
+A001813,213,yes,3,0,0,fac,Quadruple factorial numbers: a(n) = (2n)!/n!.
+A002457,214,yes,5,0,0,bin,a(n) = (2n+1)!/n!^2.
+A000245,215,yes,8,0,0,bin,a(n) = 3*(2*n)!/((n+2)!*(n-1)!).
+A008517,216,no,,,,,Second-order Eulerian triangle T(n k)  1 <= k <= n.
+A006125,217,yes,4,0,0,bin pow,a(n) = 2^(n*(n-1)/2).
+A002024,218,yes,4,0,0,nrt,k appears k times; a(n) = floor(sqrt(2n) + 1/2).
+A007953,219,yes,1,0,0,dgs,Digital sum (i.e.  sum of digits) of n; also called digsum(n).
+A000125,220,yes,4,0,0,bin,Cake numbers: maximal number of pieces resulting from n planar cuts th
+A001835,221,yes,9,1,0,,a(n) = 4*a(n-1) - a(n-2)  with a(0) = 1  a(1) = 1.
+A001608,222,yes,19,1,0,trn,Perrin sequence (or Perrin numbers  or Ondrej Such sequence): a(n) = a
+A000172,223,yes,10,1,0,bin pow,The Franel number a(n) = Sum_{k = 0..n} binomial(n k)^3.
+A008619,224,yes,2,0,0,,Positive integers repeated.
+A000712,225,yes,28,1,1,trn,a(n) = number of partitions of n into parts of 2 kinds.
+A000178,226,yes,9,1,0,,Superfactorials: product of first n factorials.
+A000228,227,no,,,,,Number of hexagonal polyominoes (or hexagonal polyforms  or planar pol
+A001840,228,yes,3,0,0,bin,Expansion of g.f. x/((1 - x)^2*(1 - x^3)).
+A006013,229,yes,6,0,0,bin,a(n) = binomial(3*n+1 n)/(n+1).
+A001035,230,no,,,,,Number of partially ordered sets ('posets') with n labeled elements (o
+A005206,231,yes,7,0,0,nrt pow,Hofstadter G-sequence: a(0) = 0; a(n) = n - a(a(n-1)) for n > 0.
+A000179,232,yes,18,1,0,rol,Ménage numbers: a(0) = 1  a(1) = -1  and for n >= 2  a(n) = number of 
+A006516,233,yes,4,0,0,bin pow,a(n) = 2^(n-1)*(2^n - 1)  n >= 0.
+A000004,234,yes,1,0,0,,The zero sequence.
+A001008,235,yes,12,1,0,gcd,a(n) = numerator of harmonic number H(n) = Sum_{i=1..n} 1/i.
+A007947,236,yes,5,1,1,,Largest squarefree number dividing n: the squarefree kernel of n  rad(
+A003849,237,yes,13,0,0,nrt pow,The infinite Fibonacci word (start with 0  apply 0->01  1->0  take lim
+A005259,238,yes,15,1,0,bin pow,Apery (Apéry) numbers: Sum_{k=0..n} (binomial(n k)*binomial(n+k k))^2.
+A001316,239,yes,4,0,0,dgs pow,Gould's sequence: a(n) = Sum_{k=0..n} (binomial(n k) mod 2); number of
+A002182,240,no,,,,,Highly composite numbers: numbers n where d(n)  the number of divisors
+A002894,241,yes,4,0,0,bin pow,a(n) = binomial(2n  n)^2.
+A001108,242,yes,24,1,0,,a(n)-th triangular number is a square: a(n+1) = 6*a(n) - a(n-1) + 2  w
+A000975,243,yes,5,0,0,pow,a(2n) = 2*a(2n-1)  a(2n+1) = 2*a(2n)+1 (also a(n) is the n-th number w
+A005150,244,yes,7,1,1,,Look and Say sequence: describe the previous term! (method A - initial
+A000389,245,yes,1,0,0,bin,Binomial coefficients C(n 5).
+A006480,246,yes,7,0,0,bin,De Bruijn's S(3 n): (3n)!/(n!)^3.
+A005836,247,yes,16,1,0,,Numbers whose base-3 representation contains no 2.
+A006519,248,yes,2,0,0,ban,Highest power of 2 dividing n.
+A005251,249,yes,9,1,0,,a(0) = 0  a(1) = a(2) = a(3) = 1; thereafter  a(n) = a(n-1) + a(n-2) +
+A001498,250,yes,23,1,0,bin nrt,Triangle a(n k) (n >= 0  0 <= k <= n) of coefficients of Bessel polyno
+A000698,251,yes,27,1,1,,A problem of configurations: a(0) = 1; for n>0  a(n) = (2n-1)!! - Sum_
+A002411,252,yes,3,0,0,bin,Pentagonal pyramidal numbers: a(n) = n^2*(n+1)/2.
+A001710,253,yes,4,0,0,dif fac,Order of alternating group A_n  or number of even permutations of n le
+A003586,254,yes,19,1,0,equ gcd trn,3-smooth numbers: numbers of the form 2^i*3^j with i  j >= 0.
+A005258,255,yes,17,1,0,bin pow,Apéry numbers: a(n) = Sum_{k=0..n} binomial(n k)^2 * binomial(n+k k).
+A002893,256,yes,27,1,0,rol,a(n) = Sum_{k=0..n} binomial(n k)^2 * binomial(2*k k).
+A002858,257,no,,,,,Ulam numbers: a(1) = 1; a(2) = 2; for n>2  a(n) = least number > a(n-1
+A005384,258,yes,28,1,2,equ pow,Sophie Germain primes p: 2p+1 is also prime.
+A001542,259,yes,14,1,0,,a(n) = 6*a(n-1) - a(n-2) for n > 1  a(0)=0 and a(1)=2.
+A007051,260,yes,5,0,0,pow,a(n) = (3^n + 1)/2.
+A001223,261,yes,20,1,1,trn,Prime gaps: differences between consecutive primes.
+A002326,262,yes,15,1,0,equ,Multiplicative order of 2 mod 2n+1.
+A003182,263,no,,,,,Dedekind numbers: inequivalent monotone Boolean functions of n or fewe
+A008578,264,yes,11,0,1,dif,Prime numbers at the beginning of the 20th century (today 1 is no long
+A000122,265,yes,7,0,0,equ nrt pow,Expansion of Jacobi theta function theta_3(x) = Sum_{m =-oo..oo} x^(m^
+A000260,266,yes,8,0,0,bin,Number of rooted simplicial 3-polytopes with n+3 nodes; or rooted 3-co
+A005809,267,yes,3,0,0,bin,a(n) = binomial(3n n).
+A003500,268,yes,8,1,0,,a(n) = 4*a(n-1) - a(n-2) with a(0) = 2  a(1) = 4.
+A002817,269,yes,3,0,0,bin dif fac,Doubly triangular numbers: a(n) = n*(n+1)*(n^2+n+2)/8.
+A000792,270,yes,9,0,0,pow,a(n) = max{(n - i)*a(i) : i < n}; a(0) = 1.
+A000127,271,yes,5,0,0,bin,Maximal number of regions obtained by joining n points around a circle
+A001181,272,yes,26,1,0,rol,Number of Baxter permutations of length n (also called Baxter numbers)
+A000579,273,yes,1,0,0,bin,Figurate numbers or binomial coefficients C(n 6).
+A003714,274,yes,10,1,0,bor,Fibbinary numbers: if n = F(i1) + F(i2) + ... + F(ik) is the Zeckendor
+A001563,275,yes,3,0,0,fac,a(n) = n*n! = (n+1)! - n!.
+A005773,276,yes,17,1,0,,Number of directed animals of size n (or directed n-ominoes in standar
+A002057,277,yes,7,0,0,bin,Fourth convolution of Catalan numbers: a(n) = 4*binomial(2*n+3 n)/(n+4
+A001076,278,yes,18,1,0,,Denominators of continued fraction convergents to sqrt(5).
+A001047,279,yes,6,0,0,pow,a(n) = 3^n - 2^n.
+A000367,280,yes,10,0,1,fac gcd,Numerators of Bernoulli numbers B_2n.
+A005044,281,yes,14,0,0,gcd pow,Alcuin's sequence: expansion of x^3/((1-x^2)*(1-x^3)*(1-x^4)).
+A006093,282,yes,2,0,1,,a(n) = prime(n) - 1.
+A006218,283,yes,11,1,0,,a(n) = Sum_{k=1..n} floor(n/k); also Sum_{k=1..n} d(k)  where d = numb
+A004009,284,yes,27,1,0,dif equ pow,Expansion of Eisenstein series E_4(q) (alternate convention E_2(q)); t
+A002865,285,yes,26,1,1,,Number of partitions of n that do not contain 1 as a part.
+A006190,286,yes,14,1,0,,a(n) = 3*a(n-1) + a(n-2)  with a(0)=0  a(1)=1.
+A001788,287,yes,6,0,0,bin pow,a(n) = n*(n+1)*2^(n-2).
+A007434,288,yes,32,1,0,dif pow,Jordan function J_2(n) (a generalization of phi(n)).
+A000957,289,yes,24,1,0,rol,Fine's sequence (or Fine numbers): number of relations of valence >= 1
+A000566,290,yes,4,0,0,bin,Heptagonal numbers (or 7-gonal numbers): n*(5*n-3)/2.
+A001110,291,yes,10,1,0,pow,Square triangular numbers: numbers that are both triangular and square
+A001834,292,yes,9,1,0,,a(0) = 1  a(1) = 5  a(n) = 4*a(n-1) - a(n-2).
+A000139,293,yes,9,0,0,bin,a(n) = 2*(3*n)! / ((2*n+1)!*(n+1)!).
+A002476,294,yes,17,1,1,pow,Primes of the form 6m + 1.
+A000296,295,yes,35,1,0,bin fac pow,Set partitions without singletons: number of partitions of an n-set in
+A008284,296,no,,,,,Triangle of partition numbers: T(n k) = number of partitions of n in w
+A001790,297,yes,5,0,0,bin dir,Numerators in expansion of 1/sqrt(1-x).
+A002860,298,no,,,,,Number of Latin squares of order n; or labeled quasigroups.
+A001567,299,no,,,,,Fermat pseudoprimes to base 2  also called Sarrus numbers or Poulet nu
+A002412,300,yes,6,0,0,bin,Hexagonal pyramidal numbers  or greengrocer's numbers.
+A006356,301,yes,10,1,0,,a(n) = 2*a(n-1) + a(n-2) - a(n-3) for n >= 3  starting with a(0) = 1  
+A001175,302,yes,19,1,0,equ gcd,Pisano periods (or Pisano numbers): period of Fibonacci numbers mod n.
+A002260,303,yes,7,0,0,bin nrt,Triangle read by rows: T(n k) = k for n >= 1  k = 1..n.
+A001497,304,yes,23,1,0,bin nrt,Triangle of coefficients of Bessel polynomials (exponents in decreasin
+A002895,305,yes,28,1,0,bin pow,Domb numbers: number of 2n-step polygons on diamond lattice.
+A001566,306,yes,7,1,0,pow,a(0) = 3; thereafter  a(n) = a(n-1)^2 - 2.
+A001629,307,yes,12,1,0,rol,Self-convolution of Fibonacci numbers.
+A000447,308,yes,3,0,0,bin,a(n) = 1^2 + 3^2 + 5^2 + 7^2 + ... + (2*n-1)^2 = n*(4*n^2 - 1)/3.
+A004148,309,yes,19,1,0,bin,Generalized Catalan numbers: a(n+1) = a(n) + Sum_{k=1..n-1} a(k)*a(n-1
+A001845,310,yes,5,0,0,bin,Centered octahedral numbers (crystal ball sequence for cubic lattice).
+A005448,311,yes,3,0,0,bin,Centered triangular numbers: a(n) = 3*n*(n-1)/2 + 1.
+A005614,312,yes,14,0,0,nrt pow,The binary complement of the infinite Fibonacci word A003849. Start wi
+A001122,313,yes,24,1,2,equ pow trn,Primes with primitive root 2.
+A000351,314,yes,3,0,0,pow,Powers of 5: a(n) = 5^n.
+A001044,315,yes,4,0,0,fac pow,a(n) = (n!)^2.
+A000168,316,yes,9,0,0,bin pow,a(n) = 2*3^n*(2*n)!/(n!*(n+2)!).
+A006126,317,no,,,,,Number of hierarchical models on n labeled factors or variables with l
+A002105,318,yes,24,1,0,bin gcd pow,Reduced tangent numbers: 2^n*(2^{2n} - 1)*|B_{2n}|/n  where B_n = Bern
+A000598,319,no,,,,,Number of rooted ternary trees with n nodes; number of n-carbon alkyl 
+A002464,320,yes,28,1,0,rol,Hertzsprung's problem: ways to arrange n non-attacking kings on an n X
+A002212,321,yes,17,1,0,,Number of restricted hexagonal polyominoes with n cells.
+A005899,322,yes,5,0,0,bin pow,Number of points on surface of octahedron; also coordination sequence 
+A001930,323,no,,,,,Number of topologies  or transitive digraphs with n unlabeled nodes.
+A000945,324,no,,,,,Euclid-Mullin sequence: a(1) = 2  a(n+1) is smallest prime factor of 1
+A005917,325,yes,5,0,0,pow,Rhombic dodecahedral numbers: a(n) = n^4 - (n - 1)^4.
+A008290,326,yes,24,1,0,bin nrt,Triangle T(n k) of rencontres numbers (number of permutations of n ele
+A004006,327,yes,4,0,0,bin,a(n) = C(n 1) + C(n 2) + C(n 3)  or n*(n^2 + 5)/6.
+A000084,328,no,,,,,Number of series-parallel networks with n unlabeled edges. Also called
+A002720,329,yes,10,1,0,,Number of partial permutations of an n-set; number of n X n binary mat
+A006370,330,yes,8,0,0,,The Collatz or 3x+1 map: a(n) = n/2 if n is even  3n + 1 if n is odd.
+A003422,331,yes,8,1,0,,Left factorials: !n = Sum_{k=0..n-1} k!.
+A000695,332,yes,10,1,0,bxo,Moser-de Bruijn sequence: sums of distinct powers of 4.
+A004016,333,yes,29,1,0,equ neq nrt pow trn,Theta series of planar hexagonal lattice A_2.
+A002981,334,no,,,,,Numbers k such that k! + 1 is prime.
+A002294,335,yes,6,0,0,bin,a(n) = binomial(5*n  n)/(4*n + 1).
+A006918,336,yes,8,0,0,bin,a(n) = binomial(n+3  3)/4 for odd n  n*(n+2)*(n+4)/24 for even n.
+A005187,337,yes,4,0,0,dgs,a(n) = a(floor(n/2)) + n; also denominators in expansion of 1/sqrt(1-x
+A000629,338,yes,17,1,0,bin pow,Number of necklaces of partitions of n+1 labeled beads.
+A007913,339,yes,5,0,1,pow,Squarefree part of n: a(n) is the smallest positive number m such that
+A000788,340,yes,9,1,0,dgs,Total number of 1's in binary expansions of 0  ...  n.
+A005893,341,yes,5,0,0,bin pow,Number of points on surface of tetrahedron; coordination sequence for 
+A000196,342,yes,1,0,0,nrt,Integer part of square root of n. Or  number of positive squares <= n.
+A000392,343,yes,9,0,0,pow,Stirling numbers of second kind S(n 3).
+A000669,344,no,,,,,Number of series-reduced planted trees with n leaves. Also the number 
+A001107,345,yes,4,0,0,,10-gonal (or decagonal) numbers: a(n) = n*(4*n-3).
+A007540,346,no,,,,,Wilson primes: primes p such that (p-1)! == -1 (mod p^2).
+A007088,347,yes,10,1,0,,The binary numbers (or binary words  or binary vectors  or binary expa
+A004001,348,yes,10,1,1,trn,Hofstadter-Conway $10000 sequence: a(n) = a(a(n-1)) + a(n-a(n-1)) with
+A003154,349,yes,3,0,0,bin,Centered 12-gonal numbers  or centered dodecagonal numbers: numbers of
+A005315,350,no,,,,,Closed meandric numbers (or meanders): number of ways a loop can cross
+A000978,351,no,,,,,Wagstaff numbers: numbers k such that (2^k + 1)/3 is prime.
+A008574,352,yes,2,0,0,,a(0) = 1  thereafter a(n) = 4n.
+A002088,353,yes,10,1,1,,Sum of totient function: a(n) = Sum_{k=1..n} phi(k)  cf. A000010.
+A001317,354,yes,15,1,0,bxo,Sierpiński's triangle (Pascal's triangle mod 2) converted to decimal.
+A002206,355,no,,,,,Numerators of logarithmic numbers (also of Gregory coefficients G(n)).
+A005493,356,yes,7,0,2,,2-Bell numbers: a(n) = number of partitions of [n+1] with a distinguis
+A005875,357,yes,18,1,1,equ nrt pow trn,Theta series of simple cubic lattice; also number of ways of writing a
+A003622,358,yes,8,0,0,nrt,The Wythoff compound sequence AA: a(n) = floor(n*phi^2) - 1  where phi
+A005581,359,yes,4,0,0,bin,a(n) = (n-1)*n*(n+4)/6.
+A001296,360,yes,7,0,0,bin,4-dimensional pyramidal numbers: a(n) = (3*n+1)*binomial(n+2  3)/4. Al
+A000587,361,yes,30,1,1,bin fac nrt,Rao Uppuluri-Carpenter numbers (or complementary Bell numbers): e.g.f.
+A001168,362,no,,,,,Number of fixed polyominoes with n cells.
+A007559,363,yes,9,1,0,,Triple factorial numbers (3*n-2)!!! with leading 1 added.
+A000078,364,yes,8,1,0,rol,Tetranacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) + a(n-4) for n >= 
+A006881,365,yes,20,1,1,equ pow,Squarefree semiprimes: Numbers that are the product of two distinct pr
+A001586,366,yes,15,1,1,bin gcd,Generalized Euler numbers  or Springer numbers.
+A008836,367,yes,4,0,1,pow,Liouville's function lambda(n) = (-1)^k  where k is number of primes d
+A008297,368,yes,20,0,0,bin fac nrt pow,Triangle of Lah numbers.
+A000207,369,no,,,,,Number of inequivalent ways of dissecting a regular (n+2)-gon into n t
+A000699,370,yes,4,0,1,,Number of irreducible chord diagrams with 2n nodes.
+A002445,371,yes,23,1,1,bin equ gcd,Denominators of Bernoulli numbers B_{2n}.
+A005153,372,yes,18,1,1,equ pow,Practical numbers: positive integers m such that every k <= sigma(m) i
+A008287,373,yes,29,1,0,,Triangle of quadrinomial coefficients  row n is the sequence of coeffi
+A007018,374,yes,6,1,0,fac,a(n) = a(n-1)^2 + a(n-1)  a(0)=1.
+A000118,375,yes,16,1,1,gcd trn,Number of ways of writing n as a sum of 4 squares; also theta series o
+A007317,376,yes,17,1,0,,Binomial transform of Catalan numbers.
+A000523,377,yes,1,0,0,log,a(n) = floor(log_2(n)).
+A001818,378,yes,3,0,0,dir fac pow,Squares of double factorials: (1*3*5*...*(2n-1))^2 = ((2*n-1)!!)^2.
+A004211,379,yes,25,1,1,bin fac nrt,Shifts one place left under 2nd-order binomial transform.
+A007306,380,yes,14,1,0,,Denominators of Farey tree fractions (i.e.  the Stern-Brocot subtree i
+A002805,381,yes,11,1,0,gcd,a(n) = denominator of harmonic number H(n) = Sum_{i=1..n} 1/i.
+A001515,382,yes,12,1,0,,Bessel polynomial y_n(x) evaluated at x=1.
+A003602,383,yes,3,0,0,dir,Kimberling's paraphrase of the binary number system: if n = (2k-1)*2^m
+A000315,384,no,,,,,Number of reduced Latin squares of order n; also number of labeled loo
+A001206,385,no,,,,,Number of self-dual monotone Boolean functions of n variables.
+A000404,386,yes,19,1,1,equ,Numbers that are the sum of 2 nonzero squares.
+A003159,387,yes,11,1,0,dir gcd,Numbers whose binary representation ends in an even number of zeros.
+A001694,388,yes,13,1,1,pow,Powerful numbers  definition (1): if a prime p divides n then p^2 must
+A000638,389,no,,,,,Number of permutation groups of degree n; also number of conjugacy cla
+A003056,390,yes,5,0,0,nrt,n appears n+1 times. Also the array A(n k) = n+k (n >= 0  k >= 0) read
+A006527,391,yes,4,0,0,bin,a(n) = (n^3 + 2*n)/3.
+A007598,392,yes,9,1,0,pow,Squared Fibonacci numbers: a(n) = F(n)^2 where F = A000045.
+A002939,393,yes,2,0,0,fac,a(n) = 2*n*(2*n-1).
+A003114,394,yes,27,1,1,trn,Number of partitions of n into parts 5k+1 or 5k+4.
+A008615,395,yes,4,0,0,,a(n) = floor(n/2) - floor(n/3).
+A006995,396,yes,31,1,0,equ geq log pow,Binary palindromes: numbers whose binary expansion is palindromic.
+A000037,397,yes,5,0,0,nrt,Numbers that are not squares (or  the nonsquares).
+A001146,398,yes,4,0,0,pow,a(n) = 2^(2^n).
+A003517,399,yes,9,0,0,bin,Number of permutations of [n+1] with exactly 1 increasing subsequence 
+A008438,400,yes,36,1,0,bxo dir equ nrt pow,Sum of divisors of 2*n + 1.
+A004736,401,yes,8,0,0,bin nrt,Triangle read by rows: row n lists the first n positive integers in de
+A001414,402,yes,9,1,1,,Integer log of n: sum of primes dividing n (with repetition). Also cal
+A008472,403,yes,10,1,1,dir,Sum of the distinct primes dividing n.
+A005897,404,yes,5,0,0,gcd pow,a(n) = 6*n^2 + 2 for n > 0  a(0)=1.
+A008955,405,yes,26,1,2,pow,Triangle of central factorial numbers |t(2n 2n-2k)| read by rows.
+A005232,406,yes,12,0,0,bin pow,Expansion of (1-x+x^2)/((1-x)^2*(1-x^2)*(1-x^4)).
+A000213,407,yes,23,1,0,trn,Tribonacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) with a(0)=a(1)=a(2
+A005132,408,yes,18,1,0,,Recamán's sequence (or Recaman's sequence): a(0) = 0; for n > 0  a(n) 
+A003506,409,yes,11,0,0,bin nrt,Triangle of denominators in Leibniz's Harmonic Triangle a(n k)  n >= 1
+A002662,410,yes,7,0,0,bin pow,a(n) = 2^n - 1 - n*(n+1)/2.
+A005867,411,yes,19,1,0,gcd neq,a(0) = 1; for n > 0  a(n) = (prime(n)-1)*a(n-1).
+A001597,412,yes,12,1,1,,Perfect powers: m^k where m > 0 and k >= 2.
+A000337,413,yes,5,0,0,pow,a(n) = (n-1)*2^n + 1.
+A003278,414,yes,13,1,0,gcd,Szekeres's sequence: a(n)-1 in ternary = n-1 in binary; also: a(1) = 1
+A001911,415,yes,10,1,0,,a(n) = Fibonacci(n+3) - 2.
+A003991,416,yes,12,0,0,bin nrt,Multiplication table read by antidiagonals: T(i j) = i*j  i>=1  j>=1.
+A007405,417,yes,36,1,1,bin fac nrt pow,Dowling numbers: e.g.f.: exp(x + (exp(b*x) - 1)/b) with b=2.
+A006002,418,yes,4,0,0,bin,a(n) = n*(n+1)^2/2.
+A002851,419,no,,,,,Number of unlabeled trivalent (or cubic) connected simple graphs with 
+A001935,420,yes,28,1,1,trn,Number of partitions with no even part repeated; partitions of n in wh
+A005250,421,no,,,,,Record gaps between primes.
+A003188,422,yes,3,0,0,bxo,Decimal equivalent of Gray code for n.
+A007588,423,yes,4,0,0,pow,Stella octangula numbers: a(n) = n*(2*n^2 - 1).
+A000607,424,yes,18,1,1,,Number of partitions of n into prime parts.
+A002064,425,yes,4,0,0,pow,Cullen numbers: a(n) = n*2^n + 1.
+A001570,426,yes,14,1,0,pow,Numbers k such that k^2 is centered hexagonal.
+A000248,427,yes,14,1,0,bin pow,Expansion of e.g.f. exp(x*exp(x)).
+A006128,428,yes,18,1,1,,Total number of parts in all partitions of n. Also  sum of largest par
+A002109,429,yes,8,1,0,pow,Hyperfactorials: Product_{k = 1..n} k^k.
+A002997,430,no,,,,,Carmichael numbers: composite numbers k such that a^(k-1) == 1 (mod k)
+A005349,431,yes,16,1,0,dgs gcd pow,Niven (or Harshad  or harshad) numbers: numbers that are divisible by 
+A003842,432,yes,14,0,0,gcd nrt pow,The infinite Fibonacci word: start with 1  repeatedly apply the morphi
+A005901,433,yes,5,0,0,bin pow,Number of points on surface of cuboctahedron (or icosahedron): a(0) = 
+A007955,434,yes,4,0,1,nrt pow,Product of divisors of n.
+A008406,435,no,,,,,Triangle T(n k) read by rows  giving number of graphs with n nodes (n 
+A001998,436,yes,12,0,0,pow,Bending a piece of wire of length n+1; walks of length n+1 on a tetrah
+A002943,437,yes,2,0,0,fac,a(n) = 2*n*(2*n+1).
+A004394,438,no,,,,,Superabundant [or super-abundant] numbers: n such that sigma(n)/n > si
+A002467,439,yes,7,1,0,gcd,The game of Mousetrap with n cards (given n letters and n envelopes  h
+A001359,440,yes,21,1,1,gcd trn,Lesser of twin primes.
+A002207,441,no,,,,,Denominators of logarithmic numbers (also of Gregory coefficients G(n)
+A001970,442,no,,,,,Functional determinants; partitions of partitions; Euler transform app
+A001951,443,yes,3,0,0,nrt pow,A Beatty sequence: a(n) = floor(n*sqrt(2)).
+A000806,444,yes,13,1,0,,Bessel polynomial y_n(-1).
+A002496,445,yes,17,1,1,pow,Primes of the form k^2 + 1.
+A007425,446,yes,21,1,0,dif pow,d_3(n)  or tau_3(n)  the number of ordered factorizations of n as n = 
+A000258,447,yes,30,1,1,bin fac pow,Expansion of e.g.f. exp(exp(exp(x)-1)-1).
+A000595,448,no,,,,,Number of binary relations on n unlabeled points.
+A001158,449,yes,25,1,0,dif equ pow,sigma_3(n): sum of cubes of divisors of n.
+A001187,450,no,,,,,Number of connected labeled graphs with n nodes.
+A002375,451,yes,22,1,3,,From Goldbach conjecture: number of decompositions of 2n into an unord
+A006577,452,yes,26,1,0,leq lex pow,Number of halving and tripling steps to reach 1 in '3x+1' problem  or 
+A004215,453,yes,20,1,1,equ pow,Numbers that are the sum of 4 but no fewer nonzero squares.
+A006820,454,no,,,,,Number of connected regular simple graphs of degree 4 (or quartic grap
+A000170,455,no,,,,,Number of ways of placing n nonattacking queens on an n X n board.
+A002386,456,no,,,,,Primes (lower end) with record gaps to the next consecutive prime: pri
+A008549,457,yes,8,0,0,bin pow,Number of ways of choosing at most n-1 items from a set of size 2*n+1.
+A000013,458,yes,22,1,0,dif gcd pow trn,Definition (1): Number of n-bead binary necklaces with beads of 2 colo
+A007331,459,yes,11,1,0,equ gcd pow,Fourier coefficients of E_{infinity 4}.
+A005820,460,no,,,,,3-perfect (triply perfect  tri-perfect  triperfect or sous-double) num
+A002324,461,yes,6,0,2,dir,Number of divisors of n == 1 (mod 3) minus number of divisors of n == 
+A007678,462,no,,,,,Number of regions in regular n-gon with all diagonals drawn.
+A003325,463,yes,18,1,1,equ pow,Numbers that are the sum of 2 positive cubes.
+A003417,464,yes,9,0,0,dif trn,Continued fraction for e.
+A007764,465,no,,,,,Number of nonintersecting (or self-avoiding) rook paths joining opposi
+A006095,466,yes,6,0,0,bin pow,Gaussian binomial coefficient [n  2] for q = 2.
+A006720,467,yes,14,1,0,fil pow ror,Somos-4 sequence: a(0)=a(1)=a(2)=a(3)=1; for n >= 4  a(n) = (a(n-1) * 
+A000309,468,yes,11,0,0,bin pow,Number of rooted planar bridgeless cubic maps with 2n nodes.
+A002439,469,yes,20,1,0,bin pow trn,Glaisher's T numbers.
+A003095,470,yes,6,1,0,pow,a(n) = a(n-1)^2 + 1 for n >= 1  with a(0) = 0.
+A005902,471,yes,8,0,0,,Centered icosahedral (or cuboctahedral) numbers  also crystal ball seq
+A003238,472,yes,24,1,0,equ trn,Number of rooted trees with n vertices in which vertices at the same l
+A006206,473,yes,48,1,2,bin equ gcd nrt pow,Number of aperiodic binary necklaces of length n with no subsequence 0
+A001286,474,yes,5,0,0,fac,Lah numbers: a(n) = (n-1)*n!/2.
+A005430,475,yes,4,0,0,bin,Apéry numbers: n*C(2*n n).
+A002313,476,yes,15,1,1,pow,Primes congruent to 1 or 2 modulo 4; or  primes of form x^2 + y^2; or 
+A000538,477,yes,9,0,0,bin,Sum of fourth powers: 0^4 + 1^4 + ... + n^4.
+A001348,478,yes,5,0,1,pow,Mersenne numbers: 2^p - 1  where p is prime.
+A006232,479,no,,,,,Numerators of Cauchy numbers of first type.
+A008299,480,no,,,,,Triangle T(n k) of associated Stirling numbers of second kind  n >= 2 
+A002420,481,yes,6,0,0,bin,Expansion of sqrt(1 - 4*x) in powers of x.
+A000257,482,yes,16,0,0,bin equ pow,Number of rooted bicubic maps: a(n) = (8*n-4)*a(n-1)/(n+2) for n >= 2 
+A007770,483,yes,18,1,1,equ pow,Happy numbers: numbers whose trajectory under iteration of sum of squa
+A000371,484,yes,14,1,0,bin pow,a(n) = Sum_{k=0..n} (-1)^(n-k)*binomial(n k)*2^(2^k).
+A007691,485,no,,,,,Multiply-perfect numbers: n divides sigma(n).
+A000188,486,yes,8,0,1,,(1) Number of solutions to x^2 == 0 (mod n). (2) Also square root of l
+A005316,487,no,,,,,Meandric numbers: number of ways a river can cross a road n times.
+A007482,488,yes,15,1,0,,a(n) is the number of subsequences of [ 1  ...  2n ] in which each odd
+A002321,489,yes,13,1,1,,Mertens's function: Sum_{k=1..n} mu(k)  where mu is the Moebius functi
+A002854,490,no,,,,,Number of unlabeled Euler graphs with n nodes; number of unlabeled two
+A002295,491,yes,8,0,0,bin trn,Number of dissections of a polygon: binomial(6n n)/(5n+1).
+A008977,492,yes,9,0,0,bin pow,a(n) = (4*n)!/(n!)^4.
+A000749,493,yes,10,1,0,,a(n) = 4*a(n-1) - 6*a(n-2) + 4*a(n-3)  n > 3  with a(0)=a(1)=a(2)=0  a
+A000682,494,no,,,,,Semi-meanders: number of ways a semi-infinite directed curve can cross
+A002982,495,no,,,,,Numbers k such that k! - 1 is prime.
+A003946,496,yes,5,0,0,pow,Expansion of (1+x)/(1-3*x).
+A003313,497,no,,,,,Length of shortest addition chain for n.
+A002839,498,no,,,,,Number of simple perfect squared rectangles of order n up to symmetry.
+A000042,499,yes,4,0,0,pow,Unary representation of natural numbers.
+A001448,500,yes,4,0,0,bin,a(n) = binomial(4n 2n) or (4*n)!/((2*n)!*(2*n)!).
+A004111,501,no,,,,,Number of rooted identity trees with n nodes (rooted trees whose autom
+A003277,502,yes,22,1,1,dif equ gcd pow,Cyclic numbers: k such that k and phi(k) are relatively prime; also k 
+A006472,503,yes,10,1,0,bin,a(n) = n!*(n-1)!/2^(n-1).
+A001913,504,yes,19,1,1,equ pow,Full reptend primes: primes with primitive root 10.
+A003480,505,yes,12,1,0,,a(0) = 1  a(1) = 2  a(2) = 7  for n > 2  a(n) = 4*a(n-1) - 2*a(n-2).
+A000464,506,yes,26,1,0,bin gcd pow,Expansion of e.g.f. sin(x)/cos(2*x).
+A008949,507,yes,19,1,0,bin nrt,Triangle read by rows of partial sums of binomial coefficients: T(n k)
+A005188,508,no,,,,,Armstrong (or pluperfect  or Plus Perfect  or narcissistic) numbers: m
+A002657,509,yes,27,1,1,bin fac gcd trn,Numerators of Cauchy numbers of second type (= Bernoulli numbers B_n^{
+A008443,510,yes,12,1,1,,Number of ordered ways of writing n as the sum of 3 triangular numbers
+A005385,511,yes,26,1,2,equ pow,Safe primes p: (p-1)/2 is also prime.
+A001861,512,yes,18,1,1,bin dif,Expansion of e.g.f. exp(2*(exp(x) - 1)).
+A001401,513,yes,13,0,0,,Number of partitions of n into at most 5 parts.
+A006257,514,yes,7,0,0,log pow,Josephus problem: a(2*n) = 2*a(n)-1  a(2*n+1) = 2*a(n)+1.
+A006331,515,yes,3,0,0,bin dif,a(n) = n*(n+1)*(2*n+1)/3.
+A001924,516,yes,12,1,0,,Apply partial sum operator twice to Fibonacci numbers.
+A005418,517,yes,8,0,0,pow,Number of (n-1)-bead black-white reversible strings; also binary grids
+A008282,518,yes,51,0,1,bin nrt pow,Triangle of Euler-Bernoulli or Entringer numbers read by rows: T(n k) 
+A001683,519,no,,,,,Number of one-sided triangulations of the disk; or flexagons of order 
+A000740,520,yes,46,1,1,bin equ nrt pow,Number of 2n-bead balanced binary necklaces of fundamental period 2n  
+A000577,521,no,,,,,Number of triangular polyominoes (or triangular polyforms  or polyiamo
+A001789,522,yes,6,0,0,bin pow,a(n) = binomial(n 3)*2^(n-3).
+A005245,523,no,,,,,The (Mahler-Popken) complexity of n: minimal number of 1's required to
+A006566,524,yes,2,0,0,bin,Dodecahedral numbers: a(n) = n*(3*n - 1)*(3*n - 2)/2.
+A005361,525,yes,19,1,0,dif equ,Product of exponents of prime factorization of n.
+A006561,526,no,,,,,Number of intersections of diagonals in the interior of a regular n-go
+A007931,527,yes,13,1,0,,Numbers that contain only 1's and 2's. Nonempty binary strings of leng
+A000435,528,yes,11,1,0,,Normalized total height of all nodes in all rooted trees with n labele
+A000407,529,yes,2,0,0,fac,a(n) = (2*n+1)! / n!.
+A002790,530,yes,33,1,1,bin fac gcd,Denominators of Cauchy numbers of second type (= Bernoulli numbers B_n
+A002372,531,yes,21,1,3,,Goldbach conjecture: number of decompositions of 2n into ordered sums 
+A006037,532,no,,,,,Weird numbers: abundant (A005101) but not pseudoperfect (A005835).
+A008276,533,yes,16,1,0,equ rol,Triangle of Stirling numbers of first kind  s(n  n-k+1)  n >= 1  1 <= 
+A003173,534,yes,9,1,1,trn,Heegner numbers: imaginary quadratic fields with unique factorization 
+A007406,535,yes,14,1,0,gcd pow,Wolstenholme numbers: numerator of Sum_{k=1..n} 1/k^2.
+A005835,536,yes,8,1,1,,Pseudoperfect (or semiperfect) numbers k: some subset of the proper di
+A003239,537,yes,17,1,0,bin gcd,Number of rooted planar trees with n non-root nodes: circularly cyclin
+A000240,538,yes,9,1,0,gcd,Rencontres numbers: number of permutations of [n] with exactly one fix
+A000666,539,no,,,,,Number of symmetric relations on n nodes.
+A000735,540,yes,12,1,2,trn,Expansion of Product_{k>=1} (1 - x^k)^12.
+A006498,541,yes,12,1,0,,a(n) = a(n-1) + a(n-3) + a(n-4)  a(0) = a(1) = a(2) = 1  a(3) = 2.
+A001523,542,yes,5,0,2,,Number of stacks  or planar partitions of n; also number of weakly uni
+A001212,543,no,,,,,a(n) = solution to the postage stamp problem with n denominations and 
+A001601,544,yes,10,1,0,,a(n) = 2*a(n-1)^2 - 1  if n>1. a(0)=1  a(1)=3.
+A005574,545,yes,15,1,1,pow,Numbers k such that k^2 + 1 is prime.
+A009545,546,yes,12,0,0,dgr dif pow,Expansion of e.g.f. sin(x)*exp(x).
+A007305,547,yes,18,1,0,,Numerators of Farey (or Stern-Brocot) tree fractions.
+A002407,548,yes,15,1,1,pow,Cuban primes: primes which are the difference of two consecutive cubes
+A001605,549,no,,,,,Indices of prime Fibonacci numbers.
+A002296,550,yes,7,0,0,bin,Number of dissections of a polygon: binomial(7n n)/(6n+1).
+A000194,551,yes,4,0,0,nrt,n appears 2n times  for n >= 1; also nearest integer to square root of
+A001522,552,yes,19,1,1,bin dif,Number of n-stacks with strictly receding walls  or the number of Type
+A008620,553,yes,2,0,0,,Positive integers repeated three times.
+A008458,554,yes,2,0,0,,Coordination sequence for hexagonal lattice.
+A001235,555,no,,,,,Taxi-cab numbers: sums of 2 cubes in more than 1 way.
+A000016,556,yes,15,1,0,gcd pow,a(n) is the number of distinct (infinite) output sequences from binary
+A006983,557,no,,,,,Number of simple perfect squared squares of order n up to symmetry.
+A002866,558,yes,7,0,0,fac pow trn,a(0) = 1; for n > 0  a(n) = 2^(n-1)*n!.
+A002034,559,yes,14,1,0,equ,Kempner numbers: smallest positive integer m such that n divides m!.
+A006227,560,no,,,,,Number of n-dimensional space groups (including enantiomorphs).
+A000354,561,yes,12,1,0,gcd,Expansion of e.g.f. exp(-x)/(1-2*x).
+A003106,562,yes,27,1,1,trn,Number of partitions of n into parts 5k+2 or 5k+3.
+A007582,563,yes,5,0,0,bin pow,a(n) = 2^(n-1)*(1+2^n).
+A005185,564,yes,22,1,0,,Hofstadter Q-sequence: a(1) = a(2) = 1; a(n) = a(n-a(n-1)) + a(n-a(n-2
+A002385,565,yes,22,1,2,equ pow trn,Palindromic primes: prime numbers whose decimal expansion is a palindr
+A000944,566,no,,,,,Number of polyhedra (or 3-connected simple planar graphs) with n nodes
+A001246,567,yes,6,0,0,bin pow,Squares of Catalan numbers.
+A003002,568,no,,,,,r3(n): Size of the largest subset of the numbers [1...n] which does no
+A002995,569,no,,,,,Number of unlabeled planar trees (also called plane trees) with n node
+A005940,570,yes,12,0,4,,The Doudna sequence: write n-1 in binary; power of prime(k) in a(n) is
+A002736,571,yes,5,0,0,bin pow,Apéry numbers: a(n) = n^2*C(2n n).
+A002131,572,yes,43,1,0,bxo dir equ nrt pow,Sum of divisors d of n such that n/d is odd.
+A003961,573,yes,20,1,1,bin dif,Completely multiplicative with a(prime(k)) = prime(k+1).
+A005374,574,yes,19,1,0,bin dif gcd,Hofstadter H-sequence: a(n) = n - a(a(a(n-1))).
+A002107,575,yes,27,1,0,dif equ nrt pow,Expansion of Product_{k>=1} (1 - x^k)^2.
+A003022,576,no,,,,,Length of shortest (or optimal) Golomb ruler with n marks.
+A005329,577,yes,8,1,0,,a(n) = Product_{i=1..n} (2^i - 1). Also called 2-factorial numbers.
+A004003,578,no,,,,,Number of domino tilings (or dimer coverings) of a 2n X 2n square.
+A002129,579,yes,43,1,0,bxo dir equ nrt pow,Generalized sum of divisors function: excess of sum of odd divisors of
+A000271,580,yes,16,1,0,rol,Sums of ménage numbers.
+A007742,581,yes,3,0,0,bin,a(n) = n*(4*n+1).
+A000898,582,yes,12,1,0,,a(n) = 2*(a(n-1) + (n-1)*a(n-2)) for n >= 2 with a(0) = 1.
+A008315,583,yes,13,1,0,bin,Catalan triangle read by rows. Also triangle of expansions of powers o
+A001678,584,no,,,,,Number of series-reduced planted trees with n nodes.
+A007427,585,yes,24,1,0,dif,Moebius transform applied twice to sequence 1 0 0 0 ....
+A001468,586,yes,15,0,0,nrt pow,There are a(n) 2's between successive 1's.
+A003987,587,yes,13,0,0,bin bxo nrt,Table of n XOR m (or Nim-sum of n and m) read by antidiagonals with m>
+A005109,588,no,,,,,Class 1- (or Pierpont) primes: primes of the form 2^t*3^u + 1.
+A000119,589,yes,14,1,0,equ rol,Number of representations of n as a sum of distinct Fibonacci numbers.
+A003121,590,yes,14,1,0,bin fac,Strict sense ballot numbers: n candidates  k-th candidate gets k votes
+A002492,591,yes,3,0,0,bin,Sum of the first n even squares: a(n) = 2*n*(n+1)*(2*n+1)/3.
+A003432,592,no,,,,,Hadamard maximal determinant problem: largest determinant of a (real) 
+A003948,593,yes,5,0,0,pow,Expansion of (1+x)/(1-5*x).
+A006721,594,yes,13,1,0,fil ror,Somos-5 sequence: a(n) = (a(n-1) * a(n-4) + a(n-2) * a(n-3)) / a(n-5) 
+A005246,595,yes,10,1,0,,a(n) = (1 + a(n-1)*a(n-2))/a(n-3)  a(0) = a(1) = a(2) = 1.
+A005425,596,yes,12,1,0,,a(n) = 2*a(n-1) + (n-1)*a(n-2).
+A006245,597,no,,,,,Number of primitive sorting networks on n elements; also number of rho
+A006351,598,no,,,,,Number of series-parallel networks with n labeled edges. Also called y
+A000186,599,no,,,,,Number of 3 X n Latin rectangles in which the first row is in order.
+A002727,600,yes,55,1,0,rol,Number of 3 X n binary matrices up to row and column permutations.
+A002135,601,yes,14,1,0,,Number of terms in a symmetrical determinant: a(n) = n*a(n-1) - (n-1)*
+A007917,602,yes,12,1,1,trn,Version 1 of the 'previous prime' function: largest prime <= n.
+A000625,603,no,,,,,Number of n-node steric rooted ternary trees; number of n carbon alkyl
+A001329,604,no,,,,,Number of nonisomorphic groupoids with n elements.
+A002965,605,yes,9,1,0,ror,Interleave denominators (A000129) and numerators (A001333) of converge
+A002814,606,no,,,,,For n > 1: a(n) = a(n-1)^3 + 3*a(n-1)^2 - 3; a(0) = 1  a(1) = 2.
+A007504,607,yes,10,1,1,,Sum of the first n primes.
+A007489,608,yes,9,1,0,,a(n) = Sum_{k=1..n} k!.
+A003319,609,yes,6,0,1,bin trn,Number of connected permutations of [1..n] (those not fixing [1..j] fo
+A002627,610,yes,7,1,0,,a(n) = n*a(n-1) + 1  a(0) = 0.
+A001499,611,yes,13,1,0,,Number of n X n matrices with exactly 2 1's in each row and column  ot
+A002218,612,no,,,,,Number of unlabeled nonseparable (or 2-connected) graphs (or blocks) w
+A000101,613,no,,,,,Record gaps between primes (upper end) (compare A002386  which gives l
+A000679,614,no,,,,,Number of groups of order 2^n.
+A001599,615,no,,,,,Harmonic or Ore numbers: numbers k such that the harmonic mean of the 
+A006862,616,yes,2,0,1,,Euclid numbers: 1 + product of the first n primes.
+A002262,617,yes,8,0,0,bin nrt,Triangle read by rows: T(n k) = k  0 <= k <= n  in which row n lists t
+A006355,618,yes,9,1,0,,Number of binary vectors of length n containing no singletons.
+A002208,619,yes,32,1,1,bin fac gcd trn,Numerators of coefficients for numerical integration.
+A000498,620,yes,18,0,0,fac pow,Eulerian numbers (Euler's triangle: column k=4 of A008292  column k=3 
+A007997,621,yes,4,0,0,bin,a(n) = ceiling((n-3)(n-4)/6).
+A003242,622,yes,28,1,1,dif trn,Number of compositions of n such that no two adjacent parts are equal 
+A000637,623,no,,,,,Number of fixed-point-free permutation groups of degree n.
+A005803,624,yes,5,0,0,pow,Second-order Eulerian numbers: a(n) = 2^n - 2*n.
+A002414,625,yes,4,0,0,bin pow,Octagonal pyramidal numbers: a(n) = n*(n+1)*(2*n-1)/2.
+A000681,626,yes,11,1,0,,Number of n X n matrices with nonnegative entries and every row and co
+A003035,627,yes,8,0,0,ban,Maximal number of 3-tree rows in n-tree orchard problem.
+A005169,628,no,,,,,Number of fountains of n coins.
+A000011,629,yes,21,1,1,gcd pow trn,Number of n-bead necklaces (turning over is allowed) where complements
+A008804,630,yes,6,0,0,bin dif,Expansion of 1/((1-x)^2*(1-x^2)*(1-x^4)).
+A002966,631,no,,,,,Egyptian fractions: number of solutions of 1 = 1/x_1 + ... + 1/x_n whe
+A000247,632,yes,5,0,0,pow,a(n) = 2^n - n - 2.
+A005849,633,no,,,,,Indices of prime Cullen numbers: numbers k such that k*2^k + 1 is prim
+A002812,634,yes,8,1,0,pow,a(n) = 2*a(n-1)^2 - 1  starting a(0) = 2.
+A006171,635,yes,28,1,1,trn,Number of factorization patterns of polynomials of degree n over integ
+A001517,636,yes,12,1,0,,Bessel polynomials y_n(x) (see A001498) evaluated at 2.
+A000293,637,no,,,,,a(n) = number of solid (i.e.  three-dimensional) partitions of n.
+A000568,638,no,,,,,Number of outcomes of unlabeled n-team round-robin tournaments.
+A005380,639,yes,29,1,1,trn,Expansion of 1 / Product_{k>=1} (1-x^k)^(k+1).
+A008579,640,yes,13,0,0,equ pow,Coordination sequence for planar net 3.6.3.6. Spherical growth functio
+A008965,641,yes,12,1,0,gcd pow,Number of necklaces of sets of beads containing a total of n beads.
+A004251,642,no,,,,,Number of graphical partitions (degree-vectors for simple graphs with 
+A006963,643,yes,3,0,0,fac,Number of planar embedded labeled trees with n nodes: (2*n-3)!/(n-1)! 
+A006883,644,yes,19,1,1,equ pow,Long period primes: the decimal expansion of 1/p has period p-1.
+A001011,645,no,,,,,Number of ways to fold a strip of n blank stamps.
+A002872,646,yes,30,1,2,bin fac nrt,Number of partitions of {1..2n} that are invariant under a permutation
+A001274,647,no,,,,,Numbers k such that phi(k) = phi(k+1).
+A000726,648,yes,28,1,1,trn,Number of partitions of n in which no parts are multiples of 3.
+A003472,649,yes,7,0,0,bin pow,a(n) = 2^(n-4)*C(n 4).
+A001809,650,yes,5,0,0,bin fac,a(n) = n! * n(n-1)/4.
+A000616,651,no,,,,,a(-1)=1 by convention; for n >= 0  a(n) = number of irreducible Boolea
+A001927,652,no,,,,,Number of connected partially ordered sets with n labeled points.
+A005894,653,yes,5,0,0,bin,Centered tetrahedral numbers.
+A000769,654,no,,,,,No-3-in-line problem: number of inequivalent ways of placing 2n points
+A000946,655,no,,,,,Euclid-Mullin sequence: a(1) = 2  a(n+1) is the largest prime factor o
+A001106,656,yes,4,0,0,bin,9-gonal (or enneagonal or nonagonal) numbers: a(n) = n*(7*n-5)/2.
+A007830,657,yes,3,0,0,pow,a(n) = (n+3)^n.
+A002288,658,yes,12,1,2,trn,G.f.: q * Product_{m>=1} (1-q^m)^8*(1-q^2m)^8.
+A006068,659,yes,6,1,0,bxo,a(n) is Gray-coded into n.
+A003180,660,no,,,,,Number of equivalence classes of Boolean functions of n variables unde
+A008621,661,yes,2,0,0,,Expansion of 1/((1-x)*(1-x^4)).
+A006722,662,yes,17,1,0,fil pow ror,Somos-6 sequence: a(n) = (a(n-1) * a(n-5) + a(n-2) * a(n-4) + a(n-3)^2
+A001411,663,no,,,,,Number of n-step self-avoiding walks on square lattice.
+A004029,664,no,,,,,Number of n-dimensional space groups.
+A000281,665,yes,25,1,0,bin gcd pow,Expansion of cos(x)/cos(2x).
+A001372,666,no,,,,,Number of unlabeled mappings (or mapping patterns) from n points to th
+A002593,667,yes,3,0,0,bin pow,a(n) = n^2*(2*n^2 - 1); also Sum_{k=0..n-1} (2k+1)^3.
+A002413,668,yes,4,0,0,bin pow,Heptagonal (or 7-gonal) pyramidal numbers: a(n) = n*(n+1)*(5*n-2)/6.
+A005179,669,no,,,,,Smallest number with exactly n divisors.
+A000914,670,yes,7,0,0,bin,Stirling numbers of the first kind: s(n+2  n).
+A005439,671,yes,30,1,0,bin equ pow,Genocchi medians (or Genocchi numbers of second kind).
+A003024,672,no,,,,,Number of acyclic digraphs (or DAGs) with n labeled nodes.
+A002819,673,yes,11,1,1,pow,Liouville's function L(n) = partial sums of A008836.
+A006233,674,no,,,,,Denominators of Cauchy numbers of first type.
+A008545,675,yes,8,1,0,,Quadruple factorial numbers: Product_{k=0..n-1} (4*k + 3).
+A003459,676,no,,,,,Absolute primes (or permutable primes): every permutation of the digit
+A002931,677,no,,,,,Number of self-avoiding polygons of length 2n on square lattice (not a
+A006154,678,yes,29,1,0,bin equ gcd pow,Number of labeled ordered partitions of an n-set into odd parts.
+A003465,679,yes,15,1,0,bin pow,Number of ways to cover an n-set.
+A001030,680,yes,17,0,0,nrt pow,Fixed under 1 -> 21  2 -> 211.
+A005234,681,no,,,,,Primes p such that 1 + product of primes up to p is prime.
+A007954,682,yes,9,1,0,,Product of decimal digits of n.
+A002538,683,yes,13,1,0,,Second-order Eulerian numbers <<n+1 n-1>>.
+A004015,684,yes,23,1,1,dif equ nrt pow trn,Theta series of face-centered cubic (f.c.c.) lattice.
+A000162,685,no,,,,,Number of 3-dimensional polyominoes (or polycubes) with n cells.
+A001412,686,no,,,,,Number of n-step self-avoiding walks on cubic lattice.
+A002884,687,yes,10,1,0,,Number of nonsingular n X n matrices over GF(2) (order of the group GL
+A003001,688,no,,,,,Smallest number of multiplicative persistence n.
+A002544,689,yes,6,0,0,bin,a(n) = binomial(2*n+1 n)*(n+1)^2.
+A002577,690,no,,,,,Number of partitions of 2^n into powers of 2.
+A005572,691,yes,21,1,0,rol,Number of walks on cubic lattice starting and finishing on the xy plan
+A002559,692,no,,,,,Markoff (or Markov) numbers: union of positive integers x  y  z satisf
+A002104,693,yes,9,1,0,,Logarithmic numbers.
+A005230,694,yes,25,1,0,nrt,Stern's sequence: a(1) = 1  a(n+1) is the sum of the m preceding terms
+A000285,695,yes,9,1,0,,a(0) = 1  a(1) = 4  and a(n) = a(n-1) + a(n-2) for n >= 2.
+A002863,696,no,,,,,Number of prime knots with n crossings.
+A000089,697,yes,11,1,0,equ pow,Number of solutions to x^2 + 1 == 0 (mod n).
+A003989,698,yes,11,0,0,bin gcd nrt,Triangle T from the array A(x  y) = gcd(x y)  for x >= 1  y >= 1  read
+A001661,699,no,,,,,Largest number not the sum of distinct positive n-th powers.
+A000399,700,yes,15,1,0,fil,Unsigned Stirling numbers of first kind s(n 3).
+A001469,701,yes,2,0,1,,Genocchi numbers (of first kind); unsigned coefficients give expansion
+A006602,702,no,,,,,a(n) is the number of hierarchical models on n unlabeled factors or va
+A001077,703,yes,22,1,0,,Numerators of continued fraction convergents to sqrt(5).
+A000621,704,yes,29,1,0,bin pow,Number of monosubstituted alkanes C(n-1)H(2n-1)-X with n-1 carbon atom
+A006352,705,yes,15,1,0,dif gcd neq,Coefficients in expansion of Eisenstein series E_2 (also called E_1 or
+A005432,706,no,,,,,Number of permutation groups of degree n (or  number of distinct subgr
+A005728,707,yes,13,1,1,,Number of fractions in Farey series of order n.
+A004125,708,yes,18,1,0,bin equ trn,Sum of remainders of n mod k  for k = 1  2  3  ...  n.
+A003132,709,yes,8,1,0,pow,Sum of squares of digits of n.
+A003754,710,yes,12,1,0,bxo,Numbers with no adjacent 0's in binary expansion.
+A000151,711,yes,35,1,0,equ,Number of oriented rooted trees with n nodes. Also rooted trees with n
+A002371,712,yes,2,0,2,,Period of decimal expansion of 1/(n-th prime) (0 by convention for the
+A004207,713,yes,9,1,0,dgs,a(0) = 1  a(n) = sum of digits of all previous terms.
+A007153,714,no,,,,,Dedekind numbers: number of monotone Boolean functions or antichains o
+A001999,715,no,,,,,a(n) = a(n-1)*(a(n-1)^2 - 3).
+A002828,716,no,,,,,Least number of squares that add up to n.
+A007123,717,yes,12,0,0,bin,Number of connected unit interval graphs with n nodes; also number of 
+A000707,718,yes,28,1,0,bin dif equ nrt pow,Number of permutations of [1 2 ... n] with n-1 inversions.
+A006065,719,no,,,,,Maximal number of 4-tree rows in n-tree orchard problem.
+A007805,720,yes,9,1,0,,a(n) = Fibonacci(6*n + 3)/2.
+A000560,721,no,,,,,Number of symmetric ways of folding a strip of n labeled stamps.
+A006337,722,yes,9,0,0,nrt pow,An 'eta-sequence': a(n) = floor( (n+1)*sqrt(2) ) - floor( n*sqrt(2) ).
+A005321,723,yes,16,1,1,bin,Upper triangular n X n (0 1)-matrices with no zero rows or columns.
+A000664,724,no,,,,,Number of graphs with n edges.
+A006008,725,yes,5,0,0,pow,Number of inequivalent ways to color vertices of a regular tetrahedron
+A005121,726,no,,,,,Number of ultradissimilarity relations on an n-set.
+A008810,727,yes,3,0,0,pow,a(n) = ceiling(n^2/3).
+A003401,728,yes,19,1,1,dir equ,Numbers of edges of regular polygons constructible with ruler (or  mor
+A000360,729,yes,21,1,0,,Distribution of nonempty triangles inside a fractal rep-4-tile.
+A002618,730,yes,22,1,0,dif pow,a(n) = n*phi(n).
+A001489,731,yes,1,0,0,,a(n) = -n.
+A003149,732,yes,10,1,0,,a(n) = Sum_{k=0..n} k!*(n - k)!.
+A001662,733,no,,,,,Coefficients of Airey's converging factor.
+A006667,734,yes,23,1,0,dir pow,Number of tripling steps to reach 1 from n in '3x+1' problem  or -1 if
+A005789,735,yes,22,0,0,bin,3-dimensional Catalan numbers.
+A001429,736,no,,,,,Number of n-node connected unicyclic graphs.
+A007623,737,yes,16,1,0,dif,Integers written in factorial base.
+A001602,738,yes,2,0,2,,Fibonacci entry points: a(n) = smallest m > 0 such that the n-th prime
+A000642,739,no,,,,,a(n) = number of isomeric hydrocarbons of the acetylene series with ca
+A001203,740,yes,20,1,1,pow,Simple continued fraction expansion of Pi.
+A006512,741,yes,21,1,1,gcd trn,Greater of twin primes.
+A005520,742,no,,,,,Smallest number of complexity n: smallest number requiring n 1's to bu
+A008548,743,yes,9,1,0,,Quintuple factorial numbers: Product_{k=0..n-1} (5*k+1).
+A008306,744,no,,,,,Triangle T(n k) read by rows: associated Stirling numbers of first kin
+A000940,745,no,,,,,Number of n-gons with n vertices.
+A000928,746,no,,,,,Irregular primes: primes p such that at least one of the numerators of
+A002494,747,no,,,,,Number of n-node graphs without isolated nodes.
+A003436,748,yes,24,1,0,rol,Number of inequivalent labeled Hamiltonian circuits on n-octahedron. I
+A008412,749,yes,7,0,0,pow,Coordination sequence for 4-dimensional cubic lattice (points on surfa
+A003293,750,no,,,,,Number of planar partitions of n decreasing across rows.
+A000701,751,yes,5,0,2,,One half of number of non-self-conjugate partitions; also half of numb
+A007508,752,no,,,,,Number of twin prime pairs below 10^n.
+A006877,753,no,,,,,In the '3x+1' problem  these values for the starting value set new rec
+A004442,754,yes,1,0,0,bxo,Natural numbers  pairs reversed: a(n) = n + (-1)^n; also Nimsum n + 1.
+A001470,755,yes,10,1,0,ror,Number of degree-n permutations of order dividing 3.
+A003105,756,yes,28,1,1,trn,Schur's 1926 partition theorem: number of partitions of n into parts 6
+A005318,757,yes,22,1,0,nrt,Conway-Guy sequence: a(n + 1) = 2a(n) - a(n - floor( 1/2 + sqrt(2n) ))
+A006247,758,no,,,,,Number of simple arrangements of n pseudolines in the projective plane
+A005590,759,yes,11,1,0,dif,a(0) = 0  a(1) = 1  a(2n) = a(n)  a(2n+1) = a(n+1) - a(n).
+A003051,760,yes,15,0,4,dir,Number of inequivalent sublattices of index n in hexagonal lattice  wh
+A003309,761,no,,,,,Ludic numbers: apply the same sieve as Eratosthenes  but cross off eve
+A008280,762,yes,23,1,1,bin dif gcd,Boustrophedon version of triangle of Euler-Bernoulli or Entringer numb
+A008611,763,yes,4,0,0,gcd,a(n) = a(n-3) + 1  with a(0)=a(2)=1  a(1)=0.
+A000608,764,no,,,,,Number of connected partially ordered sets with n unlabeled elements.
+A000008,765,yes,20,0,0,fac pow,Number of ways of making change for n cents using coins of 1  2  5  10
+A003072,766,no,,,,,Numbers that are the sum of 3 positive cubes.
+A002093,767,no,,,,,Highly abundant numbers: numbers k such that sigma(k) > sigma(m) for a
+A002596,768,yes,7,0,0,bin dif dir trn,Numerators in expansion of sqrt(1+x). Absolute values give numerators 
+A006384,769,no,,,,,Number of sensed planar maps with n edges.
+A001524,770,no,,,,,Number of stacks  or arrangements of n pennies in contiguous rows  eac
+A002050,771,yes,18,1,0,bin pow,Number of simplices in barycentric subdivision of n-simplex.
+A002619,772,no,,,,,Number of 2-colored patterns on an n X n board.
+A006564,773,yes,7,0,0,,Icosahedral numbers: a(n) = n*(5*n^2 - 5*n + 2)/2.
+A003963,774,yes,34,1,1,bin dif,Fully multiplicative with a(p) = k if p is the k-th prime.
+A000628,775,no,,,,,Number of n-node unrooted steric quartic trees; number of n-carbon alk
+A005649,776,yes,17,1,1,bin,Expansion of e.g.f. (2 - e^x)^(-2).
+A003226,777,no,,,,,Automorphic numbers: m^2 ends with m.
+A006096,778,yes,9,0,0,bin pow,Gaussian binomial coefficient [n  3] for q = 2.
+A005597,779,no,,,,,Decimal expansion of the twin prime constant C_2 = Product_{ p prime >
+A002478,780,yes,12,1,0,,Bisection of A000930.
+A007422,781,yes,19,1,1,equ pow,Multiplicatively perfect numbers j: product of divisors of j is j^2.
+A002473,782,yes,29,1,1,equ pow,7-smooth numbers: positive numbers whose prime divisors are all <= 7.
+A003623,783,yes,9,0,0,nrt pow,Wythoff AB-numbers: floor(floor(n*phi^2)*phi)  where phi = (1+sqrt(5))
+A001132,784,yes,23,1,1,equ pow,Primes == +-1 (mod 8).
+A002436,785,yes,22,1,0,bin gcd pow,E.g.f.: Sum_{n >= 0} a(n)*x^(2*n)/(2*n)! = sec(2*x).
+A003261,786,yes,4,0,0,pow,Woodall (or Riesel) numbers: n*2^n - 1.
+A009000,787,yes,24,1,2,equ pow,Ordered hypotenuse numbers (squares are sums of 2 distinct nonzero squ
+A001420,788,no,,,,,Number of fixed 2-dimensional triangular-celled animals with n cells (
+A003111,789,no,,,,,Number of complete mappings of the cyclic group Z_{2n+1}.
+A002724,790,no,,,,,Number of inequivalent n X n binary matrices  where equivalence means 
+A005165,791,yes,10,1,0,gcd,Alternating factorials: n! - (n-1)! + (n-2)! - ... 1!.
+A006794,792,no,,,,,Primorial -1 primes: primes p such that -1 + product of primes up to p
+A000904,793,yes,14,1,0,dif,a(n) = (n+1)*a(n-1) + (n+2)*a(n-2) + a(n-3); a(1)=0  a(2)=3  a(3)=13.
+A002201,794,no,,,,,Superior highly composite numbers: integers n > 1 for which there is a
+A009116,795,yes,12,0,0,dgr dif pow,Expansion of e.g.f. cos(x) / exp(x).
+A001758,796,yes,22,1,2,gcd,Number of quasi-alternating permutations of length n.
+A007047,797,yes,19,1,0,bin pow,Number of chains in power set of n-set.
+A004019,798,yes,6,1,0,pow,a(0) = 0; for n > 0  a(n) = (a(n-1) + 1)^2.
+A006751,799,yes,7,1,1,,Describe the previous term! (method A - initial term is 2).
+A003168,800,yes,23,1,0,bin equ trn,Number of blobs with 2n+1 edges.
+A000757,801,yes,11,1,0,gcd,Number of cyclic permutations of [n] with no i -> i+1 (mod n).
+A005114,802,no,,,,,Untouchable numbers  also called nonaliquot numbers: impossible values
+A005864,803,no,,,,,The coding-theoretic function A(n 4).
+A002913,804,no,,,,,High temperature series for spin-1/2 Ising magnetic susceptibility on 
+A002065,805,yes,6,1,0,fac,a(n+1) = a(n)^2 + a(n) + 1.
+A003658,806,yes,17,1,1,pow,Fundamental discriminants of real quadratic fields; indices of primiti
+A000672,807,no,,,,,Number of 3-valent trees (= boron trees or binary trees) with n nodes.
+A002861,808,no,,,,,Number of connected functions (or mapping patterns) on n unlabeled poi
+A006717,809,no,,,,,Number of ways of arranging 2n+1 nonattacking semi-queens on a (2n+1) 
+A006450,810,yes,4,0,2,,Prime-indexed primes: primes with prime subscripts.
+A007664,811,yes,13,0,0,bin nrt pow,Reve's puzzle: number of moves needed to solve the Towers of Hanoi puz
+A006884,812,no,,,,,In the '3x+1' problem  these values for the starting value set new rec
+A001855,813,yes,8,0,0,log pow,Sorting numbers: maximal number of comparisons for sorting n elements 
+A006666,814,yes,25,1,0,leq lex pow,Number of halving steps to reach 1 in '3x+1' problem  or -1 if this ne
+A002202,815,yes,18,1,1,equ pow,Values taken by totient function phi(m) (A000010).
+A007097,816,no,,,,,Primeth recurrence: a(n+1) = a(n)-th prime.
+A001952,817,yes,6,0,0,nrt pow,A Beatty sequence: a(n) = floor(n*(2 + sqrt(2))).
+A001032,818,no,,,,,Numbers k such that sum of squares of k consecutive integers >= 1 is a
+A005428,819,yes,9,1,0,,a(n) = ceiling((1 + sum of preceding terms) / 2) starting with a(0) = 
+A001938,820,yes,7,0,1,pow,Expansion of k/(4*q^(1/2)) in powers of q  where k defined by sqrt(k) 
+A001423,821,no,,,,,Number of semigroups of order n  considered to be equivalent when they
+A001917,822,yes,14,0,3,gcd,a(n) = (p-1)/x  where p = prime(n) and x = ord(2 p)  the smallest posi
+A005264,823,no,,,,,Number of labeled rooted Greg trees with n nodes.
+A002025,824,no,,,,,Smaller of an amicable pair: (a b) such that sigma(a) = sigma(b) = a+b
+A003713,825,yes,28,1,0,bin,Expansion of e.g.f. log(1/(1+log(1-x))).
+A005409,826,yes,16,1,0,,Number of polynomials of height n: a(1)=1  a(2)=1  a(3)=4  a(n) = 2*a(
+A002717,827,yes,7,0,0,pow,a(n) = floor(n(n+2)(2n+1)/8).
+A006560,828,no,,,,,Smallest starting prime for n consecutive primes in arithmetic progres
+A005282,829,no,,,,,Mian-Chowla sequence (a B_2 sequence): a(1) = 1; for n>1  a(n) = small
+A006129,830,yes,15,1,0,,a(0)  a(1)  a(2)  ... satisfy Sum_{k=0..n} a(k)*binomial(n k) = 2^bino
+A006562,831,yes,22,1,2,bin gcd pow trn,Balanced primes (of order one): primes which are the average of the pr
+A001067,832,yes,13,0,1,fac gcd,Numerator of Bernoulli(2*n)/(2*n).
+A003504,833,yes,12,1,0,pow,a(0)=a(1)=1; thereafter a(n+1) = (1/n)*Sum_{k=0..n} a(k)^2 (a(n) is no
+A002491,834,yes,10,1,0,,Smallest number of stones in Tchoukaillon (or Mancala  or Kalahari) so
+A005823,835,yes,11,1,0,gcd,Numbers whose ternary expansion contains no 1's.
+A002387,836,no,,,,,Least k such that H(k) > n  where H(k) is the harmonic number Sum_{i=1
+A005563,837,yes,3,0,0,,a(n) = n*(n+2) = (n+1)^2 - 1.
+A004641,838,yes,16,0,0,nrt pow,Fixed under 0 -> 10  1 -> 100.
+A003605,839,yes,17,0,0,equ log pow,Unique monotonic sequence of nonnegative integers satisfying a(a(n)) =
+A001043,840,yes,6,0,2,,Numbers that are the sum of 2 successive primes.
+A002898,841,yes,27,1,0,bin,Number of n-step closed paths on hexagonal lattice.
+A002234,842,no,,,,,Numbers k such that the Woodall number k*2^k - 1 is prime.
+A002522,843,yes,2,0,0,pow,a(n) = n^2 + 1.
+A005177,844,no,,,,,Number of connected regular graphs with n nodes.
+A006522,845,yes,5,0,0,bin,4-dimensional analog of centered polygonal numbers. Also number of reg
+A008919,846,no,,,,,Numbers k such that k written backwards is a nontrivial multiple of k.
+A001550,847,yes,7,0,0,pow,a(n) = 1^n + 2^n + 3^n.
+A008281,848,yes,41,0,1,bin nrt pow,Triangle of Euler-Bernoulli or Entringer numbers read by rows.
+A000837,849,yes,42,1,2,bin equ nrt,Number of partitions of n into relatively prime parts. Also aperiodic 
+A000230,850,no,,,,,a(0)=2; for n>=1  a(n) = smallest prime p such that there is a gap of 
+A000141,851,yes,16,1,1,trn,Number of ways of writing n as a sum of 6 squares.
+A001931,852,no,,,,,Number of fixed 3-dimensional polycubes with n cells; lattice animals 
+A006533,853,no,,,,,Place n equally-spaced points around a circle and join every pair of p
+A000025,854,yes,12,1,2,trn,Coefficients of the 3rd-order mock theta function f(q).
+A000356,855,yes,10,0,0,bin pow,Number of rooted cubic maps with 2n nodes and a distinguished Hamilton
+A006369,856,yes,4,0,0,dif,a(n) = 2*n/3 for n divisible by 3  otherwise a(n) = round(4*n/3). Or  
+A007299,857,no,,,,,Number of Hadamard matrices of order 4n.
+A007376,858,yes,33,1,0,geq pow,The almost-natural numbers: write n in base 10 and juxtapose digits.
+A008278,859,yes,53,1,0,bin fac nrt pow,Reflected triangle of Stirling numbers of 2nd kind  S(n n-k+1)  n >= 1
+A006784,860,no,,,,,Engel expansion of Pi.
+A005156,861,yes,22,1,0,bin,Number of alternating sign 2n+1 X 2n+1 matrices symmetric about the ve
+A002162,862,yes,16,1,0,pow,Decimal expansion of the natural logarithm of 2.
+A004086,863,yes,8,1,0,,Read n backwards (referred to as R(n) in many sequences).
+A002961,864,no,,,,,Numbers k such that k and k+1 have same sum of divisors.
+A002137,865,yes,15,1,0,gcd,Number of n X n symmetric matrices with nonnegative integer entries  t
+A002251,866,yes,25,1,0,nrt pow,Start with the nonnegative integers; then swap L(k) and U(k) for all k
+A002203,867,yes,14,1,0,,Companion Pell numbers: a(n) = 2*a(n-1) + a(n-2)  a(0) = a(1) = 2.
+A000982,868,yes,3,0,0,pow,a(n) = ceiling(n^2/2).
+A002906,869,no,,,,,High temperature series for spin-1/2 Ising magnetic susceptibility on 
+A005046,870,yes,28,1,0,bin equ pow,Number of partitions of a 2n-set into even blocks.
+A000791,871,yes,8,0,0,bin,Ramsey numbers R(3 n).
+A003601,872,yes,25,1,2,equ gcd pow,Numbers j such that the average of the divisors of j is an integer: si
+A007310,873,yes,3,0,0,bor,Numbers congruent to 1 or 5 mod 6.
+A002119,874,yes,12,1,0,,Bessel polynomial y_n(-2).
+A004247,875,yes,12,0,0,bin nrt,Multiplication table read by antidiagonals: T(i j) = i*j (i>=0  j>=0).
+A000795,876,yes,37,1,2,bin gcd nrt,Salié numbers: expansion of cosh x / cos x = Sum_{n >= 0} a(n)*x^(2n)/
+A000051,877,yes,4,0,0,pow,a(n) = 2^n + 1.
+A000986,878,yes,17,1,0,,Number of n X n symmetric matrices with (0 1) entries and all row sums
+A004137,879,no,,,,,Maximal number of edges in a graceful graph on n nodes.
+A001614,880,yes,7,0,0,nrt,Connell sequence: 1 odd  2 even  3 odd  ...
+A007918,881,yes,18,1,1,equ trn,Least prime >= n (version 1 of the 'next prime' function).
+A002171,882,yes,26,1,0,bin nrt,Glaisher's chi numbers. a(n) = chi(4*n + 1).
+A002209,883,yes,29,1,1,bin fac gcd pow,Denominators of coefficients for numerical integration.
+A004149,884,yes,39,1,0,fil rol,Generalized Catalan numbers: a(n+1) = a(n) + Sum_{k=2..n-1} a(k)*a(n-1
+A000107,885,no,,,,,Number of rooted trees with n nodes and a single labeled node; pointed
+A000569,886,no,,,,,Number of graphical partitions of 2n.
+A003046,887,yes,11,1,0,bin dif,Product of first n Catalan numbers.
+A001859,888,yes,4,0,0,pow,Triangular numbers plus quarter-squares: n*(n+1)/2 + floor((n+1)^2/4) 
+A006327,889,yes,12,1,0,,a(n) = Fibonacci(n) - 3. Number of total preorders.
+A000211,890,yes,11,1,0,,a(n) = a(n-1) + a(n-2) - 2  a(0) = 4  a(1) = 3.
+A002485,891,yes,13,1,1,,Numerators of convergents to Pi.
+A002017,892,yes,17,1,1,bin pow,Expansion of e.g.f. exp(sin(x)).
+A002878,893,yes,8,1,0,,Bisection of Lucas sequence: a(n) = L(2*n+1).
+A005866,894,no,,,,,The coding-theoretic function A(n 8).
+A008310,895,yes,4,0,2,,Triangle of coefficients of Chebyshev polynomials T_n(x).
+A008826,896,no,,,,,Triangle of coefficients from fractional iteration of e^x - 1.
+A006821,897,no,,,,,Number of connected regular graphs of degree 5 (or quintic graphs) wit
+A005172,898,no,,,,,Number of labeled rooted trees of subsets of an n-set.
+A000684,899,yes,14,1,0,bin pow,Number of colored labeled n-node graphs with 2 interchangeable colors.
+A002145,900,yes,14,1,1,pow,Primes of the form 4*k + 3.
+A007732,901,yes,15,1,0,dir geq,Period of decimal representation of 1/n.
+A001654,902,yes,10,1,0,,Golden rectangle numbers: F(n) * F(n+1)  where F(n) = A000045(n) (Fibo
+A005118,903,yes,16,1,0,fac fil,Number of simple allowable sequences on 1..n containing the permutatio
+A003686,904,yes,10,1,0,,Number of genealogical 1-2 rooted trees of height n.
+A001651,905,yes,3,0,0,,Numbers not divisible by 3.
+A008846,906,yes,34,1,0,dif equ pow,Hypotenuses of primitive Pythagorean triangles.
+A001105,907,yes,2,0,0,pow,a(n) = 2*n^2.
+A006357,908,yes,12,1,0,ror,Number of antichains in the product of a fence poset with n elements a
+A000617,909,no,,,,,Number of NP-equivalence classes of threshold functions of n or fewer 
+A002111,910,no,,,,,Glaisher's G numbers.
+A003090,911,no,,,,,Number of species (or 'main classes' or 'paratopy classes') of Latin s
+A005900,912,yes,5,0,0,pow,Octahedral numbers: a(n) = n*(2*n^2 + 1)/3.
+A004123,913,yes,17,1,1,bin,Number of generalized weak orders on n points.
+A001923,914,yes,7,1,0,pow,a(n) = Sum_{k=1..n} k^k.
+A007191,915,yes,28,1,1,,McKay-Thompson series of class 2B for the Monster group with a(0) = -2
+A001501,916,no,,,,,Number of n X n 0-1 matrices with all column and row sums equal to 3.
+A006567,917,no,,,,,Emirps (primes whose reversal is a different prime).
+A006723,918,yes,20,1,0,fil ror,Somos-7 sequence: a(n) = (a(n-1) * a(n-6) + a(n-2) * a(n-5) + a(n-3) *
+A006842,919,no,,,,,Triangle read by rows: row n gives numerators of Farey series of order
+A007539,920,no,,,,,a(n) = first n-fold perfect (or n-multiperfect) number.
+A006046,921,yes,10,1,0,dgs pow,Total number of odd entries in first n rows of Pascal's triangle: a(0)
+A006358,922,yes,19,1,0,,Number of antichains in the product of a fence poset with n elements a
+A005573,923,yes,15,1,0,,Number of walks on cubic lattice (starting from origin and not going b
+A007694,924,yes,12,1,1,,Numbers k such that phi(k) divides k.
+A001200,925,no,,,,,Number of linear geometries on n (unlabeled) points.
+A007378,926,yes,11,0,0,log pow,a(n)  for n >= 2  is smallest positive integer which is consistent wit
+A005934,927,no,,,,,Highly powerful numbers: numbers with record value of the product of t
+A000657,928,yes,7,0,1,pow,Median Euler numbers (the middle numbers of Arnold's shuttle triangle)
+A007240,929,yes,14,1,2,trn,McKay-Thompson series of class 1A for the Monster group with a(0) = 24
+A008408,930,yes,14,1,2,trn,Theta series of Leech lattice.
+A006922,931,yes,31,1,1,trn,Expansion of 1/eta(q)^24; Fourier coefficients of T_{14}.
+A001189,932,yes,11,1,0,,Number of degree-n permutations of order exactly 2.
+A002605,933,yes,18,1,0,,a(n) = 2*(a(n-1) + a(n-2))  a(0) = 0  a(1) = 1.
+A007484,934,yes,19,1,0,,a(n) = 3*a(n-1) + 2*a(n-2)  with a(0)=2  a(1)=7.
+A007569,935,no,,,,,Number of nodes in regular n-gon with all diagonals drawn.
+A002235,936,no,,,,,Numbers m such that 3*2^m - 1 is prime.
+A000028,937,yes,28,1,2,equ gcd pow,Let k = p_1^e_1 p_2^e_2 p_3^e_3 ... be the prime factorization of n. S
+A000150,938,yes,14,0,0,bin dif trn,Number of dissections of an n-gon  rooted at an exterior edge  asymmet
+A006571,939,yes,28,1,1,gcd trn,Expansion of q*Product_{k>=1} (1-q^k)^2*(1-q^(11*k))^2.
+A003430,940,no,,,,,Number of unlabeled series-parallel posets (i.e.  generated by unions 
+A003269,941,yes,7,1,0,rol,a(n) = a(n-1) + a(n-4) with a(0) = 0  a(1) = a(2) = a(3) = 1.
+A002778,942,no,,,,,Numbers whose square is a palindrome.
+A001819,943,yes,10,1,0,pow,Central factorial numbers: second right-hand column of triangle A00895
+A000934,944,yes,5,0,0,nrt,Chromatic number (or Heawood number) Chi(n) of a closed orientable sur
+A005465,945,yes,9,0,2,pow,Number of n-dimensional hypotheses allowing for conditional independen
+A005993,946,yes,7,0,0,bin,Expansion of (1+x^2)/((1-x)^2*(1-x^2)^2).
+A004070,947,yes,15,1,0,bin,Table of Whitney numbers W(n k) read by antidiagonals  where W(n k) is
+A000918,948,yes,4,0,0,pow,a(n) = 2^n - 2.
+A005248,949,yes,8,1,0,,Bisection of Lucas numbers: a(n) = L(2*n) = A000032(2*n).
+A006843,950,no,,,,,Triangle read by rows: row n gives denominators of Farey series of ord
+A002458,951,yes,5,0,0,bin,a(n) = binomial(4*n+1  2*n).
+A008904,952,yes,5,0,0,dir fac,a(n) is the final nonzero digit of n!.
+A007956,953,yes,11,0,1,gcd nrt pow,Product of the proper divisors of n.
+A001606,954,no,,,,,Indices of prime Lucas numbers.
+A005195,955,no,,,,,Number of forests with n unlabeled nodes.
+A007431,956,yes,28,1,0,dif,a(n) = Sum_{d|n} phi(d)*mu(n/d).
+A003050,957,no,,,,,Number of primitive sublattices of index n in hexagonal lattice: tripl
+A003724,958,yes,13,1,1,bin,Number of partitions of n-set into odd blocks.
+A008441,959,yes,19,1,0,equ nrt pow,Number of ordered ways of writing n as the sum of 2 triangular numbers
+A000104,960,no,,,,,Number of n-celled free polyominoes without holes.
+A002054,961,yes,5,0,0,bin,Binomial coefficient C(2n+1  n-1).
+A004613,962,yes,10,0,1,pow,Numbers that are divisible only by primes congruent to 1 mod 4.
+A007283,963,yes,4,0,0,pow,a(n) = 3*2^n.
+A002114,964,yes,24,1,0,bin pow,Glaisher's H' numbers.
+A005942,965,yes,13,1,0,,a(2n) = a(n) + a(n+1)  a(2n+1) = 2a(n+1)  if n >= 2.
+A002048,966,no,,,,,Segmented numbers  or prime numbers of measurement.
+A002183,967,no,,,,,Number of divisors of n-th highly composite number.
+A000379,968,yes,27,1,2,equ gcd pow,Numbers where total number of 1-bits in the exponents of their prime f
+A007583,969,yes,6,0,0,pow,a(n) = (2^(2*n + 1) + 1)/3.
+A001334,970,no,,,,,Number of n-step self-avoiding walks on hexagonal [ =triangular ] latt
+A003881,971,yes,22,1,0,pow,Decimal expansion of Pi/4.
+A000212,972,yes,2,0,0,pow,a(n) = floor(n^2/3).
+A003600,973,yes,5,0,0,bin trn,Maximal number of pieces obtained by slicing a torus (or a bagel) with
+A005235,974,no,,,,,Fortunate numbers: least m > 1 such that m + prime(n)# is prime  where
+A002896,975,yes,18,1,0,bin pow,Number of 2n-step polygons on cubic lattice.
+A004027,976,no,,,,,Number of arithmetic n-dimensional crystal classes.
+A005802,977,yes,27,1,0,rol,Number of permutations in S_n with longest increasing subsequence of l
+A001929,978,no,,,,,Number of connected topologies on n labeled points.
+A006694,979,yes,25,1,2,bin gcd,Number of cyclotomic cosets of 2 mod 2n+1.
+A001205,980,yes,14,1,0,,Number of clouds with n points; number of undirected 2-regular labeled
+A001232,981,yes,67,1,4,equ fil geq pow rol,Numbers k such that 9*k = (k written backwards)  k > 0.
+A005744,982,yes,9,0,0,bin,Expansion of x*(1+x-x^2)/((1-x)^4*(1+x)).
+A001400,983,yes,12,0,0,pow,Number of partitions of n into at most 4 parts.
+A005449,984,yes,3,0,0,bin,Second pentagonal numbers: a(n) = n*(3*n + 1)/2.
+A001496,985,yes,17,0,0,bin,Number of 4 X 4 matrices with nonnegative integer entries and row and 
+A000325,986,yes,4,0,0,pow,a(n) = 2^n - n.
+A006752,987,yes,28,1,0,pow,Decimal expansion of Catalan's constant 1 - 1/9 + 1/25 - 1/49 + 1/81 -
+A008776,988,yes,4,0,0,pow,Pisot sequences E(2 6)  L(2 6)  P(2 6)  T(2 6).
+A003603,989,yes,7,1,1,trn,Fractal sequence obtained from Fibonacci numbers (or Wythoff array).
+A000003,990,no,,,,,Number of classes of primitive positive definite binary quadratic form
+A006300,991,yes,36,1,0,rol,Number of rooted maps with n edges on torus.
+A004767,992,yes,2,0,0,,a(n) = 4*n + 3.
+A006097,993,yes,15,1,0,bin,Gaussian binomial coefficient [n  4] for q = 2.
+A002513,994,yes,27,1,1,trn,Number of 'cubic partitions' of n: expansion of Product_{k>0} 1/((1-x^
+A002846,995,no,,,,,Number of ways of transforming a set of n indistinguishable objects in
+A000370,996,no,,,,,Number of NPN-equivalence classes of Boolean functions of n or fewer v
+A001013,997,no,,,,,Jordan-Polya numbers: products of factorial numbers A000142.
+A000479,998,no,,,,,Number of 1-factorizations of K_{n n}.
+A004022,999,no,,,,,Primes of the form (10^k - 1)/9. Also called repunit primes or repdigi
+A000515,1000,yes,8,0,0,bin,a(n) = (2n)!(2n+1)!/n!^4  or equally (2n+1)*binomial(2n n)^2.
+A001863,1001,yes,11,1,0,,Normalized total height of rooted trees with n nodes.
+A004146,1002,yes,9,1,0,,Alternate Lucas numbers - 2.
+A006231,1003,yes,9,1,0,,a(n) = Sum_{k=2..n} n(n-1)...(n-k+1)/k.
+A008585,1004,yes,1,0,0,,a(n) = 3*n.
+A007564,1005,yes,19,1,0,,Shifts left when INVERT transform applied thrice.
+A008459,1006,yes,13,0,0,bin nrt pow,Square the entries of Pascal's triangle.
+A003959,1007,yes,12,1,1,,If n = Product p(k)^e(k) then a(n) = Product (p(k)+1)^e(k)  a(1) = 1.
+A005159,1008,yes,9,0,0,bin pow,a(n) = 3^n*Catalan(n).
+A005994,1009,yes,7,0,0,bin,Alkane (or paraffin) numbers l(7 n).
+A002541,1010,yes,12,1,0,,a(n) = Sum_{k=1..n-1} floor((n-k)/k).
+A002417,1011,yes,4,0,0,fac,4-dimensional figurate numbers: a(n) = n*binomial(n+2  3).
+A003273,1012,no,,,,,Congruent numbers: positive integers k for which there exists a right 
+A000903,1013,yes,38,1,0,ban bxo fac pow,Number of inequivalent ways of placing n nonattacking rooks on n X n b
+A002026,1014,yes,19,1,0,,Generalized ballot numbers (first differences of Motzkin numbers).
+A007581,1015,yes,6,0,0,bin pow,a(n) = (2^n+1)*(2^n+2)/6.
+A002779,1016,no,,,,,Palindromic squares.
+A007429,1017,yes,22,1,0,dif gcd pow,Inverse Moebius transform applied twice to natural numbers.
+A003406,1018,no,,,,,Expansion of Ramanujan's function R(x) = 1 + Sum_{n >= 1} { x^(n*(n+1)
+A005727,1019,yes,16,1,1,bin,n-th derivative of x^x at x=1. Also called Lehmer-Comtet numbers.
+A008793,1020,yes,20,1,0,bin,The problem of the calissons: number of ways to tile a hexagon of edge
+A006967,1021,no,,,,,Number of graceful permutations of length n.
+A001248,1022,yes,2,0,1,pow,Squares of primes.
+A002216,1023,no,,,,,Harary-Read numbers: restricted hexagonal polyominoes (cata-polyhexes)
+A003520,1024,yes,7,1,0,ror,a(n) = a(n-1) + a(n-5); a(0) = ... = a(4) = 1.
+A002699,1025,yes,4,0,0,pow,a(n) = n*2^(2*n-1).
+A000034,1026,yes,2,0,0,,Period 2: repeat [1  2]; a(n) = 1 + (n mod 2).
+A007689,1027,yes,6,0,0,pow,a(n) = 2^n + 3^n.
+A004254,1028,yes,14,1,0,,a(n) = 5*a(n-1) - a(n-2) for n > 1  a(0) = 0  a(1) = 1.
+A007531,1029,yes,1,0,0,fac,a(n) = n*(n-1)*(n-2) (or n!/(n-3)!).
+A007040,1030,yes,16,1,0,,Number of (marked) cyclic n-bit binary strings containing no runs of l
+A008233,1031,yes,10,0,0,pow,a(n) = floor(n/4)*floor((n+1)/4)*floor((n+2)/4)*floor((n+3)/4).
+A000571,1032,yes,27,1,1,trn,Number of different score sequences that are possible in an n-team rou
+A002408,1033,yes,15,1,0,equ gcd pow,Expansion of 8-dimensional cusp form.
+A002822,1034,yes,26,1,2,equ pow,Numbers m such that 6m-1  6m+1 are twin primes.
+A002325,1035,yes,23,1,0,dir equ nrt pow,Glaisher's J numbers.
+A005142,1036,no,,,,,Number of connected bipartite graphs with n nodes.
+A007570,1037,yes,24,1,0,,a(n) = F(F(n))  where F is a Fibonacci number.
+A000926,1038,no,,,,,Euler's 'numerus idoneus' (or 'numeri idonei'  or idoneal  or suitable
+A005375,1039,yes,16,1,0,dif gcd,a(0) = 0; a(n) = n - a(a(a(a(n-1)))) for n > 0.
+A006823,1040,no,,,,,Number of connected trivalent bipartite graphs with 2n nodes.
+A000241,1041,yes,9,0,0,pow,Crossing number of complete graph with n nodes.
+A006368,1042,yes,4,0,0,dif,The 'amusical permutation' of the nonnegative numbers: a(2n) = 3n  a(4
+A005260,1043,yes,10,1,0,bin pow,a(n) = Sum_{k = 0..n} binomial(n k)^4.
+A008303,1044,no,,,,,Triangle read by rows: T(n k) (n >= 1  0 <= k <= ceiling(n/2)-1) = num
+A002526,1045,yes,46,1,0,rol,Number of permutations of length n within distance 3 of a fixed permut
+A000366,1046,yes,6,0,1,pow,Genocchi numbers of second kind (A005439) divided by 2^(n-1).
+A002845,1047,no,,,,,Number of distinct values taken by 2^2^...^2 (with n 2's and parenthes
+A002975,1048,no,,,,,Primitive weird numbers: weird numbers with no proper weird divisors.
+A001014,1049,yes,1,0,0,pow,Sixth powers: a(n) = n^6.
+A003471,1050,yes,82,1,0,rol,Number of permutations with no hits on 2 main diagonals.
+A001865,1051,yes,12,1,0,,Number of connected functions on n labeled nodes.
+A002813,1052,no,,,,,a(0) = 4; for n > 0  a(n) = a(n-1)^3 - 3*a(n-1)^2 + 3.
+A003499,1053,yes,15,1,0,,a(n) = 6*a(n-1) - a(n-2)  with a(0) = 2  a(1) = 6.
+A007202,1054,yes,8,0,0,pow,Crystal ball sequence for hexagonal close-packing.
+A005478,1055,no,,,,,Prime Fibonacci numbers.
+A002469,1056,yes,10,1,0,,The game of Mousetrap with n cards: the number of permutations of n ca
+A006935,1057,no,,,,,Even pseudoprimes (or primes) to base 2: even numbers k that divide 2^
+A006285,1058,yes,20,1,1,equ pow,Odd numbers not of form p + 2^k (de Polignac numbers).
+A002827,1059,no,,,,,Unitary perfect numbers: numbers k such that usigma(k) - k = k.
+A006715,1060,yes,8,1,1,,Describe the previous term! (method A - initial term is 3).
+A007297,1061,yes,24,1,0,bin equ trn,Number of connected graphs on n labeled nodes on a circle with straigh
+A001532,1062,no,,,,,Number of NP-equivalence classes of self-dual threshold functions of n
+A008289,1063,no,,,,,Triangle read by rows: Q(n m) = number of partitions of n into m disti
+A001590,1064,yes,8,1,0,rol,Tribonacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) with a(0)=0  a(1)=
+A007629,1065,no,,,,,Keith numbers  or Repfigit (REPlicating FIbonacci diGIT) numbers.
+A004189,1066,yes,14,1,0,,a(n) = 10*a(n-1) - a(n-2); a(0) = 0  a(1) = 1.
+A000256,1067,yes,27,1,1,dif trn,Number of simple triangulations of the plane with n nodes.
+A001747,1068,yes,12,0,1,dif,2 together with primes multiplied by 2.
+A006906,1069,yes,28,1,1,trn,a(n) is the sum of products of terms in all partitions of n.
+A002741,1070,yes,14,1,0,,Logarithmic numbers: expansion of the e.g.f. -log(1-x) * e^(-x).
+A003433,1071,no,,,,,Hadamard maximal determinant problem: largest determinant of (+1 -1)-m
+A006769,1072,yes,17,1,0,pow ror,Elliptic divisibility sequence associated with elliptic curve '37a1': 
+A007052,1073,yes,8,1,0,,Number of order-consecutive partitions of n.
+A001208,1074,yes,60,1,0,rol,a(n) = solution to the postage stamp problem with 3 denominations and 
+A002488,1075,no,,,,,a(n) = n^(n^n).
+A007290,1076,yes,2,0,0,bin,a(n) = 2*binomial(n 3).
+A006896,1077,yes,14,1,0,,a(n) is the number of hierarchical linear models on n labeled factors 
+A002072,1078,no,,,,,a(n) = smallest number m such that for all k > m  either k or k+1 has 
+A002193,1079,yes,8,0,0,nrt pow,Decimal expansion of square root of 2.
+A000459,1080,yes,18,1,0,,Number of multiset permutations of {1  1  2  2  ...  n  n} with no fix
+A001644,1081,yes,10,1,0,rol,a(n) = a(n-1) + a(n-2) + a(n-3)  a(0)=3  a(1)=1  a(2)=3.
+A002955,1082,yes,36,1,0,equ,Number of (unordered  unlabeled) rooted trimmed trees with n nodes.
+A007590,1083,yes,2,0,0,pow,a(n) = floor(n^2/2).
+A001864,1084,yes,10,1,0,,Total height of rooted trees with n labeled nodes.
+A006822,1085,no,,,,,Number of connected regular graphs of degree 6 (or sextic graphs) with
+A002350,1086,no,,,,,Take solution to Pellian equation x^2 - n*y^2 = 1 with smallest positi
+A007600,1087,yes,14,1,0,pow,Minimal number of subsets in a separating family for a set of n elemen
+A002694,1088,yes,4,0,0,bin,Binomial coefficients C(2n  n-2).
+A001088,1089,yes,10,1,1,trn,Product of totient function: a(n) = Product_{k=1..n} phi(k) (cf. A0000
+A004187,1090,yes,11,1,0,,a(n) = 7*a(n-1) - a(n-2) with a(0) = 0  a(1) = 1.
+A006248,1091,no,,,,,Number of projective pseudo order types: simple arrangements of pseudo
+A002864,1092,no,,,,,Number of alternating prime knots with n crossings.
+A001250,1093,yes,60,0,1,bin nrt pow,Number of alternating permutations of order n.
+A001082,1094,yes,5,0,0,pow,Generalized octagonal numbers: k*(3*k-2)  k=0  +- 1  +- 2  +-3  ...
+A003030,1095,no,,,,,Number of strongly connected digraphs with n labeled nodes.
+A001918,1096,no,,,,,Least positive primitive root of n-th prime.
+A008805,1097,yes,3,0,0,bin,Triangular numbers repeated.
+A005810,1098,yes,3,0,0,bin,a(n) = binomial(4n n).
+A000344,1099,yes,8,0,0,bin,a(n) = 5*binomial(2n  n-2)/(n+3).
+A008586,1100,yes,1,0,0,,Multiples of 4.
+A002210,1101,no,,,,,Decimal expansion of Khinchin's constant.
+A002905,1102,no,,,,,Number of connected graphs with n edges.
+A007606,1103,yes,7,0,0,nrt,Take 1  skip 2  take 3  etc.
+A002489,1104,yes,3,0,0,pow,a(n) = n^(n^2)  or (n^n)^n.
+A004396,1105,yes,3,0,0,,One even number followed by two odd numbers.
+A001090,1106,yes,14,1,0,,a(n) = 8*a(n-1) - a(n-2); a(0) = 0  a(1) = 1.
+A002562,1107,no,,,,,Number of ways of placing n nonattacking queens on n X n board (symmet
+A001426,1108,no,,,,,Number of commutative semigroups of order n.
+A005286,1109,yes,5,0,0,bin,a(n) = (n + 3)*(n^2 + 6*n + 2)/6.
+A005228,1110,yes,23,1,0,equ gcd,Sequence and first differences (A030124) together list all positive nu
+A008486,1111,yes,2,0,0,,Expansion of (1 + x + x^2)/(1 - x)^2.
+A000346,1112,yes,9,0,0,bin pow,a(n) = 2^(2*n+1) - binomial(2*n+1  n+1).
+A000586,1113,yes,11,1,1,,Number of partitions of n into distinct primes.
+A006899,1114,yes,12,1,0,pow trn,Numbers of the form 2^i or 3^j.
+A002452,1115,yes,4,0,0,pow,a(n) = (9^n - 1)/8.
+A008296,1116,no,,,,,Triangle of Lehmer-Comtet numbers of the first kind.
+A000902,1117,yes,11,1,0,,Expansion of e.g.f. (1/2)*(exp(2*x + x^2) + 1).
+A000171,1118,no,,,,,Number of self-complementary graphs with n nodes.
+A003659,1119,yes,20,1,0,,Shifts left under Stirling2 transform.
+A000400,1120,yes,3,0,0,pow,Powers of 6: a(n) = 6^n.
+A000086,1121,yes,10,1,0,equ pow,Number of solutions to x^2 - x + 1 == 0 (mod n).
+A003307,1122,no,,,,,Numbers k such that 2*3^k - 1 is prime.
+A003513,1123,no,,,,,Number of regular sequences of length n.
+A004013,1124,yes,26,1,1,equ nrt pow trn,Theta series of body-centered cubic (b.c.c.) lattice.
+A001040,1125,yes,10,1,0,,a(n+1) = n*a(n) + a(n-1) with a(0)=0  a(1)=1.
+A005249,1126,yes,14,1,0,bin pow,Determinant of inverse Hilbert matrix.
+A000531,1127,yes,10,0,0,bin pow,From area of cyclic polygon of 2n + 1 sides.
+A001832,1128,no,,,,,Number of labeled connected bipartite graphs on n nodes.
+A005708,1129,yes,7,1,0,rol,a(n) = a(n-1) + a(n-6)  with a(i) = 1 for i = 0..5.
+A005578,1130,yes,5,0,0,pow,a(2*n) = 2*a(2*n-1)  a(2*n+1) = 2*a(2*n)-1.
+A001339,1131,yes,11,1,0,gcd,a(n) = Sum_{k=0..n} (k+1)! binomial(n k).
+A007054,1132,yes,8,0,0,bin,Super ballot numbers: 6(2n)!/(n!(n+2)!).
+A003557,1133,yes,29,1,0,dif gcd,n divided by largest squarefree divisor of n; if n = Product p(k)^e(k)
+A000478,1134,yes,15,0,0,pow,Number of ways of placing n labeled balls into 3 indistinguishable box
+A006600,1135,no,,,,,Total number of triangles visible in regular n-gon with all diagonals 
+A000580,1136,yes,1,0,0,bin,a(n) = binomial coefficient C(n 7).
+A007070,1137,yes,9,1,0,,a(n) = 4*a(n-1) - 2*a(n-2) with a(0) = 1  a(1) = 4.
+A006558,1138,no,,,,,Start of first run of n consecutive integers with same number of divis
+A006148,1139,yes,147,1,0,rol,Number of 4 X n binary matrices up to row and column permutations.
+A006659,1140,yes,6,0,0,bin,Number of closed meander systems of order n+1 with n components.
+A000375,1141,no,,,,,Topswops (1): start by shuffling n cards labeled 1..n. If top card is 
+A001174,1142,no,,,,,Number of oriented graphs (i.e.  digraphs with no bidirected edges) on
+A007661,1143,yes,6,1,0,trn,Triple factorial numbers a(n) = n!!!  defined by a(n) = n*a(n-3)  a(0)
+A000238,1144,no,,,,,Number of oriented trees with n nodes.
+A003020,1145,no,,,,,Largest prime factor of the 'repunit' number 11...1 (cf. A002275).
+A003128,1146,yes,28,1,0,bin fac pow,Number of driving-point impedances of an n-terminal network.
+A008475,1147,yes,9,1,1,,If n = Product (p_j^k_j) then a(n) = Sum (p_j^k_j) (a(1) = 0 by conven
+A000581,1148,yes,1,0,0,bin,a(n) = binomial coefficient C(n 8).
+A000995,1149,yes,28,1,0,bin,Shifts left two terms under the binomial transform.
+A000246,1150,yes,9,1,0,,Number of permutations in the symmetric group S_n that have odd order.
+A004481,1151,no,,,,,Table of Sprague-Grundy values for Wythoff's game (Wyt Queens) read by
+A005964,1152,no,,,,,Number of trivalent connected (or cubic) planar graphs with 2n nodes.
+A005717,1153,yes,18,1,0,,Construct triangle in which n-th row is obtained by expanding (1 + x +
+A006886,1154,no,,,,,Kaprekar numbers: positive numbers n such that n = q+r and n^2 = q*10^
+A000106,1155,yes,47,1,0,equ geq,2nd power of rooted tree enumerator; number of linear forests of 2 roo
+A001177,1156,yes,17,1,0,equ,Fibonacci entry points: a(n) = least k >= 1 such that n divides Fibona
+A002103,1157,no,,,,,Coefficients of expansion of Jacobi nome q in certain powers of (1/2)*
+A006012,1158,yes,8,1,0,,a(0) = 1  a(1) = 2  a(n) = 4*a(n-1) - 2*a(n-2)  n >= 2.
+A005840,1159,yes,16,1,1,,Expansion of (1-x)*e^x/(2-e^x).
+A003042,1160,no,,,,,Number of directed Hamiltonian cycles (or Gray codes) on n-cube.
+A001824,1161,yes,12,1,0,,Central factorial numbers: 1st subdiagonal of A008956.
+A003285,1162,no,,,,,Period of continued fraction for square root of n (or 0 if n is a squa
+A001616,1163,yes,25,1,0,dif gcd,Number of parabolic vertices of Gamma_0(n).
+A004102,1164,no,,,,,Number of signed graphs with n nodes. Also number of 2-multigraphs on 
+A005461,1165,yes,7,0,0,bin fac,Number of simplices in barycentric subdivision of n-simplex.
+A002373,1166,yes,21,1,2,,Smallest prime in decomposition of 2n into sum of two odd primes.
+A002071,1167,no,,,,,Number of pairs of consecutive integers x  x+1 such that all prime fac
+A006885,1168,no,,,,,Record highest point of trajectory before reaching 1 in '3x+1' problem
+A006058,1169,no,,,,,Number of connected labeled T_4-topologies with n points.
+A004171,1170,yes,4,0,0,pow,a(n) = 2^(2n+1).
+A006982,1171,no,,,,,Number of unlabeled distributive lattices on n nodes.
+A006939,1172,yes,18,1,0,gcd neq,Chernoff sequence: a(n) = Product_{k=1..n} prime(k)^(n-k+1).
+A000022,1173,no,,,,,Number of centered hydrocarbons with n atoms.
+A001153,1174,no,,,,,Degrees of primitive irreducible trinomials: n such that 2^n - 1 is a 
+A001472,1175,yes,18,1,0,fac ror,Number of degree-n permutations of order dividing 4.
+A005638,1176,no,,,,,Number of unlabeled trivalent (or cubic) graphs with 2n nodes.
+A001335,1177,no,,,,,Number of n-step polygons on hexagonal lattice.
+A002967,1178,no,,,,,Egyptian fractions: number of solutions of 1 = 1/x_1 + ... + 1/x_n in 
+A005276,1179,no,,,,,Betrothed (or quasi-amicable) numbers.
+A001610,1180,yes,10,1,0,,a(n) = a(n-1) + a(n-2) + 1  with a(0) = 0 and a(1) = 2.
+A003518,1181,yes,9,0,0,bin,a(n) = 8*binomial(2*n+1 n-3)/(n+5).
+A001116,1182,yes,12,0,0,pow,Maximal kissing number of an n-dimensional lattice.
+A005379,1183,yes,8,0,0,nrt pow,The male of a pair of recurrences.
+A005512,1184,yes,20,1,0,bin pow,Number of series-reduced labeled trees with n nodes.
+A003558,1185,yes,18,1,0,dif pow,Least number m > 0 such that 2^m == +-1 (mod 2n + 1).
+A002807,1186,yes,9,1,0,,a(n) = Sum_{k=3..n} (k-1)!*C(n k)/2.
+A005898,1187,yes,7,0,0,pow,Centered cube numbers: n^3 + (n+1)^3.
+A007542,1188,no,,,,,Successive integers produced by Conway's PRIMEGAME.
+A005758,1189,yes,29,1,1,trn,Number of partitions of n into parts of 12 kinds.
+A006968,1190,no,,,,,Number of letters in Roman numeral representation of n.
+A001078,1191,yes,14,1,0,,a(n) = 10*a(n-1) - a(n-2) with a(0) = 0  a(1) = 2.
+A003945,1192,yes,5,0,0,pow,Expansion of g.f. (1+x)/(1-2*x).
+A006542,1193,yes,6,0,0,bin gcd,a(n) = binomial(n 3)*binomial(n-1 3)/4.
+A007395,1194,yes,1,0,0,,Constant sequence: the all 2's sequence.
+A007921,1195,yes,28,1,0,gcd pow,Numbers that are not the difference of two primes.
+A005341,1196,yes,261,1,0,rol,Length of n-th term in Look and Say sequences A005150 and A007651.
+A002283,1197,yes,4,0,0,pow,a(n) = 10^n - 1.
+A007053,1198,no,,,,,Number of primes <= 2^n.
+A000376,1199,no,,,,,Topswops (2): start by shuffling n cards labeled 1..n. If the top card
+A006890,1200,no,,,,,Decimal expansion of Feigenbaum bifurcation velocity.
+A006066,1201,no,,,,,Kobon triangles: maximal number of nonoverlapping triangles that can b
+A003463,1202,yes,4,0,0,pow,a(n) = (5^n - 1)/4.
+A001163,1203,no,,,,,Stirling's formula: numerators of asymptotic series for Gamma function
+A002962,1204,no,,,,,Number of simple imperfect squared squares of order n up to symmetry.
+A003064,1205,no,,,,,a(n) = smallest number with shortest addition chain of length n.
+A003453,1206,yes,9,0,0,bin,Number of nonequivalent dissections of an n-gon into 3 polygons by non
+A002194,1207,yes,8,0,0,nrt pow,Decimal expansion of sqrt(3).
+A000584,1208,yes,1,0,0,pow,Fifth powers: a(n) = n^5.
+A001272,1209,no,,,,,Numbers k such that k! - (k-1)! + (k-2)! - (k-3)! + ... - (-1)^k*1! is
+A003010,1210,yes,7,1,0,pow,A Lucas-Lehmer sequence: a(0) = 4; for n>0  a(n) = a(n-1)^2 - 2.
+A003087,1211,no,,,,,Number of acyclic digraphs with n unlabeled nodes.
+A005814,1212,no,,,,,Number of 3-regular (trivalent) labeled graphs on 2n vertices with mul
+A007655,1213,yes,11,1,0,,Standard deviation of A007654.
+A002852,1214,no,,,,,Continued fraction for Euler's constant (or Euler-Mascheroni constant)
+A005592,1215,yes,9,1,0,,a(n) = F(2n+1) + F(2n-1) - 1.
+A001031,1216,yes,9,1,1,,Goldbach conjecture: a(n) = number of decompositions of 2n into sum of
+A008344,1217,yes,9,1,0,,a(1)=0; thereafter a(n+1) = a(n) - n if a(n) >= n otherwise a(n+1) = a
+A001001,1218,yes,24,1,0,dif,Number of sublattices of index n in generic 3-dimensional lattice.
+A006960,1219,yes,17,1,0,,Reverse and Add! sequence starting with 196.
+A003983,1220,yes,10,0,0,fac gcd nrt,Array read by antidiagonals with T(n k) = min(n k).
+A000891,1221,yes,8,0,0,bin pow,a(n) = (2*n)!*(2*n+1)! / (n! * (n+1)!)^2.
+A001140,1222,yes,7,1,1,,Describe the previous term! (method A - initial term is 4).
+A006799,1223,no,,,,,Number of vertex-transitive graphs with n nodes.
+A006863,1224,yes,21,1,1,bin gcd pow trn,Denominator of B_{2n}/(-4n)  where B_m are the Bernoulli numbers.
+A000897,1225,yes,7,0,0,bin,a(n) = (4*n)! / ((2*n)!*n!^2).
+A002264,1226,yes,1,0,0,,Nonnegative integers repeated 3 times.
+A002874,1227,yes,30,1,0,bin,The number of partitions of {1..3n} that are invariant under a permuta
+A000582,1228,yes,1,0,0,bin,a(n) = binomial coefficient C(n 9).
+A001053,1229,yes,10,1,0,,a(n+1) = n*a(n) + a(n-1) with a(0)=1  a(1)=0.
+A008763,1230,yes,10,0,0,pow,Expansion of g.f.: x^4/((1-x)*(1-x^2)^2*(1-x^3)).
+A005914,1231,yes,5,0,0,gcd pow,Number of points on surface of hexagonal prism: 12*n^2 + 2 for n > 0 (
+A006054,1232,yes,9,1,0,,a(n) = 2*a(n-1) + a(n-2) - a(n-3)  with a(0) = a(1) = 0  a(2) = 1.
+A006385,1233,no,,,,,Number of unsensed planar maps with n edges.
+A007267,1234,yes,28,1,1,gcd trn,Expansion of 16 * (1 + k^2)^4 /(k * k'^2)^2 in powers of q where k is 
+A000960,1235,yes,9,1,0,trn,Flavius Josephus's sieve: Start with the natural numbers; at the k-th 
+A005589,1236,no,,,,,Number of letters in the US English name of n  excluding spaces and hy
+A003434,1237,yes,13,1,1,,Number of iterations of phi(x) at n needed to reach 1.
+A002926,1238,no,,,,,Low temperature series for spin-1/2 Ising magnetic susceptibility on 3
+A007556,1239,yes,6,0,0,bin,Number of 8-ary trees with n vertices.
+A005891,1240,yes,4,0,0,bin,Centered pentagonal numbers: (5n^2+5n+2)/2; crystal ball sequence for 
+A007696,1241,yes,9,1,0,,Quartic (or 4-fold) factorial numbers: a(n) = Product_{k = 0..n-1} (4*
+A004523,1242,yes,2,0,0,,Two even followed by one odd; or floor(2n/3).
+A002067,1243,no,,,,,a(n) = Sum_{k=0..n-1} binomial(2*n 2*k)*a(k)*a(n-k-1).
+A000680,1244,yes,9,1,0,,a(n) = (2n)!/2^n.
+A001831,1245,yes,17,1,0,bin pow,Number of labeled graded partially ordered sets with n elements of hei
+A002897,1246,yes,4,0,0,bin pow,a(n) = binomial(2n n)^3.
+A000588,1247,yes,8,0,0,bin,a(n) = 7*binomial(2n n-3)/(n+4).
+A001711,1248,yes,11,1,0,,Generalized Stirling numbers  [n+4 4]_3.
+A006134,1249,yes,9,1,0,bin,a(n) = Sum_{k=0..n} binomial(2*k k).
+A001839,1250,yes,9,0,0,,The coding-theoretic function A(n 4 3).
+A003503,1251,no,,,,,The larger of a betrothed pair.
+A002376,1252,no,,,,,Least number of positive cubes needed to sum to n.
+A007949,1253,yes,1,0,0,lex,Greatest k such that 3^k divides n. Or  3-adic valuation of n.
+A001336,1254,no,,,,,Number of n-step self-avoiding walks on f.c.c. lattice.
+A002046,1255,no,,,,,Larger of an amicable pair with smaller member A002025(n).
+A001611,1256,yes,10,1,0,,a(n) = Fibonacci(n) + 1.
+A002076,1257,no,,,,,Number of equivalence classes of base-3 necklaces of length n  where n
+A003627,1258,yes,15,1,1,equ,Primes of the form 3n-1.
+A007428,1259,yes,23,1,0,bin dif,Moebius transform applied thrice to sequence 1 0 0 0 ....
+A008291,1260,yes,25,1,0,bin nrt,Triangle of rencontres numbers.
+A005319,1261,yes,14,1,0,,a(n) = 6*a(n-1) - a(n-2).
+A007147,1262,yes,22,1,0,gcd pow,Number of self-dual 2-colored necklaces with 2n beads.
+A004737,1263,yes,11,0,0,nrt pow,Concatenation of sequences (1 2 ... n-1 n n-1 ... 1) for n >= 1.
+A005710,1264,yes,23,1,0,,a(n) = a(n-1) + a(n-8)  with a(i) = 1 for i = 0..7.
+A006077,1265,yes,27,1,0,rol,(n+1)^2*a(n+1) = (9n^2+9n+3)*a(n) - 27*n^2*a(n-1)  with a(0) = 1 and a
+A008313,1266,yes,15,1,0,bin,Triangle of expansions of powers of x in terms of Chebyshev polynomial
+A000601,1267,yes,8,0,0,,Expansion of 1/((1-x)^2*(1-x^2)*(1-x^3)).
+A007325,1268,yes,27,1,1,trn,G.f.: Product_{k>0} (1-x^(5k-1))*(1-x^(5k-4))/((1-x^(5k-2))*(1-x^(5k-3
+A007843,1269,yes,15,1,0,dif equ lex trn,Least positive integer k for which 2^n divides k!.
+A005665,1270,yes,10,1,0,gcd,Minimal number of moves for the cyclic variant of the Towers of Hanoi 
+A007173,1271,no,,,,,Number of simplicial 3-clusters with n cells.
+A008301,1272,no,,,,,Poupard's triangle: triangle of numbers arising in enumeration of bina
+A003075,1273,yes,24,1,0,,Minimal number of comparisons needed for n-element sorting network.
+A002002,1274,yes,16,1,0,,a(n) = Sum_{k=0..n-1} binomial(n k+1) * binomial(n+k k).
+A002265,1275,yes,1,0,0,,Nonnegative integers repeated 4 times.
+A007775,1276,yes,13,0,0,,Numbers not divisible by 2  3 or 5.
+A001793,1277,yes,7,0,0,pow,a(n) = n*(n+3)*2^(n-3).
+A007908,1278,yes,12,1,0,log pow,Triangle of the gods: to get a(n)  concatenate the decimal numbers 1 2
+A008544,1279,yes,8,1,0,,Triple factorial numbers: Product_{k=0..n-1} (3*k+2).
+A007526,1280,yes,8,1,0,,a(n) = n*(a(n-1) + 1)  a(0) = 0.
+A005651,1281,no,,,,,Sum of multinomial coefficients (n_1+n_2+...)!/(n_1!*n_2!*...) where (
+A000539,1282,yes,6,0,0,bin fac,Sum of 5th powers: 0^5 + 1^5 + 2^5 + ... + n^5.
+A001019,1283,yes,3,0,0,pow,Powers of 9: a(n) = 9^n.
+A000294,1284,yes,28,1,1,trn,Expansion of g.f. Product_{k >= 1} (1 - x^k)^(-k*(k+1)/2).
+A002475,1285,no,,,,,Numbers k such that x^k + x + 1 is irreducible over GF(2).
+A007663,1286,yes,12,0,1,pow,Fermat quotients: (2^(p-1)-1)/p  where p=prime(n).
+A005700,1287,yes,25,0,0,bin,a(n) = C(n)*C(n+2) - C(n+1)^2 where C() are the Catalan numbers A00010
+A000316,1288,yes,22,1,0,pow,Two decks each have n kinds of cards  2 of each kind. The first deck i
+A003631,1289,yes,35,1,0,equ gcd pow,Primes congruent to 2 or 3 modulo 5.
+A001018,1290,yes,3,0,0,pow,Powers of 8: a(n) = 8^n.
+A000126,1291,yes,13,1,0,,A nonlinear binomial sum.
+A005145,1292,yes,8,1,1,,n copies of n-th prime.
+A000183,1293,yes,94,1,0,rol,Number of discordant permutations of length n.
+A000676,1294,no,,,,,Number of centered trees with n nodes.
+A006749,1295,no,,,,,Number of asymmetric polyominoes with n cells.
+A005596,1296,no,,,,,Decimal expansion of Artin's constant Product_{p=prime} (1-1/(p^2-p)).
+A002802,1297,yes,7,0,0,bin,a(n) = (2*n+3)!/(6*n!*(n+1)!).
+A005186,1298,no,,,,,a(n) is the number of integers m which take n steps to reach 1 in '3x+
+A005115,1299,no,,,,,Let i  i+d  i+2d  ...  i+(n-1)d be an n-term arithmetic progression of
+A004133,1300,no,,,,,Additive bases: a(n) is the least integer such that there is an n-elem
+A007063,1301,no,,,,,Main diagonal of Kimberling's expulsion array (A035486).
+A000030,1302,yes,6,0,0,log pow,Initial digit of n.
+A001164,1303,no,,,,,Stirling's formula: denominators of asymptotic series for Gamma functi
+A003958,1304,yes,13,1,1,dif,If n = Product p(k)^e(k) then a(n) = Product (p(k)-1)^e(k).
+A000267,1305,yes,3,0,0,nrt,Integer part of square root of 4n+1.
+A000100,1306,yes,14,1,0,rol,a(n) is the number of compositions of n in which the maximal part is 3
+A000939,1307,no,,,,,Number of inequivalent n-gons.
+A001634,1308,yes,10,1,0,rol,a(n) = a(n-2) + a(n-3) + a(n-4)  with initial values a(0) = 0  a(1) = 
+A009003,1309,yes,22,1,1,equ gcd pow,Hypotenuse numbers (squares are sums of 2 nonzero squares).
+A000905,1310,no,,,,,Hamilton numbers.
+A008966,1311,yes,22,1,0,dif gcd,a(n) = 1 if n is squarefree  otherwise 0.
+A000136,1312,no,,,,,Number of ways of folding a strip of n labeled stamps.
+A007302,1313,yes,4,0,0,bxo dgs,Optimal cost function between two processors at distance n.
+A006075,1314,no,,,,,Minimal number of knights needed to cover an n X n board.
+A000066,1315,yes,25,1,0,,Smallest number of vertices in trivalent graph with girth (shortest cy
+A000097,1316,yes,14,1,1,equ,Number of partitions of n if there are two kinds of 1's and two kinds 
+A005709,1317,yes,7,1,0,ror,a(n) = a(n-1) + a(n-7)  with a(i) = 1 for i = 0..6.
+A006497,1318,yes,16,1,0,,a(n) = 3*a(n-1) + a(n-2) with a(0) = 2  a(1) = 3.
+A007645,1319,yes,19,1,1,pow,Generalized cuban primes: primes of the form x^2 + xy + y^2; or primes
+A001383,1320,no,,,,,Number of n-node rooted trees of height at most 3.
+A002031,1321,no,,,,,Number of labeled connected digraphs on n nodes where every node has i
+A002424,1322,yes,11,1,0,,Expansion of (1-4*x)^(9/2).
+A008794,1323,yes,2,0,0,pow,Squares repeated; a(n) = floor(n/2)^2.
+A000610,1324,no,,,,,Number of self-complementary Boolean functions of n variables: see Com
+A001945,1325,yes,17,1,0,fil rol,a(n+6) = -a(n+5) + a(n+4) + 3a(n+3) + a(n+2) - a(n+1) - a(n). a(n) = s
+A005411,1326,yes,29,1,0,bin,Number of non-vanishing Feynman diagrams of order 2n for the electron 
+A007340,1327,no,,,,,Numbers whose divisors' harmonic and arithmetic means are both integer
+A005774,1328,yes,26,1,0,rol,Number of directed animals of size n (k=1 column of A038622); number o
+A005585,1329,yes,6,0,0,bin,5-dimensional pyramidal numbers: a(n) = n*(n+1)*(n+2)*(n+3)*(2n+3)/5!.
+A001079,1330,yes,15,1,0,,a(n) = 10*a(n-1) - a(n-2); a(0) = 1  a(1) = 5.
+A006532,1331,yes,14,1,2,pow,Numbers whose sum of divisors is a square.
+A002219,1332,no,,,,,a(n) is the number of partitions of 2n that can be obtained by adding 
+A003817,1333,yes,7,0,0,log pow,a(0) = 0  a(n) = a(n-1) OR n.
+A002829,1334,no,,,,,Number of trivalent (or cubic) labeled graphs with 2n nodes.
+A000221,1335,yes,20,1,0,rol,Take sum of squares of digits of previous term; start with 5.
+A000966,1336,yes,21,1,0,equ lex,n! never ends in this many 0's.
+A003052,1337,yes,11,1,1,equ pow,Self numbers or Colombian numbers (numbers that are not of the form m 
+A000667,1338,yes,15,1,1,bin,Boustrophedon transform of all-1's sequence.
+A002019,1339,yes,9,1,0,,a(n) = a(n-1) - (n-1)(n-2)a(n-2).
+A004524,1340,yes,4,0,0,,Three even followed by one odd.
+A006632,1341,yes,8,0,0,bin,a(n) = 3*binomial(4*n-1  n-1)/(4*n-1).
+A002988,1342,no,,,,,Number of trimmed trees with n nodes.
+A005528,1343,yes,22,1,1,equ pow,Størmer numbers or arc-cotangent irreducible numbers: numbers k such t
+A005668,1344,yes,14,1,0,,Denominators of continued fraction convergents to sqrt(10).
+A006079,1345,yes,13,0,0,bin,Number of asymmetric planted projective plane trees with n+1 nodes; br
+A002423,1346,yes,11,1,0,,Expansion of (1-4*x)^(7/2).
+A006261,1347,yes,6,0,0,bin,a(n) = Sum_{k=0..5} binomial(n k).
+A008588,1348,yes,1,0,0,,Nonnegative multiples of 6.
+A000460,1349,yes,9,0,0,bin pow,Eulerian numbers (Euler's triangle: column k=3 of A008292  column k=2 
+A000378,1350,yes,14,1,0,bin dir gcd pow,Sums of three squares: numbers of the form x^2 + y^2 + z^2.
+A002388,1351,yes,25,1,0,pow,Decimal expansion of Pi^2.
+A007245,1352,yes,12,1,2,trn,McKay-Thompson series of class 3C for the Monster group.
+A001004,1353,no,,,,,Number of nonequivalent dissections of an (n+2)-gon by nonintersecting
+A002984,1354,yes,9,1,0,nrt,a(0) = 1; for n > 0  a(n) = a(n-1) + floor(sqrt(a(n-1))).
+A003085,1355,no,,,,,Number of weakly connected digraphs with n unlabeled nodes.
+A005928,1356,yes,25,1,1,trn,G.f.: s(1)^3/s(3)  where s(k) = eta(q^k) and eta(q) is Dedekind's func
+A002163,1357,yes,8,0,0,dif nrt pow,Decimal expansion of square root of 5.
+A002448,1358,yes,9,0,0,equ nrt pow,Expansion of Jacobi theta function theta_4(x).
+A001010,1359,no,,,,,Number of symmetric foldings of a strip of n blank stamps.
+A005568,1360,yes,12,0,0,bin,Product of two successive Catalan numbers C(n)*C(n+1).
+A001858,1361,yes,12,1,0,,Number of forests of trees on n labeled nodes.
+A002349,1362,no,,,,,Take solution to Pellian equation x^2 - n*y^2 = 1 with smallest positi
+A002646,1363,no,,,,,Half-quartan primes: primes of the form p = (x^4 + y^4)/2.
+A004431,1364,yes,19,1,1,equ pow trn,Numbers that are the sum of 2 distinct nonzero squares.
+A001803,1365,yes,7,0,0,bin dir,Numerators in expansion of (1 - x)^(-3/2).
+A005378,1366,yes,8,0,0,nrt pow,The female of a pair of recurrences.
+A000466,1367,yes,3,0,0,pow,a(n) = 4*n^2 - 1.
+A000980,1368,no,,,,,Number of ways of writing 0 as Sum_{k=-n..n} e(k)*k  where e(k) is 0 o
+A001705,1369,yes,10,1,0,,Generalized Stirling numbers  [n+2 3]_2: a(n) = n! * Sum_{k=0..n-1} (k
+A007585,1370,yes,6,0,0,fac,10-gonal (or decagonal) pyramidal numbers: a(n) = n*(n + 1)*(8*n - 5)/
+A000985,1371,yes,16,1,0,,Number of n X n symmetric matrices with nonnegative entries and all ro
+A008407,1372,no,,,,,Minimal difference s(n) between beginning and end of n consecutive lar
+A008844,1373,yes,10,1,0,pow,Squares of sequence A001653: y^2 such that x^2 - 2*y^2 = -1 for some x
+A000708,1374,yes,22,1,2,gcd,a(n) = E(n+1) - 2*E(n)  where E(i) is the Euler number A000111(i).
+A002081,1375,yes,10,0,0,pow,Numbers congruent to {2  4  8  16} (mod 20).
+A005265,1376,no,,,,,a(1)=3  b(n) = Product_{k=1..n} a(k)  a(n+1) is the smallest prime fac
+A000420,1377,yes,3,0,0,pow,Powers of 7: a(n) = 7^n.
+A004253,1378,yes,16,1,0,,a(n) = 5*a(n-1) - a(n-2)  with a(1)=1  a(2)=4.
+A008364,1379,yes,58,1,0,rol,11-rough numbers: not divisible by 2  3  5 or 7.
+A001936,1380,yes,29,1,1,trn,Expansion of q^(-1/4) * (eta(q^4) / eta(q))^2 in powers of q.
+A002977,1381,no,,,,,Klarner-Rado sequence: a(1) = 1; subsequent terms are defined by the r
+A006953,1382,yes,31,1,0,bin gcd pow,a(n) = denominator of Bernoulli(2n)/(2n).
+A007676,1383,yes,20,1,0,dif,Numerators of convergents to e.
+A002001,1384,yes,6,0,0,pow,a(n) = 3*4^(n-1)  n>0; a(0)=1.
+A002005,1385,yes,19,1,0,rol,Number of rooted planar cubic maps with 2n vertices.
+A006253,1386,yes,21,1,0,,Number of perfect matchings (or domino tilings) in C_4 X P_n.
+A003141,1387,yes,9,0,0,,Minimal number of arcs whose reversal yields a transitive tournament.
+A007494,1388,yes,3,0,0,,Numbers that are congruent to 0 or 2 mod 3.
+A006702,1389,no,,,,,Solution to a Pellian equation: least x such that x^2 - n*y^2 = +- 1.
+A007895,1390,yes,8,1,1,,Number of terms in the Zeckendorf representation of n (write n as a su
+A002431,1391,yes,13,0,2,bin gcd,Numerators in Taylor series for cot x.
+A001015,1392,yes,1,0,0,pow,Seventh powers: a(n) = n^7.
+A001752,1393,yes,5,0,0,pow,Expansion of 1/((1+x)*(1-x)^5).
+A004731,1394,yes,15,1,0,fac gcd,a(0) = 1; thereafter a(n) = denominator of (n-2)!! / (n-1)!!.
+A007677,1395,yes,20,1,0,dif,Denominators of convergents to e.
+A007850,1396,no,,,,,Giuga numbers: composite numbers n such that p divides n/p - 1 for eve
+A000153,1397,yes,10,1,0,,a(n) = n*a(n-1) + (n-2)*a(n-2)  with a(0) = 0  a(1) = 1.
+A005879,1398,yes,35,1,0,bxo dir equ nrt pow,Theta series of D_4 lattice with respect to deep hole.
+A002390,1399,yes,22,1,0,pow,Decimal expansion of natural logarithm of golden ratio.
+A001609,1400,yes,10,1,0,rol,a(1) = a(2) = 1  a(3) = 4; thereafter a(n) = a(n-1) + a(n-3).
+A001371,1401,yes,62,1,3,bin equ nrt pow,Number of n-bead necklaces with beads of 2 colors and primitive period
+A003446,1402,yes,35,1,0,bin equ pow trn,Number of nonequivalent dissections of a polygon into n triangles by n
+A000415,1403,yes,33,1,1,bxo equ gcd log pow trn,Numbers that are the sum of 2 but no fewer nonzero squares.
+A000994,1404,yes,25,1,0,bin pow,Shifts 2 places left under binomial transform.
+A003221,1405,yes,12,1,0,gcd,Number of even permutations of length n with no fixed points.
+A005429,1406,yes,5,0,0,bin pow,Apéry numbers: n^3*C(2n n).
+A006153,1407,yes,10,1,0,pow,E.g.f.: 1/(1-x*exp(x)).
+A002449,1408,no,,,,,Number of different types of binary trees of height n.
+A008336,1409,yes,14,1,0,dif,a(n+1) = a(n)/n if n|a(n) else a(n)*n  a(1) = 1.
+A000729,1410,yes,12,1,2,trn,Expansion of Product_{k >= 1} (1 - x^k)^6.
+A008483,1411,yes,14,1,1,,Number of partitions of n into parts >= 3.
+A001972,1412,yes,3,0,0,pow,Expansion of 1/((1-x)^2*(1-x^4)) = 1/( (1+x)*(1+x^2)*(1-x)^3 ).
+A007241,1413,yes,8,0,1,neq,McKay-Thompson series of class 2A for the Monster group with a(0) = 24
+A005148,1414,no,,,,,Sequence of coefficients arising in connection with a rapidly convergi
+A008971,1415,no,,,,,Triangle read by rows: T(n k) is the number of permutations of [n] wit
+A002635,1416,no,,,,,Number of partitions of n into 4 squares.
+A007204,1417,yes,4,0,0,fac,Crystal ball sequence for D_4 lattice.
+A000328,1418,yes,16,1,0,nrt pow,Number of points of norm <= n^2 in square lattice.
+A000445,1419,no,,,,,Latest possible occurrence of the first consecutive pair of n-th power
+A002438,1420,yes,29,1,0,bin gcd pow,Multiples of Euler numbers.
+A004432,1421,no,,,,,Numbers that are the sum of 3 distinct nonzero squares.
+A006094,1422,yes,2,0,2,,Products of 2 successive primes.
+A000387,1423,yes,10,1,0,dif,Rencontres numbers: number of permutations of [n] with exactly two fix
+A001142,1424,yes,9,1,0,bin,a(n) = Product_{k=1..n} k^(2k - 1 - n).
+A003216,1425,no,,,,,Number of Hamiltonian graphs with n nodes.
+A005558,1426,yes,10,0,0,bin,a(n) is the number of n-step walks on square lattice such that 0 <= y 
+A002486,1427,yes,22,1,1,pow,Apart from two leading terms (which are present by convention)  denomi
+A005640,1428,no,,,,,Number of phylogenetic trees with n labels.
+A006431,1429,yes,24,1,0,rol,Numbers that have a unique partition into a sum of four nonnegative sq
+A004197,1430,yes,8,0,0,fac gcd nrt,Triangle read by rows. T(n  k) = n - k if n - k < k  otherwise k.
+A006353,1431,yes,24,1,0,dif neq,Expansion of (phi(-q^3) * psi(q))^3 / (phi(-q) * psi(q^3)) in powers o
+A002455,1432,yes,11,1,0,,Central factorial numbers: unsigned 1st subdiagonal of A182867.
+A002664,1433,yes,11,0,0,bin pow,a(n) = 2^n - C(n 0) - ... - C(n 4).
+A001692,1434,yes,5,0,2,dif,Number of irreducible polynomials of degree n over GF(5); dimensions o
+A001392,1435,yes,8,0,0,bin,a(n) = 9*binomial(2n n-4)/(n+5).
+A008970,1436,no,,,,,Triangle T(n k) = P(n k)/2  n >= 2  1 <= k < n  of one-half of number 
+A001912,1437,yes,14,1,1,pow,Numbers k such that 4*k^2 + 1 is prime.
+A003049,1438,no,,,,,Number of connected Eulerian graphs with n unlabeled nodes.
+A005943,1439,yes,27,0,0,geq,Factor complexity (number of subwords of length n) of the Golay-Rudin-
+A001155,1440,yes,8,1,1,,Describe the previous term! (method A - initial term is 0).
+A001303,1441,yes,5,0,0,bin,Stirling numbers of first kind  s(n+3  n)  negated.
+A003116,1442,no,,,,,Expansion of the reciprocal of the g.f. defining A039924.
+A005666,1443,yes,9,1,0,gcd,Minimal number of moves for the cyclic variant of the Towers of Hanoi 
+A001891,1444,yes,14,1,0,,Hit polynomials; convolution of natural numbers with Fibonacci numbers
+A003464,1445,yes,4,0,0,pow,a(n) = (6^n - 1)/5.
+A008967,1446,yes,13,0,0,nrt pow,Coefficients of Gaussian polynomials q_binomial(n-2  2). Also triangle
+A001017,1447,yes,1,0,0,pow,Ninth powers: a(n) = n^9.
+A000534,1448,yes,27,1,0,rol,Numbers that are not the sum of 4 nonzero squares.
+A003147,1449,no,,,,,Primes p with a Fibonacci primitive root g  i.e.  such that g^2 = g + 
+A001846,1450,yes,6,0,0,bxo fac pow,Centered 4-dimensional orthoplex numbers (crystal ball sequence for 4-
+A005845,1451,no,,,,,Bruckman-Lucas pseudoprimes: k | (L_k - 1)  where k is composite and L
+A006127,1452,yes,3,0,0,pow,a(n) = 2^n + n.
+A001020,1453,yes,3,0,0,pow,Powers of 11: a(n) = 11^n.
+A007304,1454,yes,19,1,1,dif equ pow,Sphenic numbers: products of 3 distinct primes.
+A001297,1455,yes,6,0,0,bin,Stirling numbers of the second kind S(n+3  n).
+A001794,1456,yes,9,0,0,bin pow,Negated coefficients of Chebyshev T polynomials: [x^n](-T(n+6  x))  n 
+A003174,1457,no,,,,,Positive squarefree integers D such that Q[sqrt(D)] is a quadratic fie
+A004771,1458,yes,2,0,0,,a(n) = 8*n + 7. Or  numbers whose binary expansion ends in 111.
+A007412,1459,yes,5,0,0,nrt,The noncubes: a(n) = n + floor((n + floor(n^(1/3)))^(1/3)).
+A003423,1460,no,,,,,a(n) = a(n-1)^2 - 2  with a(0) = 6.
+A004191,1461,yes,15,1,0,,Expansion of 1/(1 - 12*x + x^2).
+A007060,1462,yes,14,1,0,dif,Number of ways n married couples can sit in a row without any spouses 
+A007827,1463,no,,,,,Number of homeomorphically irreducible (or series-reduced) trees with 
+A005783,1464,yes,46,1,0,rol,Number of 3-covers of an unlabeled n-set.
+A000716,1465,yes,29,1,1,trn,Number of partitions of n into parts of 3 kinds.
+A006457,1466,yes,18,1,0,,Number of elements in Z[ i ] whose 'smallest algorithm' is <= n.
+A000226,1467,no,,,,,Number of n-node unlabeled connected graphs with one cycle of length 3
+A002062,1468,yes,3,0,1,,a(n) = Fibonacci(n) + n.
+A008951,1469,no,,,,,Array read by columns: number of partitions of n into parts of 2 kinds
+A004028,1470,no,,,,,Number of geometric n-dimensional crystal classes.
+A006506,1471,no,,,,,Number of n X n binary matrices with no 2 adjacent 1's  or number of c
+A006585,1472,no,,,,,Egyptian fractions: number of solutions to 1 = 1/x_1 + ... + 1/x_n in 
+A002421,1473,yes,11,1,0,,Expansion of (1-4*x)^(3/2) in powers of x.
+A006141,1474,yes,4,0,2,,Number of integer partitions of n whose smallest part is equal to the 
+A002410,1475,no,,,,,Nearest integer to imaginary part of n-th zero of Riemann zeta functio
+A008576,1476,yes,4,0,0,,Coordination sequence for planar net 4.8.8.
+A002224,1477,no,,,,,Smallest prime p of form p = 8k+1 such that first n primes (p_1=2  ...
+A007521,1478,yes,16,1,1,pow,Primes of the form 8k + 5.
+A003314,1479,yes,8,0,0,log pow,Binary entropy function: a(1)=0; for n > 1  a(n) = n + min { a(k)+a(n-
+A002454,1480,yes,7,0,0,fac pow,Central factorial numbers: a(n) = 4^n * (n!)^2.
+A000200,1481,no,,,,,Number of bicentered hydrocarbons with n atoms.
+A000023,1482,yes,10,1,0,,a(n) is the number of permutations on {1 2 ... n} with an even number 
+A000665,1483,no,,,,,Number of 3-uniform hypergraphs on n unlabeled nodes  or equivalently 
+A008937,1484,yes,20,1,0,,a(n) = Sum_{k=0..n} T(k) where T(n) are the tribonacci numbers A000073
+A001207,1485,no,,,,,Number of fixed hexagonal polyominoes with n cells.
+A005266,1486,no,,,,,a(1)=3  b(n) = Product_{k=1..n} a(k)  a(n+1) is the largest prime fact
+A007952,1487,yes,10,1,0,trn,Generated by a sieve: keep first number  drop every 2nd  keep first  d
+A002696,1488,yes,4,0,0,bin,Binomial coefficients C(2n n-3).
+A000335,1489,yes,26,1,1,trn,Euler transform of A000292.
+A006130,1490,yes,11,1,0,,a(n) = a(n-1) + 3*a(n-2) for n > 1  a(0) = a(1) = 1.
+A001690,1491,yes,10,1,0,,Non-Fibonacci numbers.
+A002465,1492,no,,,,,Number of ways to place n nonattacking bishops on an n X n board.
+A005703,1493,no,,,,,Number of n-node connected graphs with at most one cycle.
+A007476,1494,yes,29,1,0,bin pow,Shifts 2 places left under binomial transform.
+A006336,1495,yes,15,1,0,equ rol,a(n) = a(n-1) + a(n - 1 - number of even terms so far).
+A005263,1496,no,,,,,Number of labeled Greg trees.
+A000436,1497,yes,22,1,0,bin gcd pow,Generalized Euler numbers c(3 n).
+A006290,1498,no,,,,,Number of 3-connected graphs with n nodes.
+A001156,1499,yes,27,1,1,trn,Number of partitions of n into squares.
+A002586,1500,yes,14,1,0,gcd pow,Smallest prime factor of 2^n + 1.
+A001021,1501,yes,3,0,0,pow,Powers of 12: a(n) = 12^n.
+A001117,1502,yes,8,0,0,pow,a(n) = 3^n - 3*2^n + 3.
+A001847,1503,yes,12,0,0,,Crystal ball sequence for 5-dimensional cubic lattice.
+A001715,1504,yes,3,0,0,fac,a(n) = n!/6.
+A002585,1505,no,,,,,Largest prime factor of 1 + (product of first n primes).
+A006534,1506,no,,,,,Number of one-sided triangular polyominoes (n-iamonds) with n cells; t
+A002266,1507,yes,1,0,0,,Integers repeated 5 times.
+A007519,1508,yes,6,0,1,,Primes of form 8n+1  that is  primes congruent to 1 mod 8.
+A007532,1509,no,,,,,Handsome numbers: sum of positive powers of its digits; a(n) = Sum_{i=
+A000143,1510,yes,31,1,0,dif equ pow,Number of ways of writing n as a sum of 8 squares.
+A001655,1511,yes,13,1,0,,Fibonomial coefficients: a(n) = F(n+1) * F(n+2) * F(n+3)/2  where F() 
+A008864,1512,yes,2,0,1,,a(n) = prime(n) + 1.
+A001883,1513,yes,41,1,0,rol,Number of permutations s of {1 2 ... n} such that |s(i)-i|>1 for each 
+A000288,1514,yes,10,1,0,rol,Tetranacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) + a(n-4) with a(0)
+A003321,1515,no,,,,,Smallest n-th order perfect digital invariant or PDI: smallest number 
+A004068,1516,yes,5,0,0,pow,Number of atoms in a decahedron with n shells.
+A005987,1517,no,,,,,Number of symmetric plane partitions of n.
+A007562,1518,no,,,,,Number of planted trees where non-root  non-leaf nodes an even distanc
+A002697,1519,yes,4,0,0,pow,a(n) = n*4^(n-1).
+A006878,1520,no,,,,,Record number of steps to reach 1 in '3x+1' problem  corresponding to 
+A001591,1521,yes,10,1,0,ror,Pentanacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) + a(n-4) + a(n-5) 
+A000683,1522,yes,14,1,0,bin pow,Number of colorings of labeled graphs on n nodes using exactly 2 color
+A002853,1523,no,,,,,Maximal size of a set of equiangular lines in n dimensions.
+A005176,1524,no,,,,,Number of regular graphs with n unlabeled nodes.
+A000270,1525,yes,41,1,0,rol,For n >= 2  a(n) = b(n+1)+b(n)+b(n-1)  where the b(i) are the ménage n
+A005180,1526,no,,,,,Orders of simple groups.
+A008590,1527,yes,1,0,0,,Multiples of 8.
+A008997,1528,no,,,,,Orchard problem with 5 trees in a row.
+A000748,1529,yes,17,0,0,equ pow,Expansion of bracket function.
+A002277,1530,yes,4,0,0,pow,a(n) = 3*(10^n - 1)/9.
+A007528,1531,yes,15,1,1,pow,Primes of the form 6k-1.
+A002652,1532,yes,25,1,0,equ neq nrt pow trn,Theta series of Kleinian lattice Z[(1 + sqrt(-7))/ 2] in 1 complex (or
+A000408,1533,yes,17,1,1,equ,Numbers that are the sum of three nonzero squares.
+A004773,1534,yes,2,0,0,,Numbers congruent to {0  1  2} mod 4: a(n) = floor(4*n/3).
+A003016,1535,no,,,,,Number of occurrences of n as an entry in rows <= n of Pascal's triang
+A001350,1536,yes,34,1,0,ban log neq pow,Associated Mersenne numbers.
+A005098,1537,yes,14,1,1,pow,Numbers k such that 4k + 1 is prime.
+A000831,1538,yes,22,1,0,bin pow trn,Expansion of e.g.f. (1 + tan(x))/(1 - tan(x)).
+A008892,1539,no,,,,,Aliquot sequence starting at 276.
+A002663,1540,yes,8,0,0,bin pow,a(n) = 2^n - C(n 0) - C(n 1) - C(n 2) - C(n 3).
+A006036,1541,no,,,,,Primitive pseudoperfect numbers.
+A007332,1542,yes,28,1,1,gcd trn,Expansion of 6-dimensional cusp form (eta(q) * eta(q^3))^6 in powers o
+A002112,1543,yes,25,1,0,bin pow,Glaisher's H numbers.
+A006578,1544,yes,4,0,0,pow,Triangular numbers plus quarter squares: n*(n+1)/2 + floor(n^2/4) (i.e
+A008957,1545,yes,11,0,1,nrt pow,Triangle of central factorial numbers T(2*n 2*n-2*k)  k >= 0  n >= 1 (
+A001676,1546,no,,,,,Number of h-cobordism classes of smooth homotopy n-spheres.
+A007705,1547,no,,,,,Number of ways of arranging 2n+1 nonattacking queens on a 2n+1 X 2n+1 
+A002524,1548,yes,10,1,0,ror,Number of permutations of length n within distance 2 of a fixed permut
+A006973,1549,no,,,,,Dimensions of representations by Witt vectors.
+A005865,1550,no,,,,,The coding-theoretic function A(n 6).
+A006052,1551,no,,,,,Number of magic squares of order n composed of the numbers from 1 to n
+A006203,1552,no,,,,,Discriminants of imaginary quadratic fields with class number 3 (negat
+A000677,1553,no,,,,,Number of bicentered trees with n nodes.
+A001761,1554,yes,4,0,0,fac trn,a(n) = (2*n)!/(n+1)!.
+A007755,1555,no,,,,,Smallest number m such that the trajectory of m under iteration of Eul
+A004026,1556,no,,,,,Number of perfect quadratic forms or lattices in dimension n.
+A005231,1557,yes,26,1,1,equ pow,Odd abundant numbers (odd numbers m whose sum of divisors exceeds 2m).
+A003628,1558,yes,21,1,1,equ pow,Primes congruent to {5  7} mod 8.
+A007042,1559,yes,3,0,1,,Left diagonal of partition triangle A047812.
+A001494,1560,no,,,,,Numbers k such that phi(k) = phi(k+2).
+A002516,1561,yes,14,0,0,dir equ,Earliest sequence with a(a(n)) = 2n.
+A003519,1562,yes,9,0,0,bin,a(n) = 10*binomial(2*n + 1  n - 4)/(n + 6).
+A006411,1563,yes,5,0,0,bin,Number of nonseparable tree-rooted planar maps with n + 2 edges and 3 
+A008300,1564,no,,,,,Triangle read by rows: T(n k) (n >= 0  0 <= k <= n) gives number of {0
+A003516,1565,yes,5,0,0,bin,Binomial coefficients C(2n+1  n-2).
+A008865,1566,yes,2,0,0,pow,a(n) = n^2 - 2.
+A005382,1567,yes,26,1,2,equ pow,Primes p such that 2p-1 is also prime.
+A000438,1568,no,,,,,Number of 1-factorizations of complete graph K_{2n}.
+A007675,1569,yes,23,1,1,bin equ pow,Numbers m such that m  m+1 and m+2 are squarefree.
+A000454,1570,yes,13,1,0,,Unsigned Stirling numbers of first kind s(n 4).
+A001016,1571,yes,1,0,0,pow,Eighth powers: a(n) = n^8.
+A001716,1572,yes,11,1,0,,Generalized Stirling numbers  [n+5 5]_4.
+A002580,1573,yes,20,1,0,pow,Decimal expansion of cube root of 2.
+A007323,1574,no,,,,,Number of numerical semigroups of genus n; conjecturally also the numb
+A005277,1575,yes,22,1,1,equ pow trn,Nontotients: even numbers k such that phi(m) = k has no solution.
+A002820,1576,yes,15,1,0,,Number of n X n invertible binary matrices A such that A+I is invertib
+A005815,1577,no,,,,,Number of 4-valent labeled graphs with n nodes.
+A005183,1578,yes,5,0,0,pow,a(n) = n*2^(n-1) + 1.
+A005517,1579,yes,15,1,0,rol,Smallest label f(T) given to a rooted tree T with n nodes in Matula-Go
+A001141,1580,yes,7,1,1,,Describe the previous term! (method A - initial term is 5).
+A004201,1581,yes,8,0,0,bin nrt,Accept one  reject one  accept two  reject two  ...
+A005436,1582,yes,23,0,0,bin equ pow trn,Number of convex polygons of perimeter 2n on square lattice.
+A005097,1583,yes,3,0,1,,(Odd primes - 1)/2.
+A002468,1584,yes,17,1,0,fac trn,The game of Mousetrap with n cards: the number of permutations of n ca
+A009964,1585,yes,3,0,0,pow,Powers of 20.
+A001697,1586,yes,7,1,0,,a(n+1) = a(n)*(a(0) + ... + a(n))  a(0) = 1.
+A002816,1587,yes,55,1,0,rol,Number of polygons that can be formed from n points on a circle  no tw
+A008444,1588,no,,,,,Theta series of A_4 lattice.
+A000990,1589,yes,27,1,1,trn,Number of plane partitions of n with at most two rows.
+A002671,1590,yes,8,0,0,fac pow,a(n) = 4^n*(2*n+1)!.
+A000252,1591,yes,16,0,2,bin pow,Number of invertible 2 X 2 matrices mod n.
+A001478,1592,yes,1,0,0,,The negative integers.
+A008996,1593,no,,,,,Increasing length runs of consecutive composite numbers (records).
+A002583,1594,no,,,,,Largest prime factor of n! + 1.
+A007178,1595,no,,,,,Number of ways to write 1 as ordered sum of n powers of 1/2  allowing 
+A005412,1596,yes,30,1,0,bin,Number of non-vanishing Feynman diagrams of order 2n for the vacuum po
+A000828,1597,yes,9,0,2,gcd pow,E.g.f. cos(x)/(cos(x) - sin(x)).
+A001595,1598,yes,10,1,0,,a(n) = a(n-1) + a(n-2) + 1  with a(0) = a(1) = 1.
+A001196,1599,yes,11,1,0,bxo,Double-bitters: only even length runs in binary expansion.
+A003151,1600,yes,5,0,0,nrt pow,Beatty sequence for 1+sqrt(2); a(n) = floor(n*(1+sqrt(2))).
+A000574,1601,yes,6,0,0,bin,Coefficient of x^5 in expansion of (1 + x + x^2)^n.
+A001022,1602,yes,3,0,0,pow,Powers of 13: a(n) = 13^n.
+A006267,1603,no,,,,,Continued cotangent for the golden ratio.
+A002267,1604,yes,16,0,0,,The 15 supersingular primes: primes dividing order of Monster simple g
+A006378,1605,no,,,,,Prime self (or Colombian) numbers: primes not expressible as the sum o
+A006463,1606,yes,6,1,0,,Convolve natural numbers with characteristic function of triangular nu
+A006950,1607,yes,28,1,1,trn,G.f.: Product_{k>=1} (1 + x^(2*k - 1)) / (1 - x^(2*k)).
+A002297,1608,yes,30,1,0,bin fac gcd pow trn,Numerator of (2/Pi) * Integral_{x>=0} (sin x / x)^n dx.
+A003065,1609,no,,,,,Number of integers with a shortest addition chain of length n.
+A000686,1610,no,,,,,Number of 4-colored labeled graphs on n nodes  divided by 4.
+A001600,1611,no,,,,,Harmonic means of divisors of harmonic numbers.
+A006455,1612,no,,,,,Number of partial orders on {1 2 ... n} that are contained in the usua
+A007980,1613,yes,5,0,0,pow,Expansion of (1+x^2)/((1-x)^2*(1-x^3)).
+A001571,1614,yes,10,1,0,,a(n) = 4*a(n-1) - a(n-2) + 1  with a(0) = 0  a(1) = 2.
+A002533,1615,yes,14,1,0,,a(n) = 2*a(n-1) + 5*a(n-2)  with a(0) = a(1) = 1.
+A000540,1616,yes,13,0,0,,Sum of 6th powers: 0^6 + 1^6 + 2^6 + ... + n^6.
+A001921,1617,yes,11,1,0,,a(n) = 14*a(n-1) - a(n-2) + 6 for n>1  a(0)=0  a(1)=7.
+A000731,1618,yes,12,1,2,trn,Expansion of Product (1 - x^k)^8 in powers of x.
+A007350,1619,no,,,,,Where the prime race 4k-1 vs. 4k+1 changes leader.
+A007403,1620,yes,23,0,0,bin equ pow,a(n) = Sum_{m=0..n} (Sum_{k=0..m} binomial(n k))^3 = (n+2)*2^(3*n-1) -
+A004080,1621,no,,,,,Least k such that H(k) >= n  where H(k) is the harmonic number Sum_{i=
+A004273,1622,yes,2,0,0,trn,0 together with odd numbers.
+A007294,1623,yes,27,1,1,trn,Number of partitions of n into nonzero triangular numbers.
+A000727,1624,yes,33,1,0,bin dif nrt,Expansion of Product_{k >= 1} (1 - x^k)^4.
+A006588,1625,yes,6,0,0,bin pow,a(n) = 4^n*(3*n)!/((2*n)!*n!).
+A007500,1626,yes,27,1,4,equ pow,Primes whose reversal in base 10 is also prime (called 'palindromic pr
+A001934,1627,yes,12,1,1,,Expansion of 1/theta_4(q)^2 in powers of q.
+A002309,1628,yes,9,0,0,pow,Sum of fourth powers of first n odd numbers.
+A009001,1629,yes,7,0,0,dif pow,Expansion of e.g.f: (1+x)*cos(x).
+A006322,1630,yes,4,0,0,bin,4-dimensional analog of centered polygonal numbers.
+A001518,1631,yes,13,1,0,,Bessel polynomial y_n(3).
+A007478,1632,yes,7,0,0,bin,Dimension of primitive Vassiliev knot invariants of order n.
+A008784,1633,yes,23,1,1,dif equ pow,Numbers k such that sqrt(-1) mod k exists; or  numbers that are primit
+A002021,1634,yes,10,0,0,pow trn,Pile of coconuts problem: (n-1)*(n^n - 1)  n even; n^n - n + 1  n odd.
+A003823,1635,yes,27,1,1,trn,Power series expansion of the Rogers-Ramanujan continued fraction 1+x/
+A005220,1636,no,,,,,Number of Dyck paths of knight moves.
+A001091,1637,yes,15,1,0,,a(n) = 8*a(n-1) - a(n-2); a(0) = 1  a(1) = 4.
+A002674,1638,yes,4,0,0,fac,a(n) = (2n)!/2.
+A001438,1639,yes,2,0,0,dif,Maximal number of mutually orthogonal Latin squares (or MOLS) of order
+A005669,1640,no,,,,,Indices of primes where largest gap occurs.
+A002729,1641,no,,,,,Number of equivalence classes of binary sequences of period n.
+A003501,1642,yes,15,1,0,,a(n) = 5*a(n-1) - a(n-2)  with a(0) = 2  a(1) = 5.
+A007226,1643,yes,6,0,0,bin,a(n) = 2*det(M(n; -1))/det(M(n; 0))  where M(n; m) is the n X n matrix
+A004319,1644,yes,4,0,0,bin,a(n) = binomial(3*n  n - 1).
+A005487,1645,no,,,,,Starts 0  4 and contains no 3-term arithmetic progression.
+A002532,1646,yes,14,1,0,,a(n) = 2*a(n-1) + 5*a(n-2)  a(0) = 0  a(1) = 1.
+A007778,1647,yes,3,0,0,pow,a(n) = n^(n+1).
+A003179,1648,no,,,,,Number of self-dual binary codes of length 2n (up to column permutatio
+A007089,1649,yes,10,1,0,,Numbers in base 3.
+A001871,1650,yes,11,1,0,,Expansion of 1/(1 - 3*x + x^2)^2.
+A007632,1651,no,,,,,Numbers that are palindromic in bases 2 and 10.
+A006451,1652,yes,18,1,0,,Numbers k such that k*(k+1)/2 + 1 is a square.
+A003166,1653,no,,,,,Numbers whose square in base 2 is a palindrome.
+A004987,1654,yes,11,1,0,,a(n) = (3^n/n!)*Product_{k=0..n-1} (3*k + 1). 3-central binomial coeff
+A005712,1655,yes,8,0,0,bin,Coefficient of x^4 in expansion of (1+x+x^2)^n.
+A006857,1656,yes,9,0,0,bin,a(n) = binomial(n+5 5) * binomial(n+5 4)/(n+5).
+A000430,1657,yes,20,1,1,equ pow,Primes and squares of primes.
+A000431,1658,yes,8,0,0,pow,Expansion of 2*x^3/((1-2*x)^2*(1-4*x)).
+A005915,1659,yes,5,0,0,pow,Hexagonal prism numbers: a(n) = (n + 1)*(3*n^2 + 3*n + 1).
+A008908,1660,yes,2,0,1,,a(n) = (1 + number of halving and tripling steps to reach 1 in the Col
+A005817,1661,yes,11,0,0,bin,a(n) = C(floor(n/2 + 1/2))*C(floor(n/2 + 1)) where C(i) = Catalan numb
+A003294,1662,no,,,,,Numbers k such that k^4 can be written as a sum of four positive 4th p
+A002479,1663,yes,19,1,2,equ pow trn,Numbers of the form x^2 + 2*y^2.
+A005252,1664,yes,9,1,0,rol,a(n) = Sum_{k=0..floor(n/4)} binomial(n-2k 2k).
+A007259,1665,yes,31,1,1,trn,Expansion of Product_{m>=1} (1 + q^m)^(-8).
+A005882,1666,yes,24,1,0,bin dir equ nrt,Theta series of planar hexagonal lattice (A2) with respect to deep hol
+A006345,1667,no,,,,,Linus sequence: a(n) 'breaks the pattern' by avoiding the longest doub
+A007840,1668,yes,21,1,1,bin fac gcd trn,Number of factorizations of permutations of n letters into ordered cyc
+A001002,1669,yes,28,1,0,rol,Number of dissections of a convex (n+2)-gon into triangles and quadril
+A001009,1670,no,,,,,Triangle giving number L(n k) of normalized k X n Latin rectangles.
+A001224,1671,yes,18,1,0,rol,If F(n) is the n-th Fibonacci number  then a(2n) = (F(2n+1) + F(n+2))/
+A001628,1672,yes,20,1,0,rol,Convolved Fibonacci numbers.
+A001843,1673,yes,13,0,0,equ,The coding-theoretic function A(n 4 4).
+A000919,1674,yes,12,0,0,pow,a(n) = 4^n - C(4 3)*3^n + C(4 2)*2^n - C(4 1).
+A005247,1675,yes,10,1,0,,a(n) = 3*a(n-2) - a(n-4)  a(0)=2  a(1)=1  a(2)=3  a(3)=2. Alternates L
+A001394,1676,no,,,,,Number of n-step self-avoiding walks on diamond.
+A006057,1677,no,,,,,Number of topologies on n labeled points satisfying axioms T_0-T_4.
+A000719,1678,no,,,,,Number of disconnected graphs with n nodes.
+A001815,1679,yes,5,0,0,bin pow,a(n) = binomial(n 2) * 2^(n-1).
+A002312,1680,yes,19,1,1,equ pow,Arc-cotangent reducible numbers or non-Størmer numbers: largest prime 
+A002841,1681,no,,,,,Number of 3-connected self-dual planar graphs with 2n edges.
+A006226,1682,no,,,,,Number of abstract n-dimensional crystallographic point groups.
+A005704,1683,yes,14,1,0,rol,Number of partitions of 3n into powers of 3.
+A005652,1684,yes,20,1,0,equ,Lexicographically least increasing sequence  starting with 1  such tha
+A006011,1685,yes,3,0,0,bin pow,a(n) = n^2*(n^2 - 1)/4.
+A001240,1686,yes,9,0,0,pow,Expansion of 1/((1-2x)(1-3x)(1-6x)).
+A001173,1687,no,,,,,Half the number of binary relations on n unlabeled points.
+A009195,1688,yes,16,0,2,dif equ gcd,a(n) = gcd(n  phi(n)).
+A005413,1689,no,,,,,Number of non-vanishing Feynman diagrams of order 2n+1 for the electro
+A001393,1690,no,,,,,High temperature series for spin-1/2 Ising free energy on 3-dimensiona
+A002873,1691,no,,,,,The maximal number of partitions of {1..2n} that are invariant under a
+A003080,1692,no,,,,,Number of rooted triangular cacti with 2n+1 nodes (n triangles).
+A006478,1693,yes,13,1,0,rol,a(n) = a(n-1) + a(n-2) + F(n) - 1  a(0) = a(1) = 0  where F() = Fibona
+A000026,1694,yes,20,1,0,dif,Mosaic numbers or multiplicative projection of n: if n = Product (p_j^
+A001060,1695,yes,9,1,0,,a(n) = a(n-1) + a(n-2) with a(0)=2  a(1)=5. Sometimes called the Evang
+A001638,1696,yes,11,1,0,rol,A Fielder sequence: a(n) = a(n-1) + a(n-3) + a(n-4)  n >= 4.
+A003592,1697,yes,31,1,0,equ geq leq trn,Numbers of the form 2^i*5^j with i  j >= 0.
+A007875,1698,yes,5,0,1,,Number of ways of writing n as p*q  with p <= q  gcd(p  q) = 1.
+A003678,1699,yes,15,0,0,bin bxo pow,Decimal expansion of the SI unit c (speed of light in vacuum)  c = 299
+A004306,1700,yes,17,1,0,rol,Rook polynomials; fourth column of A008305.
+A007107,1701,no,,,,,Number of labeled 2-regular digraphs with n nodes.
+A001444,1702,yes,8,0,0,pow,Bending a piece of wire of length n+1 (configurations that can only be
+A004104,1703,no,,,,,Number of self-dual signed graphs with n nodes. Also number of self-co
+A001254,1704,yes,11,1,0,pow,Squares of Lucas numbers.
+A002391,1705,yes,29,1,0,equ pow,Decimal expansion of natural logarithm of 3.
+A008828,1706,no,,,,,Triangle read by rows: T(n k) = number of closed meander systems of or
+A000937,1707,yes,12,0,0,pow,Length of longest simple cycle without chords in the n-dimensional hyp
+A002383,1708,yes,14,1,1,pow,Primes of form k^2 + k + 1.
+A007505,1709,no,,,,,Primes of form 3*2^k - 1.
+A008264,1710,yes,9,0,0,pow,Coordination sequence for tridymite  lonsdaleite  and wurtzite.
+A001298,1711,yes,11,0,0,bin,Stirling numbers of the second kind S(n+4  n).
+A001118,1712,yes,16,0,0,pow,Number of labeled ordered set partitions into 5 parts for n>=1  a(0)=1
+A004212,1713,yes,27,1,1,bin fac nrt,Shifts one place left under 3rd-order binomial transform.
+A006601,1714,no,,,,,Numbers k such that k  k+1  k+2 and k+3 have the same number of diviso
+A007522,1715,yes,27,1,0,gcd pow,Primes of the form 8*k+7  that is  primes congruent to -1 mod 8.
+A004136,1716,no,,,,,Additive bases: a(n) is the least integer k such that in the cyclic gr
+A001402,1717,yes,20,1,0,,Number of partitions of n into at most 6 parts.
+A001997,1718,no,,,,,Number of different shapes formed by bending a piece of wire of length
+A000220,1719,no,,,,,Number of asymmetric trees with n nodes (also called identity trees).
+A005711,1720,yes,9,1,0,fil rol,a(n) = a(n-1) + a(n-9) for n >= 9; a(n) = 1 for n=0..7; a(8) = 2.
+A006891,1721,no,,,,,Decimal expansion of Feigenbaum reduction parameter.
+A005582,1722,yes,5,0,0,fac,a(n) = n*(n+1)*(n+2)*(n+7)/24.
+A001848,1723,yes,14,0,0,,Crystal ball sequence for 6-dimensional cubic lattice.
+A004044,1724,no,,,,,The classic football pool problem: size of minimal covering code in {0
+A007563,1725,no,,,,,Number of rooted connected graphs where every block is a complete grap
+A003312,1726,yes,10,1,0,,a(1) = 3; for n>0  a(n+1) = a(n) + floor((a(n)-1)/2).
+A005326,1727,no,,,,,Permanent of 'coprime?' matrix.
+A002920,1728,no,,,,,High-temperature series in w = tanh(J/kT) for ferromagnetic susceptibi
+A003956,1729,yes,12,1,0,,Order of complex Clifford group of degree 2^n arising in quantum codin
+A004718,1730,yes,9,1,0,,The Danish composer Per Nørgård's 'infinity sequence'  invented in an 
+A007916,1731,yes,19,1,1,equ pow,Numbers that are not perfect powers.
+A004213,1732,yes,20,1,0,bin fac pow,Shifts one place left under 4th-order binomial transform.
+A005061,1733,yes,6,0,0,pow,a(n) = 4^n - 3^n.
+A006879,1734,no,,,,,Number of primes with n digits.
+A003952,1735,yes,5,0,0,pow,Expansion of g.f.: (1+x)/(1-9*x).
+A003950,1736,yes,5,0,0,pow,Expansion of g.f.: (1+x)/(1-7*x).
+A009997,1737,no,,,,,Number of comparative probability orderings on all subsets of n elemen
+A004956,1738,yes,9,0,0,dif nrt pow,a(n) = ceiling(n*phi)  where phi is the golden ratio  A001622.
+A001025,1739,yes,3,0,0,pow,Powers of 16: a(n) = 16^n.
+A000334,1740,no,,,,,Number of 4-dimensional partitions of n.
+A003485,1741,yes,7,0,0,,Hurwitz-Radon function at powers of 2.
+A006237,1742,yes,14,1,0,bin pow,Number of spanning trees of n-cube.
+A008956,1743,yes,11,0,1,nrt pow,Triangle of central factorial numbers |4^k t(2n+1 2n+1-2k)| read by ro
+A008466,1744,yes,10,1,0,,a(n) = 2^n - Fibonacci(n+2).
+A002871,1745,yes,16,1,1,bin dif trn,a(n) = max_{k=0..n} 2^k*A048993(n k).
+A004135,1746,no,,,,,Additive bases: a(n) is the least integer k such that in the cyclic gr
+A002223,1747,no,,,,,Smallest prime p of form p = 8k-1 such that first n primes (p_1=2  ...
+A000056,1748,yes,3,0,1,,Order of the group SL(2 Z_n).
+A000557,1749,yes,21,1,0,bin equ pow trn,Expansion of e.g.f. 1/(1 - 2*sinh(x)).
+A000046,1750,yes,49,1,2,bin equ nrt pow,Number of primitive n-bead necklaces (turning over is allowed) where c
+A000102,1751,yes,19,1,0,rol,a(n) = number of compositions of n in which the maximum part size is 4
+A003947,1752,yes,5,0,0,pow,Expansion of (1+x)/(1-4*x).
+A009445,1753,yes,4,0,0,fac,a(n) = (2*n+1)!.
+A003229,1754,yes,10,1,0,rol,a(n) = a(n-1) + 2*a(n-3) with a(0)=a(1)=1  a(2)=3.
+A000505,1755,yes,29,0,0,pow,Eulerian numbers (Euler's triangle: column k=5 of A008292  column k=4 
+A008591,1756,yes,1,0,0,,Multiples of 9: a(n) = 9*n.
+A002564,1757,no,,,,,Number of different ways one can attack all squares on an n X n chessb
+A000541,1758,yes,13,0,0,bin pow,Sum of 7th powers: 1^7 + 2^7 + ... + n^7.
+A006897,1759,no,,,,,a(n) is the number of hierarchical linear models on n unlabeled factor
+A002374,1760,yes,14,1,2,,Largest prime <= n in any decomposition of 2n into a sum of two odd pr
+A007602,1761,no,,,,,Numbers that are divisible by the product of their digits.
+A004981,1762,yes,11,1,0,,a(n) = (2^n/n!) * Product_{k=0..n-1} (4*k + 1).
+A007019,1763,yes,9,1,0,,a(n) = (2n+1)! / 2^n.
+A006454,1764,yes,15,1,0,pow,Solution to a Diophantine equation: each term is a triangular number a
+A007137,1765,yes,54,1,0,rol,Number of rooted maps with n edges on the projective plane.
+A000983,1766,yes,16,1,0,dif,Size of minimal binary covering code of length n and covering radius 1
+A003435,1767,yes,9,1,1,,Number of directed Hamiltonian circuits on n-octahedron with a marked 
+A002690,1768,yes,6,0,0,fac,a(n) = (n+1) * (2*n)! / n!.
+A005846,1769,yes,13,1,1,pow,Primes of the form k^2 + k + 41.
+A008642,1770,yes,4,0,0,pow,Quarter-squares repeated.
+A003437,1771,no,,,,,Number of unlabeled Hamiltonian circuits on n-octahedron (cross polyto
+A005514,1772,yes,72,1,0,rol,Number of n-bead bracelets (turnover necklaces) with 8 red beads and n
+A000894,1773,yes,8,0,0,bin,a(n) = (2*n)!*(2*n+1)! / ((n+1)! * n!^3).
+A002306,1774,no,,,,,Numerators of Hurwitz numbers H_n (coefficients in expansion of Weiers
+A006414,1775,yes,6,0,0,bin pow,Number of nonseparable toroidal tree-rooted maps with n + 2 edges and 
+A008833,1776,yes,9,0,1,pow,Largest square dividing n.
+A000786,1777,no,,,,,Number of inequivalent planar partitions of n  when considering them a
+A003336,1778,no,,,,,Numbers that are the sum of 2 positive 4th powers.
+A007015,1779,no,,,,,a(n) = smallest k such that phi(n+k) = phi(k).
+A000988,1780,no,,,,,Number of one-sided polyominoes with n cells.
+A001228,1781,yes,27,0,0,,Orders of sporadic simple groups.
+A005105,1782,no,,,,,Class 1+ primes: primes of the form 2^i*3^j - 1 with i  j >= 0.
+A005351,1783,yes,11,1,0,bxo,Base -2 representation for n regarded as base 2  then evaluated.
+A006958,1784,no,,,,,Number of parallelogram polyominoes with n cells (also called staircas
+A003656,1785,no,,,,,Discriminants of real quadratic fields with unique factorization.
+A004290,1786,yes,22,1,0,pow,Least positive multiple of n that when written in base 10 uses only 0'
+A006325,1787,yes,3,0,0,fac,4-dimensional analog of centered polygonal numbers: a(n) = n*(n-1)*(n^
+A006165,1788,yes,8,0,0,log pow,a(1) = a(2) = 1; thereafter a(2n+1) = a(n+1) + a(n)  a(2n) = 2a(n).
+A004126,1789,yes,5,0,0,pow,a(n) = n*(7*n^2 - 1)/6.
+A005479,1790,no,,,,,Prime Lucas numbers (cf. A000032).
+A005320,1791,yes,8,1,0,,a(n) = 4*a(n-1) - a(n-2)  with a(0) = 0  a(1) = 3.
+A007246,1792,yes,4,0,1,neq,McKay-Thompson series of class 2B for the Monster group.
+A008587,1793,yes,1,0,0,,Multiples of 5: a(n) = 5 * n.
+A004310,1794,yes,4,0,0,bin,Binomial coefficient C(2n n-4).
+A005935,1795,no,,,,,Pseudoprimes to base 3.
+A004277,1796,yes,2,0,0,,1 together with positive even numbers.
+A000774,1797,yes,10,1,0,,a(n) = n!*(1 + Sum_{i=1..n} 1/i).
+A006932,1798,yes,6,0,1,fac,Number of permutations of [n] with at least one strong fixed point (a 
+A002432,1799,yes,40,0,4,dif fac gcd pow trn,Denominators of zeta(2*n)/Pi^(2*n).
+A000452,1800,yes,20,1,1,equ pow,The greedy sequence of integers which avoids 3-term geometric progress
+A006343,1801,yes,53,1,0,rol,Arkons: number of elementary maps with n-1 nodes.
+A001630,1802,yes,10,1,0,rol,Tetranacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) + a(n-4)  with a(0
+A002282,1803,yes,5,0,0,pow,a(n) = 8*(10^n - 1)/9.
+A003266,1804,yes,10,1,0,,Product of first n nonzero Fibonacci numbers F(1)  ...  F(n).
+A005968,1805,yes,10,1,0,pow,Sum of cubes of first n Fibonacci numbers.
+A006501,1806,yes,10,0,0,pow,Expansion of (1+x^2) / ( (1-x)^2 * (1-x^3)^2 ).
+A005238,1807,no,,,,,Numbers k such that k  k+1 and k+2 have the same number of divisors.
+A008706,1808,yes,2,0,0,,Coordination sequence for 3.3.3.4.4 planar net.
+A005383,1809,yes,27,1,2,equ pow,Primes p such that (p+1)/2 is prime.
+A008316,1810,no,,,,,Triangle of coefficients of Legendre polynomials P_n (x).
+A001024,1811,yes,3,0,0,pow,Powers of 15: a(n) = 15^n.
+A006535,1812,no,,,,,Number of one-sided hexagonal polyominoes with n cells.
+A008778,1813,yes,5,0,0,bin pow,a(n) = (n+1)*(n^2 +8*n +6)/6. Number of n-dimensional partitions of 4.
+A005237,1814,yes,22,1,2,equ pow,Numbers k such that k and k+1 have the same number of divisors.
+A007680,1815,yes,5,0,0,fac,a(n) = (2n+1)*n!.
+A001857,1816,no,,,,,a(1)=2  a(2)=3; for n >= 3  a(n) is smallest number that is uniquely o
+A003893,1817,yes,18,0,0,bxo pow,a(n) = Fibonacci(n) mod 10.
+A005648,1818,yes,24,1,0,bin gcd,Number of 2n-bead black-white reversible necklaces with n black beads.
+A008577,1819,yes,5,0,0,pow,Crystal ball sequence for planar net 4.8.8.
+A006753,1820,no,,,,,Smith (or joke) numbers: composite numbers k such that sum of digits o
+A006256,1821,yes,28,1,0,rol,a(n) = Sum_{k=0..n} binomial(3*k k)*binomial(3*n-3*k n-k).
+A003071,1822,yes,16,1,0,dgs dif dir,Sorting numbers: maximal number of comparisons for sorting n elements 
+A005732,1823,yes,9,0,0,bin,a(n) = binomial(n+3 6) + binomial(n+1 5) + binomial(n 5).
+A008480,1824,yes,27,1,0,bin dif equ neq,Number of ordered prime factorizations of n.
+A002639,1825,no,,,,,Numerators of expansion of Jacobi nome q in parameter m.
+A006590,1826,yes,14,1,0,,a(n) = Sum_{k=1..n} ceiling(n/k).
+A007064,1827,yes,12,0,0,nrt,Numbers not of form 'nearest integer to n*tau'  tau = (1+sqrt(5))/2.
+A002624,1828,yes,10,0,0,pow,Expansion of (1-x)^(-3) * (1-x^2)^(-2).
+A006509,1829,yes,4,0,1,,Cald's sequence: a(n+1) = a(n) - prime(n) if that value is positive an
+A007877,1830,yes,2,0,0,gcd,Period 4 zigzag sequence: repeat [0 1 2 1].
+A002921,1831,no,,,,,Susceptibility series for f.c.c. lattice.
+A003156,1832,yes,15,1,0,dir gcd,A self-generating sequence (see Comments for definition).
+A001160,1833,yes,25,1,0,dif equ pow,sigma_5(n)  the sum of the 5th powers of the divisors of n.
+A000979,1834,no,,,,,Wagstaff primes: primes of form (2^p + 1)/3.
+A004355,1835,yes,3,0,0,bin,Binomial coefficient C(6n n).
+A002804,1836,yes,8,0,0,pow,(Presumed) solution to Waring's problem: g(n) = 2^n + floor((3/2)^n) -
+A009843,1837,yes,65,0,1,bin nrt pow,Expansion of e.g.f. x/cos(x) (odd powers only).
+A001631,1838,yes,9,1,0,rol,Tetranacci numbers: a(n) = a(n-1) + a(n-2) + a(n-3) + a(n-4)  with ini
+A002416,1839,yes,4,0,0,pow,a(n) = 2^(n^2).
+A001081,1840,yes,15,1,0,,a(n) = 16*a(n-1) - a(n-2).
+A001419,1841,no,,,,,Number of n-celled polyominoes with holes.
+A001449,1842,yes,3,0,0,bin,Binomial coefficients binomial(5n n).
+A001197,1843,no,,,,,Zarankiewicz's problem k_2(n).
+A005034,1844,no,,,,,Number of nonequivalent dissections of a polygon into n quadrilaterals
+A003027,1845,no,,,,,Number of weakly connected digraphs with n labeled nodes.
+A002539,1846,yes,63,1,0,rol,Eulerian numbers of the second kind: <<n+3  n>>.
+A007477,1847,yes,23,1,0,rol,Shifts 2 places left when convolved with itself.
+A000307,1848,yes,30,1,2,bin fac nrt,Number of 4-level labeled rooted trees with n leaves.
+A004109,1849,no,,,,,Number of connected trivalent (or cubic) labeled graphs with 2n nodes.
+A007416,1850,no,,,,,The minimal numbers: sequence A005179 arranged in increasing order.
+A001029,1851,yes,3,0,0,pow,Powers of 19: a(n) = 19^n.
+A009490,1852,no,,,,,Number of distinct orders of permutations of n objects; number of noni
+A008404,1853,no,,,,,Number of Costas arrays of order n  counting rotations and flips as di
+A000755,1854,no,,,,,No-3-in-line problem on n X n grid: total number of ways of placing 2n
+A006252,1855,yes,22,1,1,bin fac gcd trn,Expansion of e.g.f. 1/(1 - log(1+x)).
+A002003,1856,yes,17,1,0,,a(n) = 2 * Sum_{k=0..n-1} binomial(n-1  k)*binomial(n+k  k).
+A002840,1857,no,,,,,Number of polyhedral graphs with n edges.
+A002584,1858,no,,,,,Largest prime factor of product of first n primes - 1  or 1 if no such
+A000227,1859,yes,16,1,0,,Nearest integer to e^n.
+A007219,1860,no,,,,,Number of golygons of order 8n (or serial isogons of order 8n).
+A001023,1861,yes,3,0,0,pow,Powers of 14: a(n) = 14^n.
+A007595,1862,yes,15,0,0,bin dif,a(n) = C_n / 2 if n is even or ( C_n + C_((n-1)/2) ) / 2 if n is odd  
+A002279,1863,yes,5,0,0,pow,a(n) = 5*(10^n - 1)/9.
+A006452,1864,yes,15,1,0,,a(n) = 6*a(n-2) - a(n-4).
+A005807,1865,yes,10,0,0,bin,Sum of adjacent Catalan numbers.
+A006988,1866,no,,,,,a(n) = (10^n)-th prime.
+A007272,1867,yes,9,0,0,bin,Super ballot numbers: 60*(2n)!/(n!*(n+3)!).
+A004250,1868,yes,5,0,1,,Number of partitions of n into 3 or more parts.
+A001143,1869,yes,7,1,1,,Describe the previous term! (method A - initial term is 6).
+A005654,1870,yes,10,0,0,bin,Number of bracelets (turn over necklaces) with n red  1 pink and n-1 b
+A001922,1871,yes,12,1,0,,Numbers k such that 3*k^2 - 3*k + 1 is both a square (A000290) and a c
+A007612,1872,yes,29,0,0,equ,a(n+1) = a(n) + digital root (A010888) of a(n).
+A004012,1873,no,,,,,Theta series of hexagonal close-packing.
+A007407,1874,yes,18,1,0,gcd,a(n) = denominator of Sum_{k=1..n} 1/k^2.
+A002785,1875,no,,,,,Number of self-complementary oriented graphs with n nodes.
+A005011,1876,yes,20,1,0,bin fac pow,Shifts one place left under 5th-order binomial transform.
+A008780,1877,yes,11,0,0,,a(n) = (n-dimensional partitions of 6) + C(n 4) + C(n 3).
+A006495,1878,yes,14,1,0,,Real part of (1 + 2*i)^n  where i is sqrt(-1).
+A000969,1879,yes,4,0,0,bin,Expansion of g.f. (1 + x + 2*x^2)/((1 - x)^2*(1 - x^3)).
+A005166,1880,no,,,,,a(0) = 1; a(n) = (1 + a(0)^3 + ... + a(n-1)^3)/n (not always integral!
+A000361,1881,no,,,,,Binary encodings of the successive columns of the Gosper-Lafitte trian
+A006521,1882,no,,,,,Numbers k such that k divides 2^k + 1.
+A001287,1883,yes,1,0,0,bin,a(n) = binomial coefficient C(n 10).
+A002249,1884,yes,12,1,0,rol,a(n) = a(n-1) - 2*a(n-2) with a(0) = 2  a(1) = 1.
+A001026,1885,yes,3,0,0,pow,Powers of 17: a(n) = 17^n.
+A000678,1886,no,,,,,Number of carbon (rooted) trees with n carbon atoms = unordered 4-tupl
+A005920,1887,yes,8,0,0,,Tricapped prism numbers.
+A001900,1888,yes,13,0,0,fac pow,Successive numerators of Wallis's approximation to Pi/2 (unreduced).
+A005271,1889,no,,,,,Number of perfect matchings in n-cube.
+A003992,1890,yes,12,0,0,bin nrt pow,Square array read by upwards antidiagonals: T(n k) = n^k for n >= 0  k
+A001856,1891,no,,,,,A self-generating sequence: every positive integer occurs as a(i)-a(j)
+A004539,1892,yes,7,0,0,nrt pow,Expansion of sqrt(2) in base 2.
+A003000,1893,yes,12,1,0,rol,Number of bifix-free (or primary  or unbordered) words of length n ove
+A001434,1894,no,,,,,Number of graphs with n nodes and n edges.
+A000275,1895,yes,29,1,0,bin pow,Coefficients of a Bessel function (reciprocal of J_0(z)); also pairs o
+A001463,1896,yes,10,1,1,,Partial sums of A001462; also a(n) is the last occurrence of n in A001
+A002796,1897,no,,,,,Numbers that are divisible by each nonzero digit.
+A003144,1898,yes,11,1,1,,Positions of letter a in the tribonacci word abacabaabacababac... gene
+A000231,1899,yes,15,0,0,pow,Number of inequivalent Boolean functions of n variables under action o
+A006458,1900,yes,28,1,0,,Number of elements in Z[ omega ] whose 'smallest algorithm' is <= n  w
+A000421,1901,no,,,,,Number of isomorphism classes of connected 3-regular (trivalent  cubic
+A001403,1902,no,,,,,Number of combinatorial configurations of type (n_3).
+A006139,1903,yes,13,1,0,,n*a(n) = 2*(2*n-1)*a(n-1) + 4*(n-1)*a(n-2) with a(0) = 1.
+A007509,1904,yes,15,1,0,gcd,Numerator of Sum_{k=0..n} (-1)^k/(2*k+1).
+A006051,1905,yes,15,1,0,pow,Square hex numbers.
+A001879,1906,yes,12,1,0,,a(n) = (2n+2)!/(n!*2^(n+1)).
+A003246,1907,no,,,,,Discriminants of real quadratic norm-Euclidean fields (a finite sequen
+A000600,1908,no,,,,,Number of tertiary alcohols (alkanols or alkyl alcohols C_n H_{2n+1} O
+A007473,1909,yes,19,1,0,,Dimension of space of Vassiliev knot invariants of order n.
+A007703,1910,no,,,,,Regular primes.
+A000474,1911,no,,,,,Number of nonisomorphic 1-factorizations of complete graph K_{2n}.
+A004144,1912,yes,18,1,1,equ pow,Nonhypotenuse numbers (indices of positive squares that are not the su
+A005513,1913,yes,50,1,0,rol,Number of n-bead bracelets (turnover necklaces) of two colors with 6 r
+A008137,1914,yes,8,0,0,pow trn,Coordination sequence T1 for Zeolite Code LTA and RHO.
+A005054,1915,yes,6,0,0,pow,a(0) = 1; a(n) = 4*5^(n-1) for n >= 1.
+A002587,1916,no,,,,,Largest prime factor of 2^n + 1.
+A000132,1917,yes,19,1,1,equ nrt pow trn,Number of ways of writing n as a sum of 5 squares.
+A007408,1918,yes,13,1,0,gcd pow,Wolstenholme numbers: numerator of Sum_{k=1..n} 1/k^3.
+A000243,1919,no,,,,,Number of trees with n nodes  2 of which are labeled.
+A000689,1920,yes,4,0,0,pow,Final decimal digit of 2^n.
+A004169,1921,yes,24,1,1,dif dir equ gcd pow,Values of m for which a regular polygon with m sides cannot be constru
+A008795,1922,yes,3,0,0,bin bxo,Molien series for 3-dimensional representation of dihedral group D_6 o
+A001379,1923,no,,,,,Degrees of irreducible representations of Monster group M.
+A006951,1924,no,,,,,Number of conjugacy classes in GL(n 2).
+A007001,1925,yes,43,1,0,bin dif leq log,Trajectory of 1 under the morphism 1 -> 12  2 -> 123  3 -> 1234  etc.
+A006116,1926,yes,11,1,0,fil,Sum of Gaussian binomial coefficients [n k] for q=2 and k=0..n.
+A001176,1927,yes,4,0,2,,Number of zeros in fundamental period of Fibonacci numbers mod n.
+A005171,1928,yes,2,0,1,equ,Characteristic function of nonprimes: 0 if n is prime  else 1.
+A006131,1929,yes,15,1,0,,a(n) = a(n-1) + 4*a(n-2)  a(0) = a(1) = 1.
+A000409,1930,no,,,,,Singular n X n (0 1)-matrices: the number of n X n (0 1)-matrices havi
+A005586,1931,yes,4,0,0,bin,a(n) = n*(n+4)*(n+5)/6.
+A006747,1932,no,,,,,Number of rotationally symmetric polyominoes with n cells (that is  po
+A007617,1933,yes,21,1,1,equ pow trn,Values not in range of Euler phi function.
+A002049,1934,no,,,,,Prime numbers of measurement.
+A007593,1935,no,,,,,2-hyperperfect numbers: n = 2*(sigma(n) - n - 1) + 1.
+A001657,1936,yes,13,1,0,pow,Fibonomial coefficients: column 5 of A010048.
+A009006,1937,yes,7,1,2,gcd pow,Expansion of e.g.f.: 1 + tan(x).
+A000057,1938,no,,,,,Primes that divide at least one term in every Fibonacci sequence.
+A007289,1939,yes,21,1,0,bin equ pow trn,Expansion of e.g.f. (sin(2*x) + cos(x)) / cos(3*x).
+A007453,1940,no,,,,,Number of unlabeled connected series-parallel posets with n nodes.
+A001169,1941,yes,14,1,0,,Number of board-pile polyominoes with n cells.
+A002780,1942,no,,,,,Numbers whose cube is a palindrome.
+A006192,1943,yes,37,1,0,,Number of nonintersecting (or self-avoiding) rook paths joining opposi
+A008614,1944,yes,17,0,0,pow,Molien series of 3-dimensional representation of group GL(3 2) (= L(2 
+A001151,1945,yes,8,1,1,,Describe the previous term! (method A - initial term is 8).
+A004188,1946,yes,5,0,0,pow,a(n) = n*(3*n^2 - 1)/2.
+A004490,1947,no,,,,,Colossally abundant numbers: integers m > 1 for which there is a posit
+A001668,1948,no,,,,,Number of self-avoiding n-step walks on honeycomb lattice.
+A002868,1949,yes,11,0,0,bin fac nrt,Largest number in n-th row of triangle of Lah numbers (A008297 and A27
+A002859,1950,no,,,,,a(1) = 1  a(2) = 3; for n >= 3  a(n) is smallest number that is unique
+A000503,1951,no,,,,,a(n) = floor(tan(n)).
+A008978,1952,yes,10,1,0,bin,a(n) = (5*n)!/(n!)^5.
+A003275,1953,no,,,,,Values of phi(k) when phi(k) = phi(k+1).
+A000685,1954,no,,,,,Number of 3-colored labeled graphs on n nodes  divided by 3.
+A005157,1955,yes,22,1,0,bin,Number of totally symmetric plane partitions that fit in an n X n X n 
+A005798,1956,yes,7,0,1,trn,Expansion of (theta_2(q)/theta_3(q))^4/16 in powers of q.
+A008366,1957,yes,15,1,0,gcd neq,Smallest prime factor is >= 17.
+A007068,1958,yes,11,1,0,,a(n) = a(n-1) + (3+(-1)^n)*a(n-2)/2.
+A003015,1959,no,,,,,Numbers that occur 5 or more times in Pascal's triangle.
+A007091,1960,yes,10,1,0,,Numbers in base 5.
+A004760,1961,yes,9,0,0,log pow,List of numbers whose binary expansion does not begin 10.
+A006204,1962,no,,,,,Number of starters in cyclic group of order 2n+1.
+A000938,1963,no,,,,,Number of collinear point-triples in an n X n grid.
+A001720,1964,yes,4,0,0,fac,a(n) = n!/24.
+A000187,1965,no,,,,,Generalized Euler numbers  c(5 n).
+A005362,1966,yes,19,1,0,bin,Hoggatt sequence with parameter d=4.
+A006047,1967,yes,9,1,0,,Number of entries in n-th row of Pascal's triangle not divisible by 3.
+A003169,1968,yes,21,1,0,bin equ trn,Number of 2-line arrays; or number of P-graphs with 2n edges.
+A005226,1969,no,,,,,Number of atomic species of degree n; also number of connected permuta
+A001582,1970,yes,13,1,0,ror,Product of Fibonacci and Pell numbers.
+A001337,1971,no,,,,,Number of n-step polygons on f.c.c. lattice.
+A006844,1972,no,,,,,a(1)=4  a(2)=5; thereafter a(n) is smallest number that is greater tha
+A007095,1973,yes,10,1,0,,Numbers in base 9.
+A007619,1974,yes,3,0,2,,Wilson quotients: ((p-1)! + 1)/p where p is the n-th prime.
+A008592,1975,yes,1,0,0,,Multiples of 10: a(n) = 10*n.
+A004747,1976,yes,43,1,0,bin fac nrt pow,Triangle read by rows: the Bell transform of the triple factorial numb
+A005314,1977,yes,10,1,0,,For n = 0  1  2  a(n) = n; thereafter  a(n) = 2*a(n-1) - a(n-2) + a(n-
+A003775,1978,yes,17,1,0,,Number of perfect matchings (or domino tilings) in P_5 X P_2n.
+A002972,1979,yes,7,0,2,gcd,a(n) is the odd member of {x y}  where x^2 + y^2 is the n-th prime of 
+A006335,1980,yes,14,0,0,bin pow,a(n) = 4^n*(3*n)!/((n+1)!*(2*n+1)!).
+A007401,1981,yes,6,0,0,nrt,Add n-1 to n-th term of 'n appears n times' sequence (A002024).
+A001564,1982,yes,5,0,0,fac,2nd differences of factorial numbers.
+A002831,1983,no,,,,,Number of 3-edge-colored connected trivalent graphs with 2n nodes.
+A000514,1984,yes,22,1,0,bin pow,Eulerian numbers (Euler's triangle: column k=6 of A008292  column k=5 
+A001373,1985,no,,,,,Number of functional digraphs (digraphs of functions on n nodes where 
+A008981,1986,no,,,,,Number of immersions of the unoriented circle into the oriented plane 
+A006992,1987,no,,,,,Bertrand primes: a(n) is largest prime < 2*a(n-1) for n > 1  with a(1)
+A005494,1988,yes,20,1,0,bin fac pow,3-Bell numbers: E.g.f.: exp(3*z + exp(z) - 1).
+A002945,1989,yes,34,1,0,pow,Continued fraction for cube root of 2.
+A008305,1990,no,,,,,Triangle read by rows: T(n k) = number of permutations of [n] allowing
+A001666,1991,no,,,,,Number of n-step self-avoiding walks on b.c.c. lattice (version 2).
+A002004,1992,yes,10,0,0,pow,Davenport-Schinzel numbers of degree 4 on n symbols.
+A001085,1993,yes,11,1,0,,a(n) = 20*a(n-1) - a(n-2).
+A001783,1994,yes,20,1,0,gcd neq,n-phi-torial  or phi-torial of n: Product k  1 <= k <= n  k relatively
+A001842,1995,yes,18,1,0,dif equ,Number of divisors of n of the form 4*k+3.
+A005583,1996,yes,6,0,0,bin,Coefficients of Chebyshev polynomials.
+A006053,1997,yes,9,1,0,,a(n) = a(n-1) + 2*a(n-2) - a(n-3)  with a(0) = a(1) = 0  a(2) = 1.
+A001658,1998,yes,31,1,0,rol,Fibonomial coefficients.
+A007369,1999,yes,14,1,1,equ pow,Numbers n such that sigma(x) = n has no solution.
+A003067,2000,yes,17,1,0,,Problimes (second definition).

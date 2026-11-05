@@ -1,17 +1,16 @@
 # bmsynth
 
-A synthesizer built on one cell rule: y' = z XNOR OR(terms), where a term is a cell or a pair of cells (AND).
-
-`experiments/main.py` builds a small seed (278 cells) and runs `net()`. The net grows itself from targets into a
-single-cycle LODA machine (9,483 cells, 767 targets, about 60 s). What it builds is described in
-`notes/machine-built.md` (in the project's shared notes); the run log is `experiments/results/main_v4_partsA-K.txt`.
+A synthesizer built on one cell rule: y' = z XNOR OR(xs), where an x is a cell or a pair of cells (AND).
+A net holds the cells and their connections; cells can copy their inputs (cp) and connect cells (cn), see `net.py`.
 
 | folder | what |
 |---|---|
-| `core/` | the concept: `cell.py` (the rule), `net.py` (Net), `box.py` (a box is a net), `maker.py` (a cell that makes cells) |
-| `accel/` | speed only: `fastnet.py` (numba, event-driven, same result tick for tick) |
-| `targets/` | descriptions of targets only, no nets: the target box and parts A to K |
+| `net.py` | the concept: Net (cells, connections, the rule, cp and cn); a box is Net(f, n_in, n_out) |
+| `accel/` | speed only (none yet) |
+| `boxes/` | hand-written boxes (none yet) |
+| `targets/` | targets only: `oeis.py` |
 | `experiments/` | `main.py` (the seed), `watch.py` (observer), `fewest.py` and `gridsearcher.py` (seed helpers) |
-| `data/oeis/` | the top-2000 OEIS sequences, for the parts still to come |
+| `data/oeis/` | the top-2000 OEIS sequences |
 
-Run: `python3 experiments/main.py`, or `python3 experiments/watch.py [seconds]` to watch it.
+Each folder's `rules.md` says what a change there may do. `experiments/main.py` does not run until the new
+seed (plan step 4b) replaces it.
