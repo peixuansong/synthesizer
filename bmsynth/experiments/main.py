@@ -1,71 +1,64 @@
-"""The main net: the seed, then one net run. Run:  python3 experiments/main.py [seconds]
+"""The main net: the small seed, then net(). Nothing else runs.
 
-Words used here:
-    player     boxes/player.py, an IO box: it plays every target of targets/ladder.py in turn, drives the
-               candidate's inputs i0, i1, i2, and says `step` (try the next wiring) or `reset` (next target)
-    region     the cells being wired: r0 (the candidate's `bit` output) and r1 (its `valid` output)
-    wire       one possible connection into a region cell: x from i0, i1, i2 or the other region cell; z from
-               ZERO, i0, i1 or the other region cell (r0's wires come first in the count)
-    connect    one cell per wire. Its inputs are the wire's two ends (and ONE when the wire is a z wire), so
-               net.py's cn links them when its cn signal rises and unlinks them when it falls
-    counter    one bit per wire, driving that wire's connect cell: each count is one candidate wiring;
-               `step` adds 1, `reset` clears it, and its last carry is `overflow` (every wiring tried)
-
-Not yet in the seed: self wires (net.py's cn can't link a cell to itself) and more cells (needs copy).
+The seed (notes/targets-1-seed-and-ops.md):
+    fixed cells    0 = always 0, 1 = T, 2 = TEST, rows A and B, GO: copies of what the target box drives
+    candidate      one cell y with 21 switch bits (core/maker.py NAMES); every input reaches it 3 ticks late
+    counter        fewest.py: sets of 0..3 switch bits, fewest first; `go` steps it, `clr` restarts it
+    checker        a latch that is set when y differs from the wanted bit at a strobe; passed = the try ended
+                   (dec) with no mismatch
+    maker          on passed, makes the found cell or row from the switch bits, wired to the real sources the box
+                   names; on the box's act pulse, wires the box's probe inputs to a cell or row, or copies a block
+    target box     targets/target_box.py: plays every target in turn (a black box, inside the net)
+The net only grows by what it finds. Run:  python3 experiments/main.py   (it may never end; watch.py looks)
 """
-import sys, time
 import _setup
+from cell import Cell
 from fastnet import FastNet
-import ladder
-from player import player_box
+from maker import Maker, NAMES
+from fewest import fewest
+from target_box import target_box, AW
+from machine_targets import TARGETS, W, samples
+from mul_div_targets import TARGETS_C
+from cpu_targets import TARGETS_D
+from cpu_control import TARGETS_E
+from cpu_runs import TARGETS_K
+import gridsearcher as G
+
+
+def wire(net, y, bits, g):
+    """Cell y reads g (4 sources and its own value, each already one tick late) through the switch bits."""
+    srcs = [G.delay(net, a) for a in g] + [G.cell(net, terms=[(a, b)]) for i, a in enumerate(g) for b in g[i + 1:]]
+    zb = bits[16:21]
+    nz = G.cell(net, z=0, terms=[bits[0]] + zb)                               # no z source and not nor
+    y.z = G.cell(net, terms=[nz] + list(zip(zb, g)))
+    for b, s in zip(bits[1:16], srcs): (b, s) >> y
+    net += y
 
 
 def seed():
-    n = FastNet._empty()                                      # accel/: the same net, ticked faster
-
-    def cell(y=0, x=(), z=None, terms=()):
-        n.ys.append(y); c = len(n.ys) - 1
-        for s in x: n._link(s, c)
-        for t in terms:
-            k = n._term(c)
-            for s in t: n._link(s, c, 'x', k)
-        if z is not None: n._link(z, c, 'z')
-        return c
-    ZERO = cell(); ONE = cell(z=ZERO)
-    box = player_box(ladder.TARGETS, settle=20)
-    pb = n._put(box)                                          # inputs pb .. pb+2; outputs pb+3 .. pb+7
-    ins, step, reset = [pb + 3, pb + 4, pb + 5], pb + 6, pb + 7
-    R = [cell(), cell()]
-    n._link(R[0], pb); n._link(R[1], pb + 1)                  # the candidate's outputs go to the player
-    wires = []
-    for r, o in ((R[0], R[1]), (R[1], R[0])):
-        wires += [(s, r, 'x') for s in ins + [o]] + [(s, r, 'z') for s in [ZERO] + ins[:2] + [o]]
-    nreset = cell(x=[reset], z=ZERO, y=1)
-    c, nc = cell(x=[step]), cell(x=[step], z=ZERO, y=1)
-    bits = []
-    for src, r, port in wires:
-        b, nb = cell(), cell(y=1)
-        for t in ((b, nc, nreset), (nb, c, nreset)): k = n._term(b); [n._link(s, b, 'x', k) for s in t]
-        for t in ((nb, nc), (b, c), (reset,)): k = n._term(nb); [n._link(s, nb, 'x', k) for s in t]
-        bits.append(b)
-        c, nc = cell(terms=[(c, b)]), cell(terms=[(c, b)], z=ZERO, y=1)
-        con = cell(x=[src, r] + ([ONE] if port == 'z' else []))   # the connect cell for this wire
-        n._link(b, con, 'cn')
-    n._link(c, pb + 2)                                        # the last carry: overflow
-    return n, box, len(n.ys)
-
-
-def main(seconds=180):
-    n, box, size = seed()
-    print(f'seed: {size} cells; {len(ladder.TARGETS)} targets', flush=True)
-    t0, seen = time.time(), 0
-    while time.time() - t0 < seconds and not (box.log and box.log[-1][1] == 'cannot play'):
-        n(ticks=1000)
-        for name, result, tries, tick in box.log[seen:]:
-            print(f'{time.time() - t0:6.1f} s  tick {tick:7}  {name:12} {result:11} after {tries} tries', flush=True)
-        seen = len(box.log)
-    print(f'{time.time() - t0:.1f} s: {sum(r == "found" for _, r, _, _ in box.log)} found of {len(box.log)} played')
+    net, box = FastNet(), target_box(TARGETS + TARGETS_C + TARGETS_D + TARGETS_E + TARGETS_K, W, samples)
+    o, i = box.o, box.i
+    c = lambda **k: G.cell(net, **k)
+    net += Cell()                                                             # place 0: always 0
+    for name in ('T', 'TEST', 'A', 'B', 'GO'):
+        for x in o[name]: G.delay(net, x)                                     # places 1, 2, 3.., 3+W.., 3+2W
+    net.nets.append(box)
+    mism = Cell(); net += mism                                                # a mismatch seen in this try
+    dec, ndec = o['dec'][0], o['ndec'][0]
+    passed = c(z=0, terms=[ndec, mism])                                       # dec AND no mismatch
+    bits, done = fewest(net, c(terms=[(dec, mism)]), o['clr'][0], len(NAMES))
+    y = Cell()
+    wire(net, y, bits, [G.delay(net, x) for x in o['x']] + [c(terms=[(y, o['nrst'][0])])])
+    neq = G.NOT(net, c(z=y, terms=[o['want'][0]]))                            # y differs from the wanted bit
+    (o['strobe'][0], neq) >> mism; (mism, ndec) >> mism
+    addr = [c() for _ in range(AW)]
+    for a, b in zip(addr, i['addr']): a >> a; a >> b                          # holds the maker's last address
+    srcs = [(s[:AW], s[AW:AW + 2], s[AW + 2:AW + 8]) for s in (o['src'][k * 28:(k + 1) * 28] for k in range(4))]
+    mk = Maker(net, o['op'], bits, srcs, addr, i['probe'], W)
+    passed >> mk; o['act'][0] >> mk; net += mk
+    passed >> i['passed'][0]; done >> i['fdone'][0]
+    return net
 
 
 if __name__ == '__main__':
-    main(float(sys.argv[1]) if len(sys.argv) > 1 else 180)
+    seed()()
