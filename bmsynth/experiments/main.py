@@ -10,6 +10,8 @@ Words used here:
                net.py's cn links them when its cn signal rises and unlinks them when it falls
     counter    one bit per wire, driving that wire's connect cell: each count is one candidate wiring;
                `step` adds 1, `reset` clears it, and its last carry is `overflow` (every wiring tried)
+    keep       a cell whose inputs are the region: when a target is found, its cp copies the region with its
+               wires, so every found circuit stays in the net (it reads the same inputs)
 
 Not yet in the seed: self wires (net.py's cn can't link a cell to itself) and more cells (needs copy).
 """
@@ -33,10 +35,11 @@ def seed():
         return c
     ZERO = cell(); ONE = cell(z=ZERO)
     box = player_box(ladder.TARGETS, settle=20)
-    pb = n._put(box)                                          # inputs pb .. pb+2; outputs pb+3 .. pb+7
-    ins, step, reset = [pb + 3, pb + 4, pb + 5], pb + 6, pb + 7
+    pb = n._put(box)                                          # inputs pb .. pb+2; outputs pb+3 .. pb+8
+    ins, step, reset, found = [pb + 3, pb + 4, pb + 5], pb + 6, pb + 7, pb + 8
     R = [cell(), cell()]
     n._link(R[0], pb); n._link(R[1], pb + 1)                  # the candidate's outputs go to the player
+    keep = cell(x=R); n._link(found, keep, 'cp')
     wires = []
     for r, o in ((R[0], R[1]), (R[1], R[0])):
         wires += [(s, r, 'x') for s in ins + [o]] + [(s, r, 'z') for s in [ZERO] + ins[:2] + [o]]
@@ -64,7 +67,8 @@ def main(seconds=180):
         for name, result, tries, tick in box.log[seen:]:
             print(f'{time.time() - t0:6.1f} s  tick {tick:7}  {name:12} {result:11} after {tries} tries', flush=True)
         seen = len(box.log)
-    print(f'{time.time() - t0:.1f} s: {sum(r == "found" for _, r, _, _ in box.log)} found of {len(box.log)} played')
+    print(f'{time.time() - t0:.1f} s: {sum(r == "found" for _, r, _, _ in box.log)} found of {len(box.log)} played;'
+          f' the net has {len(n.ys)} cells (seed {size} + 2 kept per find)')
 
 
 if __name__ == '__main__':
