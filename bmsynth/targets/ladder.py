@@ -62,18 +62,19 @@ SERIAL = [
     ('SERIAL_ADD', 3, 1, stateful(lambda c, a, b, s: _add(c, a, b, s), 0)),
 ]
 
-# The easiest top-2000 entries (constant, linear, periodic), then the rest in rank order. make = None: the
-# sequence box of plan step 2 plays them.
+# The easiest top-2000 entries (constant, linear, periodic), then the rest in rank order. An OEIS target is
+# (A-number, 3, 2, ('oeis', offset, terms)): inputs index bit, index valid, start; outputs bit, valid.
 EASY_OEIS = ['A000004', 'A000012', 'A000007', 'A000035', 'A001477', 'A000027', 'A005843', 'A005408']
 
 
 def oeis_list():
-    rest = [f"A{d['n']:06d}" for d in sorted(oeis.oeis_targets(R=1, W=1 << 10), key=lambda d: d['rank'])]
-    return EASY_OEIS + [a for a in rest if a not in EASY_OEIS]
+    ds = {f"A{d['n']:06d}": d for d in oeis.oeis_targets(R=1, W=1 << 10)}
+    order = EASY_OEIS + [a for a in sorted(ds, key=lambda a: ds[a]['rank']) if a not in EASY_OEIS]
+    return [(a, ds[a]['offset'], ds[a]['terms']) for a in order]
 
 
 TARGETS = ([(GATE_NAMES[k], 2, 1, gate(k)) for k in range(16)] + MEMORY + SERIAL
-           + [(a, None, None, None) for a in oeis_list()])
+           + [(a, 3, 2, ('oeis', off, terms)) for a, off, terms in oeis_list()])
 
 
 def box(t):
