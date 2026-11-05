@@ -3,7 +3,7 @@
     player_box(targets, settle, D)
         inputs:  bit, valid (the candidate's two outputs), overflow (the counter has tried every wiring)
         outputs: i0, i1, i2 (the candidate's inputs), step (1 tick: try the next wiring), reset (1 tick: clear
-                 the counter, a new target starts), found (1 tick, with reset, when the target was found)
+                 the counter, a new target starts)
     One try: `settle` ticks with all inputs 0 (the wiring changes), then one input vector per tick. The
     candidate must answer each vector D ticks later. A mismatch ends the try with `step`. Every answer right:
     the target is found, `reset`, next target. `overflow`: not found, `reset`, next target.
@@ -61,22 +61,22 @@ def player_box(targets, settle=24, D=3):
 
     def f(bit, valid, overflow):
         st['tick'] += 1
-        if st['done']: return 0, 0, 0, 0, 0, 0
+        if st['done']: return 0, 0, 0, 0, 0
         if overflow:
-            next_target('not found'); return 0, 0, 0, 0, 1, 0
+            next_target('not found'); return 0, 0, 0, 0, 1
         if st['t0'] is None:
             st['n'] += 1
-            if st['n'] < settle: return 0, 0, 0, 0, 0, 0
+            if st['n'] < settle: return 0, 0, 0, 0, 0
             st['t0'] = st['tick']
         s, i = st['s'], st['tick'] - st['t0'] - D     # the vector the candidate answers now
         if 0 <= i < len(s):
             wb, wv = s[i][1]
             if (wv is None and bit != wb) or (wv is not None and (valid != wv or (wv and bit != wb))):
-                start_try(); return 0, 0, 0, 1, 0, 0
+                start_try(); return 0, 0, 0, 1, 0
         if i >= len(s) - 1:
-            next_target('found'); return 0, 0, 0, 0, 1, 1
+            next_target('found'); return 0, 0, 0, 0, 1
         n = st['tick'] - st['t0']
-        return (s[n][0] if n < len(s) else (0, 0, 0)) + (0, 0, 0)
-    box = Net(f, 3, 6)
+        return (s[n][0] if n < len(s) else (0, 0, 0)) + (0, 0)
+    box = Net(f, 3, 5)
     box.log = log
     return box
