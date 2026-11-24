@@ -10,7 +10,6 @@ A net holds the cells and their connections; cells can copy their inputs (cp) an
 | `boxes/` | hand-written boxes (none yet) |
 | `targets/` | targets only, as boxes: `ops.py` (O1-O11), `machine.py` (M1-M3), `big.py` (B1-B10), `seqs.py` (OEIS), `plan_targets.py` (all + check) |
 | `seed/` | `main.py` (the seed) |
-| `experiments/` | `_setup.py` (import paths) |
 | `data/oeis/` | the top-2000 OEIS sequences |
 
 Each folder's `rules.md` says what a change there may do. `seed/main.py` does not run until the new
