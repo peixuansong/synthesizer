@@ -1,7 +1,7 @@
 """REFERENCE blackboxes for the plan's big operators (B1-B10) and the chain links that lead to them, as boxes.
 
 Each function is a reference: it says WHAT the net must produce, never how. None of them is placed in the net.
-Numbers are whole numbers >= 0. Division or remainder by 0 gives 0 (as in targets/blocks.py).
+Numbers are whole numbers >= 0. Division or remainder by 0 gives 0.
 A link with several outputs returns a tuple. Each box is ops.serial_box(function): numbers in and out as bits.
 TICKS gives the tick limit the checker (BOXO) uses, as a function of the bit size; None = not set in the plan yet.
 """

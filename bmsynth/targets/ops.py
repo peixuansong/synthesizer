@@ -1,7 +1,7 @@
 """REFERENCE blackboxes for the plan's cell operators (O1-O11), as boxes: Net(f, n_in, n_out) (net.py).
 
 Each function is a reference: it says WHAT the net must produce, never how. None of them is placed in the net.
-Numbers are whole numbers >= 0. A result that would be negative is 0 (as in targets/blocks.py).
+Numbers are whole numbers >= 0. A result that would be negative is 0.
 
 A number travels on two cells, as in boxes/sequence.py: a bit line (lowest bit first, one bit per tick) and a valid
 line (1 while the bits flow). A number ends when its valid line falls.
