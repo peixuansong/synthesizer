@@ -11,7 +11,10 @@ The seed (notes/targets-1-seed-and-ops.md):
     target box     targets/target_box.py: plays every target in turn (a black box, inside the net)
 The net only grows by what it finds. Run:  python3 experiments/main.py   (it may never end; watch.py looks)
 """
-import _setup
+import sys, os                                   # import path (was experiments/_setup.py): bmsynth/, accel/, boxes/, targets/
+ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+for p in ('', 'accel', 'boxes', 'targets'):
+    if os.path.join(ROOT, p) not in sys.path: sys.path.insert(0, os.path.join(ROOT, p))
 from cell import Cell
 from fastnet import FastNet
 from maker import Maker, NAMES
